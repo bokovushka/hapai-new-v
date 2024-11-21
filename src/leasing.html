@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/leasing" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/leasing" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/leasing" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/leasing" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="W5ppnUbxRPRNk8xhq_0vTkTxg0KZ1joqFGYxfUnw0K8IyVHuDacbogrW_Cf7vEYfIJ_UCaqabF8gKXo7C4OX1w==">
+	<title>Лізинг - ХАПАЙ аукціон авто</title>
+
+	<meta name="description" content="Детальніше про Лізинг від ХАПАЙ аукціон авто">
+	@@include('html/part-head-stylesheet.html',{})
+
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="leasing-p">
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="breadcrumb">
+					<div class="container">
+						<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a itemprop="item" href="/">
+									<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+								</a>
+								<meta itemprop="position" content="0" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Лізинг</span>
+								<meta itemprop="position" content="1" />
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="top-banner-search top-banner-lease">
+					<div class="container">
+						<div class="top-banner-lease__wrap">
+							<h1 class="title">Лізинг? Легко!</h1>
+							<p class="top-banner-lease__txt">Скористайся калькулятором - дізнайся щомісячний платіж</p>
+							<div class="selection-car__info leasing-calc">
+								<div class="selection-car__preferences">
+									<div class="selection-car__payments">
+										<div class="selection-car__payments-item">
+											<label for="leasing-car-price">Вартість авто</label>
+											<input type="number" placeholder="Вартість авто" class="field" id="leasing-car-price" value="10000">
+										</div>
+										<div class="selection-car__payments-item">
+											<label for="leasing-self-money">Сума в наявності</label>
+											<input type="number" placeholder="Сума в наявності" class="field" id="leasing-self-money" value="1500">
+										</div>
+									</div>
+									<div class="selection-car__slider">
+										<div id="selection-car__slider-result" class="selection-car__slider-result">
+											<p>Срок фінансування</p>
+											<div class="heading"><span class="v-p">60</span></div>
+										</div>
+										<div id="selection-car__slider-month">
+											<span class="end-line"></span>
+										</div>
+										<input type="hidden" id="leasing-month-count" value="60">
+									</div>
+								</div>
+								<div class="selection-car__result-search">
+									<p>Щомісячний платіж</p>
+									<div class="title search-sum">
+										<span id="leasing-total">0$</span>
+										<span id="leasing-total-uah" class="il-price__description">0грн</span>
+									</div>
+									<a href="#popup-leasing" class="btn btn-style-3 popup-link">Відправити заявку</a>
+								</div>
+							</div>
+							<div class="img-wrap">
+								<img src="img/c4542cd615f44173abe2243c7c451b59.png" alt="leasing-1">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="lease-terms">
+					<div class="container">
+						<div class="lease-terms__wrap">
+							<div class="lease-terms__b">
+								<div class="title">Умови фінансування</div>
+								<div class="lease-terms__item">
+									<span class="icon-u_car-sideview"></span>
+									<div class="heading">Мінімальний перший внесок</div>
+									<p>(складається з авансу та одноразової комісії. Аванс - 15% від вартості авто, комісія
+										- 2%)</p>
+								</div>
+								<div class="lease-terms__item">
+									<span class="icon-u_money-stack"></span>
+									<div class="heading">Зручний термін</div>
+									<p>(обирай будь-який строк: від 12 до 60 місяців)</p>
+								</div>
+								<div class="lease-terms__item">
+									<span class="icon-fi_truck"></span>
+									<div class="heading">Фіксований щомісячний платіж</div>
+									<p>(сума щомісячного платежу прописується в договорі, фіксується у гривні, залишається
+										незмінною до закінчення договору лізингу; щомісячний платіж включає витрати на
+										реєстрацію та страхування)</p>
+								</div>
+								<div class="lease-terms__item">
+									<span class="icon-u_car-sideview"></span>
+									<div class="heading">Для оформлення - паспорт та ІПН</div>
+									<p>(оформлення займає декілька годин)</p>
+								</div>
+							</div>
+							<img src="@img/95a976d0afe258065cbcb7475bc0090b.png" alt="leasing-2">
+						</div>
+					</div>
+				</section>
+
+				<section class="how-works">
+					<div class="container">
+						<div class="title">Як придбати авто в лізинг?</div>
+						<div class="how-works__wrap">
+							<div class="how-works__item">
+								<div class="heading">Крок 1</div>
+								<p>Обери автомобіль з каталогу , надішли заявку, натиснувши “купити зараз” або дочекайся
+									початку аукціону та виграй його.</p>
+							</div>
+							<div class="how-works__item">
+								<div class="heading">Крок 2</div>
+								<p>Підпиши договір та здійсни перший платіж.</p>
+							</div>
+							<div class="how-works__item">
+								<div class="heading">Крок 3</div>
+								<p>Отримай автомобіль.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="loan-leasing partners">
+					<div class="container">
+						<div class="h1">Чим кредит відрізняється від лізингу?</div>
+						<div class="partners__title">
+							<div class="title">Лізинг</div>
+							<div class="swiper__buttons leasing-swiper__buttons">
+								<div class="btn__swiper icon-u_arrow-left btn__swiper-prev"></div>
+								<div class="btn__swiper icon-u_arrow-right btn__swiper-next"></div>
+							</div>
+						</div>
+						<div class="swiper-container leasing__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-car-usd">
+											<use xlink:href="img/icons/icons.svg#car-usd"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що отримуємо</div>
+										<p class="expandable">Відразу після підписання договору компанія передає зареєстрований та готовий</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="partners__title">
+							<div class="title">Банківський автокредит</div>
+						</div>
+						<div class="swiper-container loan__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-car-usd">
+											<use xlink:href="img/icons/icons.svg#car-usd"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що отримуємо</div>
+										<p class="expandable">Відразу після підписання договору компанія передає зареєстрований та готовий</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="qa-loop" class="partners">
+					<div class="container">
+						<div class="partners__title">
+							<div class="title">Авто в наявності</div>
+							<div class="swiper__buttons">
+								<div class="btn__swiper icon-u_arrow-left btn__swiper-prev"></div>
+								<div class="btn__swiper icon-u_arrow-right btn__swiper-next"></div>
+							</div>
+						</div>
+						<div class="swiper-container partners__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/renault-logan-344159">
+																<img src="files/cache/files/images/57/9a/9a8d3ef8b74a9ff3b73ff47b6f5ce332/500_500/117.jpg" alt="Renault Logan">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/16a027c8cb8a452d8136b30bc4509832.jpg" alt="Renault Logan-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d6fd527b64884d229472db5abc7ab9ba.jpg" alt="Renault Logan-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d88910fc09194dcc8eea68a5d29eb46f.jpg" alt="Renault Logan-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f97225512d0b4e8ea8ef00f1805201af.jpg" alt="Renault Logan-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/040cb92464874f658475133480c3ee87.jpg" alt="Renault Logan-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/3c42a415ee3d4541bfd1e494a18909cc.jpg" alt="Renault Logan-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8b731e9ba4304dc8956e286c09d1f11f.jpg" alt="Renault Logan-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/2a768e163522464992cb7f15ac5597ac.jpg" alt="Renault Logan-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e9c50a31a8904e52a4c79d5fd2121093.jpg" alt="Renault Logan-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0615ba011d454d9ebadc7ca93ebf649f.jpg" alt="Renault Logan-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a0b68720e64b4ca98933bafb4b748a09.jpg" alt="Renault Logan-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7179d51f5dd8494496c8c8c975ee64fa.jpg" alt="Renault Logan-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="117">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/renault-logan-344159">
+													<div class="heading">Renault Logan 2019</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>133000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">322 320 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/citroen-c-elysee-344161">
+																<img src="files/cache/files/images/48/0a/0a14a3afce48e708beaf03a45b4f94fb/500_500/119.jpg" alt="Citroen C-Elysee">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/16aa6752a95a49028e6f3beaa4bb2134.jpg" alt="Citroen C-Elysee-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0b044508d5ea49b6ba64bf3a514e0c83.jpg" alt="Citroen C-Elysee-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/92346a75d631449ba8ee127190ca026f.jpg" alt="Citroen C-Elysee-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d630f5efc77d4ac48febe106b0107db9.jpg" alt="Citroen C-Elysee-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/3ab6818d266548f89b0e02e7d03e4420.jpg" alt="Citroen C-Elysee-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/76009f7105af46e2954a77afc1f79b5c.jpg" alt="Citroen C-Elysee-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/ce749166c2574dbaa59fa0048a532d06.jpg" alt="Citroen C-Elysee-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/ff599b17f53345d799fbee2c509a7e11.jpg" alt="Citroen C-Elysee-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7b87d15e9b2842bfa9e1e4730a873480.jpg" alt="Citroen C-Elysee-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/87ee0f5a9f7c4cd891a0e9b535ff9da8.jpg" alt="Citroen C-Elysee-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1eb59d70aa99458dbf47f7e7af30d445.jpg" alt="Citroen C-Elysee-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8f1700ce820a48afa7c75c9936ba9fe6.jpg" alt="Citroen C-Elysee-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="119">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/citroen-c-elysee-344161">
+													<div class="heading">Citroen C-Elysee 2019</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>81000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">403 920 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/citroen-c-elysee-347441">
+																<img src="files/cache/files/images/98/b7/b73160182c6ca7e03979ebde17cfb91c/500_500/135.jpg" alt="Citroen C-Elysee">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1c2104cabb294f91a6a17a6f191cb18c.jpg" alt="Citroen C-Elysee-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/73ba9f93280544f3bc0c8de151074f8d.jpg" alt="Citroen C-Elysee-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/b9a17ee6f6df4fb796c09809394d786a.jpg" alt="Citroen C-Elysee-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a9c92823b8c24b66bda8b61be73afb5c.jpg" alt="Citroen C-Elysee-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7a58176df0434f3d825dbcea285c953b.jpg" alt="Citroen C-Elysee-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/6b147501aa4c46ebaa3d40d314a913a5.jpg" alt="Citroen C-Elysee-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e3825b91979b43598521772a271d4933.jpg" alt="Citroen C-Elysee-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d82920b49b9f41b18e660dbdb73afef6.jpg" alt="Citroen C-Elysee-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/bd754be8beea4b43a401d0c5e34100c8.jpg" alt="Citroen C-Elysee-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e620c96c65304c8c91787bcc0f3f7fb2.jpg" alt="Citroen C-Elysee-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d642d29dbaeb4b8ba21c326664e726f7.jpg" alt="Citroen C-Elysee-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/5cf6278a5a7a4c44b26c6132dd62ce71.jpg" alt="Citroen C-Elysee-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="135">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/citroen-c-elysee-347441">
+													<div class="heading">Citroen C-Elysee 2013</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>147000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Львів</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">306 000 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/opel-astra-348339">
+																<img src="files/cache/files/images/97/a4/a4be29092b1bd4620b2e1c29173675d5/500_500/142.jpg" alt="Opel Astra">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/17d70939c2ad4978b8392dddfb47efaf.jpg" alt="Opel Astra-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/549da7107cd444a284db691104a9699b.jpg" alt="Opel Astra-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e11c6da987394a25bbf78262674ce767.jpg" alt="Opel Astra-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1681540044034116b8fb29090f67bec6.jpg" alt="Opel Astra-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/32a0b81c643e470ab8c6859b64099437.jpg" alt="Opel Astra-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/74f895a17d834249a95e15e7a0e87855.jpg" alt="Opel Astra-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c7e048208c284be6a034c5a9c2c28439.jpg" alt="Opel Astra-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/156ce8b4332a4a86b3a32e24ae768d0d.jpg" alt="Opel Astra-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e75db3c828f34b1781f0d17d5ea2119a.jpg" alt="Opel Astra-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/48f56171ebfb4bbba8f0324b9ac01640.jpg" alt="Opel Astra-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f9bbb0d9410549568b35b7122178b918.jpg" alt="Opel Astra-11">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="142">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/opel-astra-348339">
+													<div class="heading">Opel Astra 2012</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>93000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">244 800 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/nissan-juke-349082">
+																<img src="files/cache/files/images/97/a3/a362fd66336faf51e3c0debb36370435/500_500/151.jpg" alt="Nissan Juke">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/802f714c3c64427fb8ea226df290808b.jpg" alt="Nissan Juke-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c33fae23e4b74815984d7e1fbfcc248a.jpg" alt="Nissan Juke-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1d63945a74ad433a9212f248043b6149.jpg" alt="Nissan Juke-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a394ecbf87d846b3afd105d381ecab9e.jpg" alt="Nissan Juke-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/cb04a3744d95442ba24ca0aa6ed50558.jpg" alt="Nissan Juke-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d516423e205f449eb51cf01f5d8af52d.jpg" alt="Nissan Juke-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/62f1364a36db417eaef06cf7e0820ed3.jpg" alt="Nissan Juke-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e101d5994b4e4432bd29bb18bb57f95a.jpg" alt="Nissan Juke-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/ce30c88869384dd7b7e2f4e8abe95d82.jpg" alt="Nissan Juke-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8953063926044fe49c2b081b025844c2.jpg" alt="Nissan Juke-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/538e21fca2f74affa43c86824e3eebe7.jpg" alt="Nissan Juke-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/43e3b65633394ce19320373bfbe4e319.jpg" alt="Nissan Juke-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="151">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/nissan-juke-349082">
+													<div class="heading">Nissan Juke 2012</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>26000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">412 080 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/renault-logan-349418">
+																<img src="files/cache/files/images/57/98/9875a3d8bedc1074ce38f89eaf0ff514/500_500/169.jpg" alt="Renault Logan">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a5398837169c47a4a9fe823fd520bc3b.jpg" alt="Renault Logan-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/b679a5828cb64219a924485d4ec3b6a1.jpg" alt="Renault Logan-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c4546d2b42b24d2eaab3fe92597cca65.jpg" alt="Renault Logan-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f6ab865e555e4da99635a3b2f707e9e3.jpg" alt="Renault Logan-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8aff5dea9e2c4dea9a6a04b4fdeddca6.jpg" alt="Renault Logan-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/67948efcc7ee4e24a27d346e235afb57.jpg" alt="Renault Logan-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/b16b042d6568453997796a56a73b6630.jpg" alt="Renault Logan-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e186f90d81ae40a4a829f9608898f711.jpg" alt="Renault Logan-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/046238eb9190433d98c4a11792b93bd6.jpg" alt="Renault Logan-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a01824f8fdf04b508e4791ab6c71627c.jpg" alt="Renault Logan-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/43097e2e63914f629e8d0fcf7c06324d.jpg" alt="Renault Logan-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/26398cc657f8462bb5f99fea81086b45.jpg" alt="Renault Logan-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="169">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/renault-logan-349418">
+													<div class="heading">Renault Logan 2020</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>171000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">310 080 грн</span></p>
+												</div>
+												<button type="button" class="btn btn-style-1">Розрахувати платіж</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="/catalog" class="btn btn-style-2">Дивитись всі авто</a>
+					</div>
+				</section>
+				<section class="why why-we">
+					<div class="container">
+						<div class="title">Переваги покупки авто в лізинг</div>
+						<div class="why__wrap">
+							<div class="why__item">
+								<div class="why__descrp">
+									<span class="icon-u_car-sideview"></span>
+									<div class="heading">Економія грошей та часу</div>
+								</div>
+								<p>Ти можеш швидко купити перевірений автомобіль усього за 15% від його вартості. Оформлення
+									- від декількох годин. Реєструє та страхує ХАПАЙ АВТО.</p>
+							</div>
+							<div class="why__item">
+								<div class="why__descrp">
+									<span class="icon-u_money-stack"></span>
+									<div class="heading">Мінімальний пакет документів</div>
+								</div>
+								<p>Для оформлення - паспорт та ІПН (в деяких випадках може знадобитися довідка про
+									доходи).</p>
+							</div>
+							<div class="why__item">
+								<div class="why__descrp">
+									<span class="icon-fi_truck"></span>
+									<div class="heading">Безпека та надійність</div>
+								</div>
+								<p>Нам довіряють 8 000 клієнтів. В каталозі представлені тільки перевірені авто з чесною
+									інформацією про стан.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="accordion-section">
+					<div class="container">
+						<div class="title">Поширені питання щодо лізингу</div>
+						<div id="accordion">
+							<div class="accordion__title">Що таке “лізинг”?</div>
+							<div class="accordion__info">
+								<p dir="ltr">Лізинг - це комплекс послуг з придбання, страхування,
+									супроводу та сервісного обслуговування.</p>
+
+								<p dir="ltr">Тобто, щоб придбати автомобіль, тобі потрібно просто подати заявку, підписати
+									договір та внести аванс. Іншими питаннями (типу реєстрації, страхування) займається
+									лізингодавець.</p>
+							</div>
+							<div class="accordion__title">Які умови фінансування?</div>
+							<div class="accordion__info">
+								<p dir="ltr">Фінансуємо будь-які авто: від вподобаних тобою на
+									цьому сайті в розділі “Аукціон” до авто, знайдених тобою в каталозі на сайті
+									“ХАПАЙавто”.</p>
+
+								<p dir="ltr">Аванс - від 15% вартості авто</p>
+
+								<p dir="ltr">Термін - від 1 до 5 років</p>
+
+								<p dir="ltr">Середня місячна ставка - 2,6%</p>
+
+								<p dir="ltr">Щомісячні платежі зафіксовано в гривні на весь термін дії договору.</p>
+							</div>
+							<div class="accordion__title">Де можна ознайомитися з договором лізингу?</div>
+							<div class="accordion__info">
+								<p>Договір лізингу доступний за посиланням - <a href="https://ulf.ua/zagalni-umovi-dogovory-finansovogo-lizingy-novi-obekty">https://ulf.ua/zagalni-umovi-dogovory-finansovogo-lizingy-novi-obekty</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Що таке “лізинг”?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p dir=\"ltr\">Лізинг - це комплекс послуг з придбання, страхування, супроводу та сервісного обслуговування.</p> <p dir=\"ltr\">Тобто, щоб придбати автомобіль, тобі потрібно просто подати заявку, підписати договір та внести аванс. Іншими питаннями (типу реєстрації, страхування) займається лізингодавець.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Які умови фінансування?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p dir=\"ltr\">Фінансуємо будь-які авто: від вподобаних тобою на цьому сайті в розділі “Аукціон” до авто, знайдених тобою в каталозі на сайті “ХАПАЙавто”.</p> <p dir=\"ltr\">Аванс - від 15% вартості авто</p> <p dir=\"ltr\">Термін - від 1 до 5 років</p> <p dir=\"ltr\">Середня місячна ставка - 2,6%</p> <p dir=\"ltr\">Щомісячні платежі зафіксовано в гривні на весь термін дії договору.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Де можна ознайомитися з договором лізингу?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Договір лізингу доступний за посиланням - <a href=\"https://ulf.ua/zagalni-umovi-dogovory-finansovogo-lizingy-novi-obekty\">https://ulf.ua/zagalni-umovi-dogovory-finansovogo-lizingy-novi-obekty</a></p> "
+                            }
+                        }
+                    ]
+                }
+            </script>
+
+				<section class="questions-lease">
+					<div class="container">
+						<div class="top-banner-lease__wrap">
+							<div class="title">Залишились питання стосовно лізингу?</div>
+							<p class="top-banner-lease__txt">Залиш заявку та отримай консультацію вже зараз</p>
+							<div class="questions-lease__info">
+								<div class="selection-car__preferences">
+									<form id="form-help">
+										<input type="hidden" name="subject" value="Вопросы о лизинге">
+										<div class="selection-car__payments">
+											<div class="user-txt">
+												<input type="text" name="client_name" placeholder="Ваше ім'я">
+												<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+											</div>
+											<div class="user-txt">
+												<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+												<p class="help-block help-block-error">Невірний телефон</p>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-style-3">Отримати консультацію</button>
+									</form>
+								</div>
+							</div>
+							<div class="img-wrap">
+								<img src="@img/9c563d4d54992bd826ee84b654fb7a56.png" alt="leasing-3">
+							</div>
+						</div>
+					</div>
+				</section>
+				@@include('html/popup/popup-leasing.html',{})
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<div id="popup-installment" class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+			<div class="authorization__wrap">
+				<div class="installment">
+					<div class="popup-auction__title">Оформити авто в розстрочку</div>
+					<form id="form-installment">
+						<input type="hidden" name="subject" value="Рассрочка">
+						<input type="hidden" name="price" value="">
+						<input type="hidden" name="car_mark" value="BMW">
+						<input type="hidden" name="car_model" value="X1">
+						<input type="hidden" name="car_year" value="2012">
+						<div class="user-info">
+							<div class="user-txt">
+								<input type="text" name="client_name" placeholder="Ваше ім'я">
+								<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+							</div>
+							<div class="user-txt">
+								<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+								<p class="help-block help-block-error">Невірний телефон</p>
+							</div>
+							<div class="user-txt">
+								<p class="help-block help-descrp__top">* для отримання швидкого рішення, заповніть рядок нижче</p>
+								<input type="text" name="client_inn" placeholder="Ваш ІНП">
+								<p class="help-block help-block-error">Невірний ІНП</p>
+							</div>
+							<div class="checkbox">
+								<label for="installment-checkbox-agree"></label>
+								<input type="checkbox" checked name="agreement" id="installment-checkbox-agree">
+								<span class="checkbox__txt">Даю згоду на збір, обробку, зберігання та використання своїх <a href="##">персональних даних</a>.</span>
+							</div>
+							<button type="submit" class="btn btn-style-4">Відправити</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

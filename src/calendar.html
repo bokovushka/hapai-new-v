@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/calendar" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/calendar" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/calendar" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/calendar" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="vzaFps0fUWlMBES97E6Gxg6CRgqu5P21n8TQ9QrNJY_sZb3VhkkOPwtBdPu8D--XauwRQZ2oq8Cri5uzSL5i9w==">
+	<title>Аукціон авто в Україні, Автоаукціон онлайн, Купити машину на аукціоні - ХАПАЙ аукціон авто</title>
+
+	<meta name="description" content="⓵ Перший в Україні Аукціон авто ✦ Великий вибір авто на ХАПАЙ аукціон авто ☼ Купити перевірені авто в Україні онлайн на автоаукціоні ✔ Швидке оформлення з ХАПАЙ аукціон авто">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="catalog-page">
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+
+				<section class="breadcrumb">
+					<div class="container">
+						<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a itemprop="item" href="/">
+									<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+								</a>
+								<meta itemprop="position" content="0" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Аукціон</span>
+								<meta itemprop="position" content="1" />
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="title-item">
+					<div class="container">
+						<div class="title-item__b">
+							<h1 class="title">Аукціон</h1>
+							<div class="heading" id="calendar-main-count">0 автомобілів</div>
+						</div>
+					</div>
+				</section>
+				<section id="auction-section" class="auction-section">
+					<div class="container">
+						<div id="filter-result" class="filter-wrap">
+							<div class="filter-result-txt">
+								Знайдено 0 автомобілів
+							</div>
+							<div class="filter-result">
+								<div class="btn btn-filter">Фільтр</div>
+								<div class="filter-result-v" data-reload="ajax-reload-filter-tags">
+								</div>
+								<div class="filter-sort-box">
+									<div id="filter-city-block" class="filter-city">
+										<select name="filter-city" id="filter-city">
+											<option data-href="javascript:void(0)">Місто</option>
+											<option data-href="/calendar/filter-m-kyiv">
+												Київ
+											</option>
+											<option data-href="/calendar/filter-m-lviv">
+												Львів
+											</option>
+										</select>
+									</div>
+									<div id="sort-mode" class="sort-mode">
+										<select name="sortmode" id="sortmode">
+											<option data-href="/calendar?limit=50" selected>Показувати 50</option>
+											<option data-href="/calendar?limit=80">Показувати 80</option>
+											<option data-href="/calendar?limit=100">Показувати 100</option>
+										</select>
+									</div>
+									<div id="sort-items" class="sort-items">
+										<select name="sortitems" id="sortitems">
+											<option data-href="/calendar?sort=default" selected>За замовчуванням</option>
+											<option data-href="/calendar?sort=price">Від дешевих до дорогих</option>
+											<option data-href="/calendar?sort=price-desc">Від дорогих до дешевих</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="auction-wrapper">
+							<div id="a-sidebar" class="a-sidebar" data-reload="ajax-reload-filter">
+								<div id="a-filter" class="a-filter">
+									<div class="a-filter__main-titile">
+										<div class="subtitle">Фільтр</div>
+									</div>
+
+									<div class="filter-item f-brand">
+										<div class="filter-title">Марка авто</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-2-200">
+												<span class="name">BMW</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-200" onclick="ajaxReload($(this).val())" value="/calendar/filter-bmw" id="chx-2-200">
+											</label>
+											<label for="chx-2-241">
+												<span class="name">Citroen</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-241" onclick="ajaxReload($(this).val())" value="/calendar/filter-citroen" id="chx-2-241">
+											</label>
+											<label for="chx-2-180">
+												<span class="name">Ford</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-180" onclick="ajaxReload($(this).val())" value="/calendar/filter-ford" id="chx-2-180">
+											</label>
+											<label for="chx-2-290">
+												<span class="name">Honda</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-290" onclick="ajaxReload($(this).val())" value="/calendar/filter-honda" id="chx-2-290">
+											</label>
+											<label for="chx-2-171">
+												<span class="name">Hyundai</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-171" onclick="ajaxReload($(this).val())" value="/calendar/filter-hyundai" id="chx-2-171">
+											</label>
+											<label for="chx-2-229">
+												<span class="name">Jeep</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-229" onclick="ajaxReload($(this).val())" value="/calendar/filter-jeep" id="chx-2-229">
+											</label>
+											<label for="chx-2-204">
+												<span class="name">Kia</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-204" onclick="ajaxReload($(this).val())" value="/calendar/filter-kia" id="chx-2-204">
+											</label>
+											<label for="chx-2-232">
+												<span class="name">Lexus</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-232" onclick="ajaxReload($(this).val())" value="/calendar/filter-lexus" id="chx-2-232">
+											</label>
+											<label for="chx-2-234">
+												<span class="name">Mazda</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-234" onclick="ajaxReload($(this).val())" value="/calendar/filter-mazda" id="chx-2-234">
+											</label>
+											<label for="chx-2-182">
+												<span class="name">Mercedes-Benz</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-182" onclick="ajaxReload($(this).val())" value="/calendar/filter-mercedes-benz" id="chx-2-182">
+											</label>
+											<label for="chx-2-278">
+												<span class="name">MINI</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-278" onclick="ajaxReload($(this).val())" value="/calendar/filter-mini" id="chx-2-278">
+											</label>
+											<label for="chx-2-274">
+												<span class="name">Mitsubishi</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-274" onclick="ajaxReload($(this).val())" value="/calendar/filter-mitsubishi" id="chx-2-274">
+											</label>
+											<label for="chx-2-169">
+												<span class="name">Nissan</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-169" onclick="ajaxReload($(this).val())" value="/calendar/filter-nissan" id="chx-2-169">
+											</label>
+											<label for="chx-2-247">
+												<span class="name">Opel</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-247" onclick="ajaxReload($(this).val())" value="/calendar/filter-opel" id="chx-2-247">
+											</label>
+											<label for="chx-2-176">
+												<span class="name">Peugeot</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-176" onclick="ajaxReload($(this).val())" value="/calendar/filter-peugeot" id="chx-2-176">
+											</label>
+											<label for="chx-2-297">
+												<span class="name">Porsche</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-297" onclick="ajaxReload($(this).val())" value="/calendar/filter-porsche" id="chx-2-297">
+											</label>
+											<label for="chx-2-314">
+												<span class="name">Ravon</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-314" onclick="ajaxReload($(this).val())" value="/calendar/filter-ravon" id="chx-2-314">
+											</label>
+											<label for="chx-2-159">
+												<span class="name">Renault</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-159" onclick="ajaxReload($(this).val())" value="/calendar/filter-renault" id="chx-2-159">
+											</label>
+											<label for="chx-2-174">
+												<span class="name">Skoda</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-174" onclick="ajaxReload($(this).val())" value="/calendar/filter-skoda" id="chx-2-174">
+											</label>
+											<label for="chx-2-306">
+												<span class="name">Smart</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-306" onclick="ajaxReload($(this).val())" value="/calendar/filter-smart" id="chx-2-306">
+											</label>
+											<label for="chx-2-265">
+												<span class="name">Suzuki</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-265" onclick="ajaxReload($(this).val())" value="/calendar/filter-suzuki" id="chx-2-265">
+											</label>
+											<label for="chx-2-312">
+												<span class="name">Tesla</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-312" onclick="ajaxReload($(this).val())" value="/calendar/filter-tesla" id="chx-2-312">
+											</label>
+											<label for="chx-2-202">
+												<span class="name">Toyota</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-202" onclick="ajaxReload($(this).val())" value="/calendar/filter-toyota" id="chx-2-202">
+											</label>
+											<label for="chx-2-164">
+												<span class="name">Volkswagen</span>
+												<!--span class="i-count">(5авто)</span-->
+												<input type="checkbox" name="chx-2-164" onclick="ajaxReload($(this).val())" value="/calendar/filter-volkswagen" id="chx-2-164">
+											</label>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title">Об'єм двигуна (мл)</div>
+										<div class="filter-list f-range group-f" data-optionname="volume">
+											<input type="number" data-min="998" data-max="3600" value="998" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="998" data-max="3600" value="3600" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="998" data-slider-max="3600" data-slider-step="100" data-slider-value="[998,3600]"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title">Ціна авто (USD)</div>
+										<div class="filter-list f-range group-f" data-optionname="price">
+											<input type="number" data-min="5300" data-max="98000" value="5300" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="5300" data-max="98000" value="98000" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="5300" data-slider-max="98000" data-slider-step="100" data-slider-value="[5300,98000]"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title">Рік авто</div>
+										<div class="filter-list f-range group-f" data-optionname="year">
+											<input type="number" data-min="2008" data-max="2022" value="2008" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="2008" data-max="2022" value="2022" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="2008" data-slider-max="2022" data-slider-step="1" data-slider-value="[2008,2022]"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title">Пробіг авто (км)</div>
+										<div class="filter-list f-range group-f" data-optionname="mileage">
+											<input type="number" data-min="5000" data-max="272000" value="5000" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="5000" data-max="272000" value="272000" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="5000" data-slider-max="272000" data-slider-step="100" data-slider-value="[5000,272000]"></div>
+										</div>
+									</div>
+
+									<div class="filter-item">
+										<div class="filter-title">Трансмісія</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-3-168">
+												<span class="name">Автомат</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-3-168" value="/calendar/filter-avtomat" id="chx-3-168">
+											</label>
+											<label for="chx-3-163">
+												<span class="name">Ручна / Механіка</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-3-163" value="/calendar/filter-ruchna-mehanika" id="chx-3-163">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title">Колір</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-4-161">
+												<span class="name">Білий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-161" value="/calendar/filter-bilij" id="chx-4-161">
+											</label>
+											<label for="chx-4-198">
+												<span class="name">Бежевий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-198" value="/calendar/filter-bezhevij" id="chx-4-198">
+											</label>
+											<label for="chx-4-193">
+												<span class="name">Коричневий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-193" value="/calendar/filter-korichnevij" id="chx-4-193">
+											</label>
+											<label for="chx-4-173">
+												<span class="name">Сірий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-173" value="/calendar/filter-sirij" id="chx-4-173">
+											</label>
+											<label for="chx-4-166">
+												<span class="name">Синій</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-166" value="/calendar/filter-sinij" id="chx-4-166">
+											</label>
+											<label for="chx-4-219">
+												<span class="name">Червоний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-219" value="/calendar/filter-chervonij" id="chx-4-219">
+											</label>
+											<label for="chx-4-178">
+												<span class="name">Чорний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-4-178" value="/calendar/filter-chornij" id="chx-4-178">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title">Тип двигуна</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-7-167">
+												<span class="name">Бензин</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-7-167" value="/calendar/filter-benzin" id="chx-7-167">
+											</label>
+											<label for="chx-7-185">
+												<span class="name">Газ / Бензин</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-7-185" value="/calendar/filter-gaz-benzin" id="chx-7-185">
+											</label>
+											<label for="chx-7-239">
+												<span class="name">Гибрид</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-7-239" value="/calendar/filter-gibrid" id="chx-7-239">
+											</label>
+											<label for="chx-7-162">
+												<span class="name">Дизель</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-7-162" value="/calendar/filter-dizel" id="chx-7-162">
+											</label>
+											<label for="chx-7-269">
+												<span class="name">Электро</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-7-269" value="/calendar/filter-elektro" id="chx-7-269">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title">Клас</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-18-189">
+												<span class="name">Екологічний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-18-189" value="/calendar/filter-eco-friendly" id="chx-18-189">
+											</label>
+											<label for="chx-18-190">
+												<span class="name">Економний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-18-190" value="/calendar/filter-ekonomichnij" id="chx-18-190">
+											</label>
+											<label for="chx-18-187">
+												<span class="name">Міський</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-18-187" value="/calendar/filter-miskij" id="chx-18-187">
+											</label>
+											<label for="chx-18-191">
+												<span class="name">Нестримний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-18-191" value="/calendar/filter-pozashlyahovik" id="chx-18-191">
+											</label>
+											<label for="chx-18-188">
+												<span class="name">Сімейний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-18-188" value="/calendar/filter-simejnij" id="chx-18-188">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title">Кузов</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-15-212">
+												<span class="name">Кабріолет</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-212" value="/calendar/filter-kabriolet" id="chx-15-212">
+											</label>
+											<label for="chx-15-231">
+												<span class="name">Кросовер</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-231" value="/calendar/filter-krosover" id="chx-15-231">
+											</label>
+											<label for="chx-15-211">
+												<span class="name">Купе</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-211" value="/calendar/filter-kupe" id="chx-15-211">
+											</label>
+											<label for="chx-15-209">
+												<span class="name">Мінівен</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-209" value="/calendar/filter-miniven" id="chx-15-209">
+											</label>
+											<label for="chx-15-210">
+												<span class="name">Позашляховик</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-210" value="/calendar/filter-vnedorozhnik" id="chx-15-210">
+											</label>
+											<label for="chx-15-214">
+												<span class="name">Седан</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-214" value="/calendar/filter-sedan" id="chx-15-214">
+											</label>
+											<label for="chx-15-207">
+												<span class="name">Універсал</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-207" value="/calendar/filter-universal" id="chx-15-207">
+											</label>
+											<label for="chx-15-208">
+												<span class="name">Хетчбек</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-15-208" value="/calendar/filter-hetchbek" id="chx-15-208">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item filter-place">
+										<div class="filter-title">Звідки авто</div>
+										<div class="filter-list f-checkbox">
+											<label for="chx-19-271">
+												<span class="name">Київ</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-19-271" value="/calendar/filter-m-kyiv" id="chx-19-271">
+											</label>
+											<label for="chx-19-272">
+												<span class="name">Львів</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" onclick="ajaxReload($(this).val())" name="chx-19-272" value="/calendar/filter-m-lviv" id="chx-19-272">
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-result-info">
+									<div class="filter-result-txt">
+										Знайдено 0 автомобілів
+									</div>
+									<button class="filter-close">Закрити</button>
+								</div>
+							</div>
+							<div class="a-main" data-reload="ajax-reload-product">
+								<p class="heading calendar-not-found-items">Сорі, цього авто зараз немає в наявності... <br><a href="/calendar">Переглянь, що є.</a>
+								</p>
+								<div data-reload="ajax-reload-navigation">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="accordion-section">
+					<div class="container">
+						<div class="title">Найчастіші питання при покупці авто</div>
+						<div id="accordion">
+							<div class="accordion__title">Що таке ХАПАЙ аукціон авто?</div>
+							<div class="accordion__info">
+								<p>ХАПАЙ аукціон авто - перший в Україні чесний сервіс покупки та
+									продажу вживаних авто.</p>
+
+								<p>10 років роботи на фінансовому ринку дали змогу краще розуміти запити клієнтів, бути
+									гнучкими та корисними, відповідально та швидко закривати всі потреби. Ми добре знаємо
+									про складнощі вибору та перевірки б/в авто. Саме тому, ми вклали весь досвід в створення
+									аукціону.</p>
+
+								<p>Наша мета - зробити ринок купівлі та продажу чесним та прозорим.</p>
+							</div>
+							<div class="accordion__title">ХАПАЙ аукціон авто - такий самий, як американські та європейські
+								аукціони?
+							</div>
+							<div class="accordion__info">
+								<p>В дечому подібний, але загалом інакший.</p>
+
+								<p>По-перше, до аукціону потрапляють тільки перевірені авто в хорошому стані.</p>
+
+								<p>Ми не купуємо «потопельників» а також авто, які потребують капітального ремонту та
+									суттєвих відновлювальних робіт</p>
+
+								<p>По-друге, до старту аукціону, ти можеш записатися на тест-драйв, переконатися в технічній
+									справності авто, відчути, що воно чекає саме тебе =)</p>
+
+								<p>По-третє, аукціон стартує з визначеної мінімальної ринкової вартості, яка допоможе тобі
+									сформувати оптимальну та чесну вартість купівлі.</p>
+
+								<p>Четверте. З нами маєш додаткові опції:</p>
+
+								<ul>
+									<li>лізинг</li>
+									<li>trade in</li>
+								</ul>
+							</div>
+							<div class="accordion__title">Як формується ціна на авто аукціону?</div>
+							<div class="accordion__info">
+								<p>Попередньо вартість формується за рахунок аналітики сайтів
+									продажу вживаних авто. На оцінку також впливає стан автомобіля на момент огляду нашими
+									спеціалістами та після техогляду на СТО. Кінцеву вартість продажу формують ставки учасників
+									аукціону.</p>
+							</div>
+							<div class="accordion__title">Як відбувається перевірка авто?</div>
+							<div class="accordion__info">
+								<p>Спочатку наші спеціалісти особисто перевіряють стан основних
+									систем, вузлів і агрегатів. Сюди входить діагностика двигуна, коробки передач, гальмівної
+									системи, рульового управління, ходової частини, електрообладнання, стану технічних рідин та
+									ін.</p>
+
+								<p>Також проводиться перевірка лакофарбового покриття на предмет пошкоджень (з використанням
+									товщиноміра). Авто перевіряється і на предмет внутрішніх механічних дефектів. Обов&#39;язковий
+									тест-драйв.</p>
+
+								<p>Перед розміщенням лоту на аукціоні, авто проходить додаткову перевірку на СТО.</p>
+							</div>
+							<div class="accordion__title">Чи доступний тест-драйв?</div>
+							<div class="accordion__info">
+								<p>Однозначно! Тест-драйв доступний в робочі дні, з 9:00 до 18:00.
+									Аби ми приділили тобі максимум уваги, радимо попередньо зателефонувати та погодити час.</p>
+							</div>
+							<div class="accordion__title">Яких років випуску авто?</div>
+							<div class="accordion__info">
+								<p>В наявності авто від 2008 року випуску.</p>
+							</div>
+							<div class="accordion__title">Як взяти участь в аукціоні?</div>
+							<div class="accordion__info">
+								<ol>
+									<li>Пройди коротку реєстрацію.</li>
+									<li>Ознайомся з правилами проведення аукціону (самостійно або за допомогою менеджера).
+									</li>
+									<li>Обирай автомобіль на аукціоні та приходь на тест-драйв.</li>
+								</ol>
+							</div>
+							<div class="accordion__title">Як визначається переможець аукціону?</div>
+							<div class="accordion__info">
+								<p>В аукціоні перемагає той, хто зробив максимальну ставку. Одразу
+									після завершення торгів наш менеджер зв&#39;язується з переможцем та погоджує деталі
+									угоди.</p>
+							</div>
+							<div class="accordion__title">Коли я отримаю автомобіль?</div>
+							<div class="accordion__info">
+								<p>Автомобіль ти можеш забрати одразу після перемоги в
+									аукціоні.</p>
+
+								<p>Або, якщо ти просто приїхав до салону ХАПАЙавто, протестував автомобіль і не захотів
+									чекати початку аукціону, можеш купити автівку прямо у салоні (за вартістю, вказаною на
+									сайті або оформити лізинг).</p>
+							</div>
+							<div class="accordion__title">Що робити, якщо через деякий час я захочу поміняти авто?</div>
+							<div class="accordion__info">
+								<p>Жодних проблем. Маємо послугу «traide in» - приймемо старе авто
+									на рахунок купівлі нового<strong>*</strong>, що суттєво знизить твої витрати.</p>
+
+								<p><strong>* </strong>підберемо вживане авто за чесною ціною або профінансуємо новий
+									автомобіль із салону</p>
+							</div>
+							<div class="accordion__title">Як купити авто за повну вартість?</div>
+							<div class="accordion__info">
+								<p>➢ Обери автомобіль</p>
+
+								<p>➢ Натисни "Купити"</p>
+
+								<p>➢ Залиш контактні дані</p>
+
+								<p>➢ Поспілкуйся з менеджером</p>
+
+								<p>➢ Оплати <em>(оплата здійснюється безготівково на банківський рахунок)</em></p>
+
+								<p>➢ Отримай авто</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Що таке ХАПАЙ аукціон авто?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>ХАПАЙ аукціон авто - перший в Україні чесний сервіс покупки та продажу вживаних авто.</p> <p>10 років роботи на фінансовому ринку дали змогу краще розуміти запити клієнтів, бути гнучкими та корисними, відповідально та швидко закривати всі потреби. Ми добре знаємо про складнощі вибору та перевірки б/в авто. Саме тому, ми вклали весь досвід в створення аукціону.</p> <p>Наша мета - зробити ринок купівлі та продажу чесним та прозорим.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "ХАПАЙ аукціон авто - такий самий, як американські та європейські аукціони?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>В дечому подібний, але загалом інакший.</p> <p>По-перше, до аукціону потрапляють тільки перевірені авто в хорошому стані.</p> <p>Ми не купуємо «потопельників» а також авто, які потребують капітального ремонту та суттєвих відновлювальних робіт</p> <p>По-друге, до старту аукціону, ти можеш записатися на тест-драйв, переконатися в технічній справності авто, відчути, що воно чекає саме тебе =)</p> <p>По-третє, аукціон стартує з визначеної мінімальної ринкової вартості, яка допоможе тобі сформувати оптимальну та чесну вартість купівлі.</p> <p>Четверте. З нами маєш додаткові опції:</p> <ul> <li>лізинг</li> <li>trade in</li> </ul> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Як формується ціна на авто аукціону?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Попередньо вартість формується за рахунок аналітики сайтів продажу вживаних авто. На оцінку також впливає стан автомобіля на момент огляду нашими спеціалістами та після техогляду на СТО. Кінцеву вартість продажу формують ставки учасників аукціону.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Як відбувається перевірка авто?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Спочатку наші спеціалісти особисто перевіряють стан основних систем, вузлів і агрегатів. Сюди входить діагностика двигуна, коробки передач, гальмівної системи, рульового управління, ходової частини, електрообладнання, стану технічних рідин та ін.</p> <p>Також проводиться перевірка лакофарбового покриття на предмет пошкоджень (з використанням товщиноміра). Авто перевіряється і на предмет внутрішніх механічних дефектів. Обов&#39;язковий тест-драйв.</p> <p>Перед розміщенням лоту на аукціоні, авто проходить додаткову перевірку на СТО.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Чи доступний тест-драйв?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Однозначно! Тест-драйв доступний в робочі дні, з 9:00 до 18:00. Аби ми приділили тобі максимум уваги, радимо попередньо зателефонувати та погодити час.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Яких років випуску авто?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>В наявності авто від 2008 року випуску.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Як взяти участь в аукціоні?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<ol> <li>Пройди коротку реєстрацію.</li> <li>Ознайомся з правилами проведення аукціону (самостійно або за допомогою менеджера).</li> <li>Обирай автомобіль на аукціоні та приходь на тест-драйв.</li> </ol> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Як визначається переможець аукціону?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>В аукціоні перемагає той, хто зробив максимальну ставку. Одразу після завершення торгів наш менеджер зв&#39;язується з переможцем та погоджує деталі угоди.</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Коли я отримаю автомобіль?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Автомобіль ти можеш забрати одразу після перемоги в аукціоні.</p> <p>Або, якщо ти просто приїхав до салону ХАПАЙавто, протестував автомобіль і не захотів чекати початку аукціону, можеш купити автівку прямо у салоні (за вартістю, вказаною на сайті або оформити лізинг).</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Що робити, якщо через деякий час я захочу поміняти авто?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>Жодних проблем. Маємо послугу «traide in» - приймемо старе авто на рахунок купівлі нового<strong>*</strong>, що суттєво знизить твої витрати.</p> <p><strong>* </strong>підберемо вживане авто за чесною ціною або профінансуємо новий автомобіль із салону</p> "
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Як купити авто за повну вартість?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<p>➢ Обери автомобіль</p> <p>➢ Натисни \"Купити\"</p> <p>➢ Залиш контактні дані</p> <p>➢ Поспілкуйся з менеджером</p> <p>➢ Оплати <em>(оплата здійснюється безготівково на банківський рахунок)</em></p> <p>➢ Отримай авто</p> "
+                            }
+                        }
+                    ]
+                }
+            </script>
+
+				<section id="seo-text-section" class="seo-text-section">
+					<div class="container">
+						<h2 style="text-align:justify">Перший український автоаукціон: як він працює і чому це вигідніше,
+							ніж покупка автомобіля на Auto.Ria</h2>
+
+						<p style="text-align:justify">І <a href="/">купити</a> і <a href="/sell-car">продати авто з
+								пробігом</a> - це багатоетапні завдання. Так, продавець зобов&#39;язаний підготувати машину:
+							помити її, навести порядок під капотом, провести хімчистку в салоні та впорядкувати документи.
+							Покупцеві зі свого боку доводиться витрачати час на переговори та огляд авто, перевіряти його
+							юридичну чистоту. Все це величезні часові витрати для обох сторін, уникнути яких допоможе одна
+							проста річ - аукціон.</p>
+
+						<p style="text-align:justify">Автомобільний аукціон - найпопулярніше явище в Європі та Америці. Саме
+							на автоаукціоні можна в рази дешевше <a href="/">купити б/в автомобіль</a> у хорошому або навіть
+							чудовому стані. Аукціон продажів авто як налагоджена схема працює вже дуже давно. Наша компанія
+							вирішила інтегрувати цю культуру в український ринок авто, щоб кожен з вас міг знайти сучасну
+							машину за доступною ціною.</p>
+
+						<h2 style="text-align:justify">ХАПАЙ аукціон авто - можливість купити вживаний автомобіль в Україні
+							швидко та безпечно</h2>
+
+						<p style="text-align:justify">Більшість водіїв в Україні їздять на б/в авто, а попит на вживані
+							машини зростає з кожним роком. І це логічно, адже автомобіль, якому 5 років міг мало
+							експлуатуватися, і тепер виглядає практично новим. Але його ціна на вторинному ринку буде вже на
+							30-40% меншою, ніж якби покупець брав його в дилерському центрі.</p>
+
+						<p style="text-align:justify">Тільки такий попит завжди впирався у фактор безпеки. Далеко не кожен
+							українець чудово розуміється на машинах, а значить не може беззаперечно довіряти продавцю, який
+							запевняє, що його автомобіль у відмінному стані, "не битий, не фарбований".</p>
+
+						<p style="text-align:justify">Аукціон авто позбавляє покупця всіх невідомих у рівнянні. Ми в ХАПАЙ
+							аукціон авто організували перший в Україні справді безпечний автоаукціон, який працює за
+							прозорими та зрозумілими алгоритмами для всіх. Наше ключове завдання - популяризувати лізингові
+							аукціони авто, щоби викуп машини був максимально простим для кожного українця.</p>
+
+						<h3 style="text-align:justify">Чому український автоаукціон безпечніший за покупку авто "з рук"</h3>
+
+						<p style="text-align:justify">Досвідчені водії бажають купувати б/в авто по-старому: знайшов
+							оголошення в інтернеті, приїхав, оглянув машину, поспілкувався і поторгувався з власником на
+							місці. Але далеко не кожен може з першого разу безпомилково оцінити стан авто. Онлайн аукціон
+							дозволяє обійти майже всі можливі граблі. <strong>Ваша покупка буде безпечною, адже:</strong>
+						</p>
+
+						<ol>
+							<li style="text-align:justify">ХАПАЙ аукціон авто перевіряє технічний стан автомобіля перед тим,
+								як він потрапляє на торги. Якщо з машиною щось не так, то вона обов&#39;язково проходить
+								технічне обслуговування. Тобто, купуючи авто на автоаукціоні, ви можете бути впевнені у його
+								ідеальному технічному стані.
+							</li>
+							<li style="text-align:justify">Юридичний відділ ХАПАЙ аукціон авто перевіряє історію автомобіля.
+								Тому покупка викраденого автомобіля просто виключена. Ми перевіряємо машину на сервісах Epic
+								Win, CAR Fax, Auto Check.
+							</li>
+							<li style="text-align:justify">Сам аукціон авто та всі наступні етапи процедури викупу проходять
+								при нашій повній підтримці. Ми тримаємо з вами зв&#39;язок онлайн, по телефону або можемо
+								зустрітися в одному з наших офісів. Крім того, ми пропонуємо вам підтримку протягом усього
+								періоду експлуатації.
+							</li>
+						</ol>
+
+						<p style="text-align:justify">Український автоаукціон безпечніший за будь-який закордонний аукціон
+							ще й тому, що автомобілі, які продаються тут, простіше перевірити. Якщо розглядати американські
+							чи азіатські автоаукціони, то там складніше, особливо з дорогими люксовими авто. Нерідко
+							продавці йдуть на нахабні хитрощі, щоб продати своє авто: наприклад, впорядковують тільки зовні,
+							а подряпини і потертості зафарбовують звичайною фарбою з балончика. При цьому під капотом
+							залишається повний хаос, що перевірити перед покупкою неможливо.</p>
+
+						<p style="text-align:justify">Зрештою, на фото онлайн аукціону все виглядає ідеально. А коли
+							автомобіль приїжджає в Україну, виринають різні неприємні сюрпризи. В окремих випадках може
+							виявитися, що авто вже неможливо довести до ідеального технічного стану.</p>
+
+						<p style="text-align:justify">Участь в автоаукціоні в Україні вбереже вас від таких неприємностей.
+							Тут ви боретесь в онлайн торгах за вже перевірену машину, яка точно на повному ходу, а її опис
+							відповідає дійсності. ХАПАЙ аукціон авто, як безпосередній організатор аукціону, суворо
+							контролює авто, які потрапляють на торги.</p>
+
+						<h2 style="text-align:justify">Переваги автоаукціону в Україні порівняно із закордонними
+							аукціонами</h2>
+
+						<p style="text-align:justify">Крім безпеки і прозорості торгів, покупка авто через аукціон має свої
+							переваги. <strong>Завдяки ініціативі ХАПАЙ аукціон авто, ви можете оцінити такі переваги
+								придбання автомобіля за такою схемою:</strong></p>
+
+						<ol>
+							<li style="text-align:justify">Ви отримаєте авто набагато швидше, ніж якби купували його на
+								автоаукціоні з-за кордону. Не доведеться чекати, доки машина приїде та її відремонтують.
+								Щойно ваша ставка виграла, можна займатися оформленням документів на авто.
+							</li>
+							<li style="text-align:justify">Аукціон проходить онлайн. Це означає, що вам не потрібно нікуди
+								їхати, нічого не доведеться дивитись і ні з ким домовлятися. У кожному лоті є докладний опис
+								автомобіля та вся актуальна інформація про його стан.
+							</li>
+							<li style="text-align:justify">Український автоаукціон дозволить <a href="/">купити авто</a>
+								дешевше, ніж із-за кордону, адже на вас не лягає оплата доставки та мит. Навіть враховуючи,
+								що авто проходить ТО та різні перевірки, після торгів його ціна залишається набагато нижчою,
+								ніж якби ви брали транспортний засіб із салону від офіційного дилера.
+							</li>
+						</ol>
+
+						<h2 style="text-align:justify">ХАПАЙ аукціон авто - найнадійніший дилер з продажу б/в авто в
+							Україні.</h2>
+
+						<p style="text-align:justify">Ми в ХАПАЙ аукціон авто не перший рік працюємо з вживаними
+							автомобілями. Наші схеми співпраці з автомайстернями та держструктурами по Україні давно
+							налагоджені. Тепер ми втілюємо нову глобальну мету - створення першого в країні
+							автоаукціону.</p>
+
+						<p style="text-align:justify">Відгуки перших щасливчиків, які вже встигли придбати машину з пробігом
+							через аукціон авто, свідчать про те, що наша праця не даремна. Покупці оцінили можливість
+							вибрати автомобіль онлайн та отримати його у своєму місті після викупу на аукціоні.</p>
+
+						<p style="text-align:justify"><strong>Торги - це простий та захоплюючий процес. Щоб взяти участь в
+								аукціоні, вам потрібно:</strong></p>
+
+						<ul>
+							<li style="text-align:justify">вибрати автомобіль із каталогу;</li>
+							<li style="text-align:justify">внести фіксований гарантійний платіж у розмірі 1000 грн.;</li>
+							<li style="text-align:justify">підключитися до аукціону та стежити за ним, доки ваша ставка не
+								переможе;
+							</li>
+							<li style="text-align:justify">щойно торги закінчаться, з вами зв&#39;яжеться наш менеджер і
+								розповість, що робити далі.
+							</li>
+						</ul>
+
+						<p style="text-align:justify">Після того як аукціон авто закінчився, йде досить стандартна процедура
+							оформлення паперів, якою займаються представники ХАПАЙ аукціон авто. Як тільки всі реєстраційні
+							процеси закінчаться, ви зможете забрати свій автомобіль за вказаною в лоті адресою.</p>
+					</div>
+				</section>
+
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

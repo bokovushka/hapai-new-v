@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="">
+	<title>Автовикуп</title>
+
+	<meta name="description" content="Автовикуп">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="buyout-car-p">
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<div class="choice-car-wrapper">
+					<div class="container">
+						<div class="choice-car__main">
+							<section class="breadcrumb">
+								<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/">
+											<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+										</a>
+										<meta itemprop="position" content="0" />
+									</li>
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/catalog">
+											<span itemprop="name">Автовикуп</span>
+										</a>
+										<meta itemprop="position" content="1" />
+									</li>
+								</ul>
+							</section>
+							<section class="choice-car">
+								<div class="choice-car__content">
+									<div class="choice-car__info">
+										<div class="h1">Хочеш продати авто?</div>
+										<ul class="choice-car__list">
+											<li>Автомобіль не старше 2010 року</li>
+											<li>З українською реєстрацією</li>
+											<li>У гарному стані й не потребує капітального ремонту</li>
+										</ul>
+										<div class="subtitle">Придбаємо його хоч сьогодні!</div>
+									</div>
+									<form id="form-buyout-car" class="form-choice-car form-buyout-car">
+										<div class="h1">Оцініть свій автомобіль</div>
+										<div class="user-info">
+											<div class="user-txt">
+												<input type="text" name="client_name" placeholder="Ваше ім'я">
+												<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+											</div>
+											<div class="user-txt">
+												<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+												<p class="help-block help-block-error">Невірний телефон</p>
+											</div>
+											<div class="form-buyout-car-inputs-wrapper">
+												<div class="form-buyout-car-select-wrapper">
+													<select data-placeholder="Марка авто" class="form-buyout-car-select" tabindex="12">
+														<option value=""></option>
+														<option value="Acura">Acura</option>
+														<option value="Alfa Romeo">Alfa Romeo</option>
+														<option value="Audi">Audi</option>
+														<option value="BMW">BMW</option>
+														<option value="Daewoo">Daewoo</option>
+														<option value="Dodge">Dodge</option>
+														<option value="Fiat">Fiat</option>
+														<option value="Ford">Ford</option>
+														<option value="Geely">Geely</option>
+														<option value="Great Wall">Great Wall</option>
+														<option value="Honda">Honda</option>
+														<option value="Hyundai">Hyundai</option>
+														<option value="Infiniti">Infiniti</option>
+														<option value="Jaguar">Jaguar</option>
+														<option value="Jeep">Jeep</option>
+														<option value="Kia">Kia</option>
+														<option value="Land Rover">Land Rover</option>
+														<option value="Lexus">Lexus</option>
+														<option value="Mazda">Mazda</option>
+														<option value="Mercedes-Benz">Mercedes-Benz</option>
+														<option value="MG">MG</option>
+														<option value="MINI">MINI</option>
+														<option value="Mitsubishi">Mitsubishi</option>
+														<option value="Nissan">Nissan</option>
+														<option value="Opel">Opel</option>
+														<option value="Peugeot">Peugeot</option>
+														<option value="Porsche">Porsche</option>
+														<option value="Ravon">Ravon</option>
+														<option value="Renault">Renault</option>
+														<option value="SEAT">SEAT</option>
+														<option value="Skoda">Skoda</option>
+														<option value="Smart">Smart</option>
+														<option value="Subaru">Subaru</option>
+														<option value="Suzuki">Suzuki</option>
+														<option value="Tesla">Tesla</option>
+														<option value="Toyota">Toyota</option>
+														<option value="Triumph">Triumph</option>
+														<option value="Volkswagen">Volkswagen</option>
+														<option value="Volvo">Volvo</option>
+													</select>
+												</div>
+												<div class="form-buyout-car-select-wrapper">
+													<select data-placeholder="Модель авто" class="form-buyout-car-select" tabindex="12">
+														<option value=""></option>
+														<option value="Acura">Acura</option>
+														<option value="Alfa Romeo">Alfa Romeo</option>
+														<option value="Audi">Audi</option>
+														<option value="BMW">BMW</option>
+														<option value="Daewoo">Daewoo</option>
+														<option value="Dodge">Dodge</option>
+														<option value="Fiat">Fiat</option>
+														<option value="Ford">Ford</option>
+														<option value="Geely">Geely</option>
+														<option value="Great Wall">Great Wall</option>
+														<option value="Honda">Honda</option>
+														<option value="Hyundai">Hyundai</option>
+														<option value="Infiniti">Infiniti</option>
+														<option value="Jaguar">Jaguar</option>
+														<option value="Jeep">Jeep</option>
+														<option value="Kia">Kia</option>
+														<option value="Land Rover">Land Rover</option>
+														<option value="Lexus">Lexus</option>
+														<option value="Mazda">Mazda</option>
+														<option value="Mercedes-Benz">Mercedes-Benz</option>
+														<option value="MG">MG</option>
+														<option value="MINI">MINI</option>
+														<option value="Mitsubishi">Mitsubishi</option>
+														<option value="Nissan">Nissan</option>
+														<option value="Opel">Opel</option>
+														<option value="Peugeot">Peugeot</option>
+														<option value="Porsche">Porsche</option>
+														<option value="Ravon">Ravon</option>
+														<option value="Renault">Renault</option>
+														<option value="SEAT">SEAT</option>
+														<option value="Skoda">Skoda</option>
+														<option value="Smart">Smart</option>
+														<option value="Subaru">Subaru</option>
+														<option value="Suzuki">Suzuki</option>
+														<option value="Tesla">Tesla</option>
+														<option value="Toyota">Toyota</option>
+														<option value="Triumph">Triumph</option>
+														<option value="Volkswagen">Volkswagen</option>
+														<option value="Volvo">Volvo</option>
+													</select>
+												</div>
+											</div>
+											<div class="user-txt">
+												<input id="form-buyout-car-year" type="text" name="car-year" placeholder="Рік випуску авто">
+												<p class="help-block help-block-error">Обов'язкове поле. Тільки цифри</p>
+											</div>
+											<div class="checkbox">
+												<label for="pre-sell-checkbox-agree"></label>
+												<input type="checkbox" checked name="agreement" id="pre-sell-checkbox-agree">
+												<span class="checkbox__txt">Даю згоду на обробку <a href="##">персональних даних</a>.</span>
+											</div>
+											<button type="submit" class="btn btn-style-3">Відправити заявку</button>
+										</div>
+										<div class="tip">Зверніть увагу! Авто повинно бути не старше 2014 року</div>
+									</form>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<section class="how-works">
+					<div class="container">
+						<div class="title">3 кроки до продажу авто</div>
+						<div class="how-works__wrap">
+							<div class="how-works__item">
+								<div class="heading">Крок 1</div>
+								<p>Залиш заявку, поспілкуйся з менеджером аби попередньо оцінити авто (до хвилини твого часу)</p>
+							</div>
+							<div class="how-works__item">
+								<div class="heading">Крок 2</div>
+								<p>Обери зручний час і місце зустрічі (одне з наших відділень)</p>
+							</div>
+							<div class="how-works__item">
+								<div class="heading">Крок 3</div>
+								<p>Після ретельного огляду авто, ми озвучуємо ціну (не нижче ринкової). Якщо ціна влаштовує, оформлюємо угоду і одразу віддаємо гроші за авто.</p>
+							</div>
+						</div>
+						<button type="button" class="btn btn-style-3">Відправити заявку</button>
+					</div>
+				</section>
+				<section class="why-sell-car">
+					<div class="container">
+						<div class="title">Чому продають авто через ХАПАЙавто?</div>
+						<div class="swiper-container why-sell-car__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="why-sell-car__item">
+										<div class="svg-icon">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#security"></use>
+											</svg>
+										</div>
+										<div class="heading">Зручність та безпека</div>
+										<p class="expandable">Компанія ХАПАЙавто входить до лізингової компанії ULF, а ULF, в свою чергу, до групи ТАС</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="why-sell-car__item">
+										<div class="svg-icon">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#time"></use>
+											</svg>
+										</div>
+										<div class="heading">Швидкість</div>
+										<p>Залиш заявку, обери час та місце зустрічі, отримай цінову пропозицію (не нижче ринкової) та гроші.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="why-sell-car__item">
+										<div class="svg-icon">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#car-service"></use>
+											</svg>
+										</div>
+										<div class="heading">Комплексний сервіс</div>
+										<p class="expandable">Ми знаємо, як важливо надавати комплексний сервіс. Оцінка авто, оформлення документів, оплата за авто - все швидко</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="why-sell-car__item">
+										<div class="svg-icon">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#trust"></use>
+											</svg>
+										</div>
+										<div class="heading">Довіра</div>
+										<p>Ви отримуєте повний фотозвіт, детальний акт огляду, експертний висновок і відмінний автомобіль за зрозумілі гроші</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="qa-loop" class="partners sell-car-slider">
+					<div class="container">
+						<div class="partners__title">
+							<div class="title">Продано. ХАПАЙ аукціон АВТО</div>
+							<div class="swiper__buttons">
+								<div class="btn__swiper icon-u_arrow-left "></div>
+								<div class="btn__swiper icon-u_arrow-right "></div>
+							</div>
+						</div>
+						<div class="swiper-container partners__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/peugeot-3008">
+																<img src="files/cache/files/images/98/bf/bfe37f51f4b7f040f1037b503b7fe5a1/500_500/placeholder.png" alt="Peugeot 3008">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/38502bec383743e2b3b5565a285a8dd0.jpg" alt="Peugeot 3008-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/dce59d3fb47043818c8684eaaa615ddc.jpg" alt="Peugeot 3008-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/cbaf6c25b9da4319a991ab6b5c76caff.jpg" alt="Peugeot 3008-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/254ca0b99e14486c96630dd553667021.jpg" alt="Peugeot 3008-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/5ae78c5a8158417b87eed860be0343b4.jpg" alt="Peugeot 3008-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/91c5b3c4dd6946e4946207b3ed698cac.jpg" alt="Peugeot 3008-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/6e23493cd6bb45b3bef6a8e6ceac075c.jpg" alt="Peugeot 3008-7">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="76">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/peugeot-3008">
+													<div class="heading">Peugeot 3008 2010</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>209000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>-</p>
+													<p><span class="icon-oil icon-u_pump"></span>-, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">306 000 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/hyundai-sonata-318634">
+																<img src="files/cache/files/images/101/e1/e1a07b691b4969866d9b64db61e85094/500_500/78.jpg" alt="Hyundai Sonata">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f5167642ddfd4edb892495ee33fe2eab.jpg" alt="Hyundai Sonata-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/03d3b2ac137647519d2dbad67af76aca.jpg" alt="Hyundai Sonata-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d4dd10c43f81443d991ab29800bc86dd.jpg" alt="Hyundai Sonata-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/b165f59183e843dc92564c30df83c761.jpg" alt="Hyundai Sonata-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0dfdd66b58b14063b420c6b143227518.jpg" alt="Hyundai Sonata-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/2964cdf03f954a36a82f772eb6e009d3.jpg" alt="Hyundai Sonata-6">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="78">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/hyundai-sonata-318634">
+													<div class="heading">Hyundai Sonata 2015</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>250000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Газ, 2.0</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">367 200 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/volkswagen-polo-318792">
+																<img src="files/cache/files/images/52/4f/4f3f919b6bf87c89be9a66f13efb98ae/500_500/79.jpg" alt="Volkswagen Polo">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d93b64f2166c4803a1bceddac1207bcf.jpg" alt="Volkswagen Polo-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0b489cc6829345d1b610cf5fe503d19c.jpg" alt="Volkswagen Polo-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/008a5ecd7329495e804126a9c5c5654f.jpg" alt="Volkswagen Polo-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/00eb8a46c06f4352ba6c15e661f2c128.jpg" alt="Volkswagen Polo-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7f5669963c304693917ff55a28b8d6f5.jpg" alt="Volkswagen Polo-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8b396b24a8a44d3ba0770d6914da2a97.jpg" alt="Volkswagen Polo-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1972761e460d444bb4f277522e29f265.jpg" alt="Volkswagen Polo-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/b07203987c074f03a8b487575158ead1.jpg" alt="Volkswagen Polo-8">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="79">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/volkswagen-polo-318792">
+													<div class="heading">Volkswagen Polo 2017</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>174000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">301 920 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/toyota-proace-verso-332113">
+																<img src="files/cache/files/images/98/bc/bc4c4401710aca6f10d5a00d99e5c4f7/500_500/83.jpg" alt="Toyota Proace Verso">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/460cb8fd97e9475596f6d6d54dec1c60.jpg" alt="Toyota Proace Verso-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1f27e4416d6843ce883fd037643069a9.jpg" alt="Toyota Proace Verso-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/600a6dac230445c489ada6e391be7d67.jpg" alt="Toyota Proace Verso-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/3d70f4f0a96d40c5a30c676ac515cc9b.jpg" alt="Toyota Proace Verso-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/4ce1d679e7de479a982993a65b0d7ed4.jpg" alt="Toyota Proace Verso-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/9b24a8be1a414e0383714e893e61c0bf.jpg" alt="Toyota Proace Verso-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/83fd188df7e34f32984d0679f43ddb0d.jpg" alt="Toyota Proace Verso-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f54def01b71d4e389cf6685f1e4fa943.jpg" alt="Toyota Proace Verso-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/fb45abfadd9f465e9151f17d2ca596b3.jpg" alt="Toyota Proace Verso-9">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="83">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/toyota-proace-verso-332113">
+													<div class="heading">Toyota Proace Verso 2022</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>2000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 2.0</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">1 958 400 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/hyundai-sonata-336604">
+																<img src="files/cache/files/images/100/d2/d27aa56380a1919548448f9f3c06b289/500_500/86.jpg" alt="Hyundai Sonata">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/86e6698828e2409886a0c471ab634398.jpg" alt="Hyundai Sonata-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/46d1bff59cc04e488b3de8bdbcc683ae.jpg" alt="Hyundai Sonata-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d8915ae21a9d4116b6cd1681edddbeed.jpg" alt="Hyundai Sonata-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/6bb42760af044335adc4c43f0668c963.jpg" alt="Hyundai Sonata-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d76967e5674744ef8cd59eaf8e7585f0.jpg" alt="Hyundai Sonata-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a418ef658689435da30a26140cb82501.jpg" alt="Hyundai Sonata-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f4bb5acc0c644fe5baf401e7f20189c1.jpg" alt="Hyundai Sonata-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/3cd5c51a066b4269ae309a5314034270.jpg" alt="Hyundai Sonata-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/dca50824adce4c53a059509a2ca405f8.jpg" alt="Hyundai Sonata-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/2dedcd9c20da4353b8addbff6646942c.jpg" alt="Hyundai Sonata-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f92a0b6b48d14b99bf00537784f98aae.jpg" alt="Hyundai Sonata-11">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="86">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/hyundai-sonata-336604">
+													<div class="heading">Hyundai Sonata 2017</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>63000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.4</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">469 200 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/toyota-camry-339488">
+																<img src="files/cache/files/images/102/fc/fce2611ec67740d8e349e42ca966cb9f/500_500/89.jpg" alt="Toyota Camry">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/cc7ac0e83ed14ec59d79902e3ed1e4ed.jpg" alt="Toyota Camry-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e3ac7fd2840d4ae6afea2f45dc2a9971.jpg" alt="Toyota Camry-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7a3f6d9e6d93493aa65ac3155db41bd2.jpg" alt="Toyota Camry-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/cb0d473cf3b3499aa759217ad9b9499b.jpg" alt="Toyota Camry-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/ac2b2887500743008ba8321638cccb65.jpg" alt="Toyota Camry-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d2a9881e11be4ad8a47d13751bd30957.jpg" alt="Toyota Camry-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/9934439dbb674ba4ba1313abf74c3386.jpg" alt="Toyota Camry-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/953d7af01d124534969d64b44714bb3a.jpg" alt="Toyota Camry-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8ad39116c3f34f16b0941c37ebeb6ff8.jpg" alt="Toyota Camry-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/6c632a1766374d60aedfe15707dd7d54.jpg" alt="Toyota Camry-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/cd3e80efe7bc4d1ca51571120a04cd5a.jpg" alt="Toyota Camry-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/e0e8ce961e19435f97fc7209c27031e4.jpg" alt="Toyota Camry-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="89">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/toyota-camry-339488">
+													<div class="heading">Toyota Camry 2011</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>141000 км
+													</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.5</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">461 040 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/volvo-v40-339819">
+																<img src="files/cache/files/images/98/b8/b8b1cadda8a568837487728683da3bd0/500_500/91.jpg" alt="Volvo V40">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1d9c8f6efea341ee806757b113c4d44e.jpg" alt="Volvo V40-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d7d569b3d10748668e48361865b75984.jpg" alt="Volvo V40-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/03d278004b9a4557ba1e5a60baff7d81.jpg" alt="Volvo V40-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1a7b2f5a287b4fab956672927d358a63.jpg" alt="Volvo V40-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/19dec429a91c4bd2b2c46df2c85dc272.jpg" alt="Volvo V40-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/f2fe4b6dcdc1414a8708d0fee6eda111.jpg" alt="Volvo V40-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/2fd1636a09414a08a980526f2fee3331.jpg" alt="Volvo V40-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/bd10e1c28a714fc98986674b0428e310.jpg" alt="Volvo V40-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c4ca6f40fc6048f7bcdaf85b03299d80.jpg" alt="Volvo V40-9">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="91">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/volvo-v40-339819">
+													<div class="heading">Volvo V40 2013</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>88000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Львів</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.6</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">410 040 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/renault-clio-340149">
+																<img src="files/cache/files/images/100/d2/d2ae9358ebeb5205639376045c7ed757/500_500/92.jpg" alt="Renault Clio">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c518dad3a3d54ba0beb5147e8ec59363.jpg" alt="Renault Clio-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/aff74a767aa5424d9d68b92f87855791.jpg" alt="Renault Clio-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c389f03519f1464eb1f22d8a14a2d15c.jpg" alt="Renault Clio-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/726e53ef573b43a6bfbb2651bcb4319e.jpg" alt="Renault Clio-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/eabdbd3c7c184b0b996f1e1a30c5b3e1.jpg" alt="Renault Clio-5">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="92">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/renault-clio-340149">
+													<div class="heading">Renault Clio 2012</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>215000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Львів</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">191 760 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/renault-megane-340950">
+																<img src="files/cache/files/images/98/b3/b3e1446cd15012e805d1924e87cdb612/500_500/95.jpg" alt="Renault Megane">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/5c2c74d81ed04cdcbdc5eef59212b0f6.jpg" alt="Renault Megane-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/265bd71f59614cf697364dad8a4ace65.jpg" alt="Renault Megane-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1a635f39299144ed807ea7479e159ce3.jpg" alt="Renault Megane-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/52fd7911e76d40698fb831989215748e.jpg" alt="Renault Megane-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0f6976136c4649cb91291ee28fbe0ec0.jpg" alt="Renault Megane-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d8ddbe871fc84406bf3f148fac66c2cd.jpg" alt="Renault Megane-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/0a52d3ec63eb4dba877ca715c0f5f096.jpg" alt="Renault Megane-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/354623c65e064cfab0fd0ddaa4525a6e.jpg" alt="Renault Megane-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/6ff4e810a64c4247995b73ca58ba94df.jpg" alt="Renault Megane-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/1f1e00057ce44fda8cce9359968eab5c.jpg" alt="Renault Megane-10">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="95">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/renault-megane-340950">
+													<div class="heading">Renault Megane 2016</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>184000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">336 600 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item-loop">
+										<div class="item-loop__link">
+											<div class="item-loop__img">
+												<div class="swiper-item-gallery">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="/product/toyota-rav4-340951">
+																<img src="files/cache/files/images/99/c6/c60ed0461d761655bed7c253b75ea51c/500_500/96.jpg" alt="Toyota RAV4">
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/5b1c203e5fd747dfbb8d8d135a42c9b0.jpg" alt="Toyota RAV4-1">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a193b917f3674c1085ec2f85019c7dfe.jpg" alt="Toyota RAV4-2">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/3c43058c5f4f4a89a0938d39492f741d.jpg" alt="Toyota RAV4-3">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/d4e470562ab041b68564373d37b3bddc.jpg" alt="Toyota RAV4-4">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/35f467d1269542c38b4b0743c5d9a3e0.jpg" alt="Toyota RAV4-5">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/c1be32f872494d6883a462ef823907cb.jpg" alt="Toyota RAV4-6">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/8d79703932954ad69081b754a122bd34.jpg" alt="Toyota RAV4-7">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/2b86cf4d5b9f4db4aff74b4997a55272.jpg" alt="Toyota RAV4-8">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/a2bedb1b94104f058385c0982e6195f5.jpg" alt="Toyota RAV4-9">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/aaa5878f4d7b482d9c04391649eb9f6e.jpg" alt="Toyota RAV4-10">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/7e0ceb9124d243c69402f8fd5ee05d53.jpg" alt="Toyota RAV4-11">
+														</div>
+														<div class="swiper-slide">
+															<img src="https://api.ulf24.com:2222/query/files/preview/05d120fc6c5c466983751b8624428473.jpg" alt="Toyota RAV4-12">
+														</div>
+													</div>
+													<div class="item-gallery-button">
+														<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+														<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+													</div>
+												</div>
+												<a href="javascript:void();" class="btn-favor" data-id="96">
+													<i class="icon-star icon-u_favorite"></i>
+												</a>
+											</div>
+											<div class="item-loop__txtblock">
+												<a href="/product/toyota-rav4-340951">
+													<div class="heading">Toyota RAV4 2011</div>
+												</a>
+												<div class="il-param">
+													<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>189000 км
+													</p>
+													<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+													<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+													<p><span class="icon-oil icon-u_pump"></span>Газ / Бензин, 2.0</p>
+												</div>
+												<div class="sell-car-slider__price">
+													<p>Ціна<span class="il-price__full">542 640 грн</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="need-help">
+					<div class="container">
+						<div class="need-help__wrap">
+							<div class="h1">Потрібна допомога? Ми на звʼязку!</div>
+							<ul>
+								<li>Понеділок - Четвер <span>9:00 - 18:00</span></li>
+								<li>Пʼятниця <span>9:00 - 16:45</span></li>
+								<li>Субота, Неділя <span>- вихідні</span></li>
+							</ul>
+							<div class="number">
+								<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+							</div>
+							<div class="social__wrap">
+								<a href="##">
+									<div class="icon-svg icon-telegram">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#telegram-white"></use>
+										</svg>
+									</div>
+								</a>
+								<a href="##">
+									<div class="icon-svg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="seo-text-section" class="seo-text-section">
+					<div class="container">
+						<h2>ХАПАЙ аукціон авто: що таке аукціон і як купити легкове авто в Україні недорого</h2>
+						<p>Швидко дістатися з одного міста до іншого. Перевезти речі чи відвезти посилку родичам через всю Україну. Взяти та зробити. Сісти та поїхати. Коли є машина відстані скорочуються, а дорогоцінний час заощаджується. Сьогодні охочих купити авто стало вдвічі більше, ніж було 2 роки тому. Навіть у маленькому місті машина - це необхідність.</p>
+						<p>І якщо взяти авто із салону може далеко не кожен, то купити авто бв під силу більшості українців. Понад 60% водіїв в Україні купують машини з пробігом. Це нормальна практика для нашої країни: так економічніше, і можна дозволити собі міняти авто частіше або взяти два автомобілі в сім&#39;ю.</p>
+						<p>Але гострим завжди залишалося питання безпеки покупки бв авто. Будь-який продавець стверджуватиме, що його авто повністю на ходу, в аварії не потрапляло, і взагалі ось тільки пройшло капремонт. А будь-який покупець хоче взяти надійну машину з пробігом недорого, але часто не може витрачати час на додаткові перевірки.</p>
+						<p>З цієї ситуації є простий вихід - купити авто через ХАПАЙ аукціон авто. Ми пропонуємо своїм клієнтам максимально прозору можливість взяти авто із пробігом в Україні. Фахівці ХАПАЙ аукціон авто перевіряють автомобіль на всіх рівнях (від технічного до юридичного), перш ніж допустити його до угоди з покупцем. А наші менеджери розкажуть вам все про те, як взяти участь в <a href="/calendar">аукціоні</a> та купити авто з пробігом безпечно та швидко.</p>
+						<h2>Авто з пробігом або нова машина: ХАПАЙ аукціон авто розвіє останні сумніви</h2>
+						<p>Досвідчені автомобілісти-порадники в інтернеті або найближчі друзі можуть скільки завгодно твердити вам, що легкове авто потрібно брати тільки в салоні офіційного дилера. Але якщо стоїть гостра необхідність заощадити кошти або взяти дві машини в сім&#39;ю, то хоч-не-хоч задумуєшся про покупку авто з пробігом.</p>
+						<p>І якщо взяти відносно нове легкове авто, якому 4-6 років, то все може бути не так і страшно. Машини за кілька років не встигають серйозно зноситися. Особливо якщо трапляється продавець, який мало експлуатував свій транспортний засіб. Але причини для недовіри все одно є, а щоб перевірити ще всю історію бв авто, потрібен час.</p>
+						<p><strong>Якщо ви не можете вирішити, взяти нову машину або купити б/в авто, то кілька аргументів нижче допоможуть схилити шальки терезів на користь участі в торгах за бв авто від ХАПАЙ аукціон авто:</strong></p>
+						<ol>
+							<li>Вартість машини відчутно вигідніша. Наприклад, авто, якому 2 роки, за технічними характеристиками не надто поступається новим, а ціна його може бути на 30-40% нижчою.</li>
+							<li>Для бв авто, як правило, немає необхідності купувати аксесуари. Попередній власник часто залишає сигналізацію, аудіосистему, а іноді навіть додатковий комплект дисків та гуми.</li>
+							<li>Обслуговування бв авто обходиться недорого. Багато власників авто з пробігом помічають, що деталі на нього коштують дешевше через вік машини. Крім того, на неї вже не шкода поставити більш доступні аналоги оригінальних запчастин.</li>
+						</ol>
+						<p>І ще один важливий аспект: вибір бв авто в Україні дуже широкий. Ви можете купити авто, яке повністю відповідає вашому стилю життя і потребам. Причому в найкоротший термін. Возите вантажі? У нас є пікапи та мінівени. У вас велика сім&#39;я? Беріть джип або кросовер. Потрібна економна легкова машина? На аукціоні є малолітражки чи гібриди.</p>
+						<h2>Купівля легкового авто в Україні: чому з ХАПАЙ аукціон авто це безпечно</h2>
+						<p>ХАПАЙ аукціон авто вирішує буквально всі питання, які можуть виникнути в процесі покупки авто з пробігом в Україні. <strong>Ми забезпечуємо абсолютно безпечну угоду і для продавця машини, і для покупця. І ось як ми це робимо:</strong></p>
+						<ul>
+							<li>організовуємо технічну перевірку бв авто;</li>
+							<li>супроводжуємо клієнта не тільки на етапі аукціону та покупки, але й у процесі всього періоду експлуатації легкового автомобіля;</li>
+							<li>перш ніж виставити бв авто на торги, ми перевіряємо юридичну &quot;чистоту&quot; через сервіси Auto Check, CAR Fax, Epic Win.</li>
+						</ul>
+						<p>І ще один важливий етап. Якщо ви вже купували колись машину з пробігом, то, напевно, потрапляли в ситуацію, коли продавець навіть не спромігся прибрати в салоні. Брудні килимки, затерті сидіння в плямах, неприємний запах, запилена панель приладів. Такі дрібниці не змусять відмовитися від покупки автомобіля, адже їх можна легко усунути. Але вони псують враження про авто.</p>
+						<p>Співробітники ХАПАЙ аукціон авто повністю готують автомобіль з пробігом перед тим, як він потрапляє на торги. А значить ви можете купити вживане авто після повної хімчистки салону. Він навіть пахне, як новий. І жодна цятка не нагадає про те, що у автомобіля був інший власник до вас.</p>
+						<h2>Як недорого купити авто б/в&nbsp;в Україні через ХАПАЙ аукціон авто: покрокова інструкція</h2>
+						<p>ХАПАЙ аукціон авто організовує максимально прозорий в Україні сервіс з
+							<a href="/sell-car">продажу легкових машин</a> з пробігом. Ми не тільки перевіряємо повну історію авто та проводимо його передпродажну підготовку, але й розписуємо всю інформацію у технічних характеристиках лота.
+						</p>
+						<p><strong>Щоб купити вживане авто вам потрібно:</strong></p>
+						<ul>
+							<li>вибрати транспортний засіб із каталогу на сайті;</li>
+							<li>ознайомитися з його характеристиками, і якщо він вам підходить, зробити ставку;</li>
+							<li>брати участь в аукціоні доти, доки він не закінчиться;</li>
+							<li>як тільки ваша ставка перемагає, наш менеджер зв&#39;яжеться з вами, щоб обговорити угоду про викуп машини.</li>
+						</ul>
+						<p>Далі процедура покупки авто з пробігом дуже стандартна і схожа на ту, що проходить у звичайному автосалоні. Потрібно буде зібрати та підготувати документи, оформити їх через держструктури. Ми в ХАПАЙ аукціон авто можемо усі реєстраційні питання взяти на себе, щоб ви могли тільки прийти та забрати своє авто з уже готовим набором документів.</p>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+	@@include('html/popup/popup-callback.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

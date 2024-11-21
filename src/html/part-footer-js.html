@@ -1,0 +1,53 @@
+<script src="files/assets/45446e13/jquery.js"></script>
+<script src="files/assets/b1b6c6cc/yii.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/plyr.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/popups.js"></script>
+<script src="js/fancybox.umd.js"></script>
+<script src="js/main.js"></script>
+<script src="js/main-new-v.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/script.js"></script>
+<script src="js/home.js"></script>
+<script src="js/comparison-slider.js"></script>
+<script src="files/assets/b1b6c6cc/yii.validation.js"></script>
+<script src="files/assets/b1b6c6cc/yii.activeForm.js"></script>
+<script>jQuery(function ($) {
+		jQuery('#form-popup-login').yiiActiveForm([{
+			"id": "loginform-phone",
+			"name": "phone",
+			"container": ".field-loginform-phone",
+			"input": "#loginform-phone",
+			"error": ".help-block.help-block-error",
+			"enableAjaxValidation": true,
+			"validate": function (attribute, value, messages, deferred, $form) {
+				yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+				value = yii.validation.trim($form, attribute, {
+					"skipOnArray": true,
+					"skipOnEmpty": false,
+					"chars": false
+				}, value);
+			}
+		}, {
+			"id": "loginform-password",
+			"name": "password",
+			"container": ".field-loginform-password",
+			"input": "#loginform-password",
+			"error": ".help-block.help-block-error",
+			"enableAjaxValidation": true,
+			"validate": function (attribute, value, messages, deferred, $form) {
+				yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+				value = yii.validation.trim($form, attribute, {
+					"skipOnArray": true,
+					"skipOnEmpty": false,
+					"chars": false
+				}, value);
+			}
+		}], { "validationUrl": "auth\/login-validate" });
+	});</script>

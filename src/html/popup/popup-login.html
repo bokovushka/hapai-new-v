@@ -1,0 +1,34 @@
+<div id="login" class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+			<div class="title">Вхід</div>
+			<form id="form-popup-login" action="files/auth/login" method="post">
+				<input type="hidden" name="_csrf" value="B_GJKiydcIa9uzqXnDmpo5Vnt8JRfvG4Ac73cBuj_INUorFZZ8sv0Pr-CtHMeMDy8QngiWIyp801gbw2WdC7-w==">
+				<div class="user-info">
+					<div class="user-txt form-group field-loginform-phone required">
+						<label class="control-label" for="loginform-phone">Телефон</label>
+						<input type="text" id="loginform-phone" class="phone-mask" name="LoginForm[phone]" aria-required="true">
+						<p class="help-block help-block-error"></p>
+					</div>
+					<div class="user-txt form-group field-loginform-password required">
+						<label class="control-label" for="loginform-password">Пароль</label>
+						<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+						<p class="help-block help-block-error"></p>
+					</div>
+					<div class="user-info__b">
+						<div class="checkbox">
+							<label for="checkbox-remember-popup">
+								<input type="checkbox" name="LoginForm[remember]" id="checkbox-remember-popup" checked>
+								<span class="checkbox__txt">Запам'ятати мене</span>
+							</label>
+						</div>
+						<a href="/files/auth/request-password-reset" class="forgot-password">Забули пароль?</a>
+					</div>
+					<button type="submit" class="btn btn-style-1">Войти</button>
+					<a href="/files/auth/signup" class="txt-link">У мене ще немає акаунту</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/catalog" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/catalog" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/catalog" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/catalog" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="isenWIkiKoWNc6qE8vBk7wvm6NF8rBmofYE_EQ7mhlDZlJ8rwnR108o2msKisQ2-b4i_mk_gT91JznRXTJXBKA==">
+	<title>Активний аукціон на ХАПАЙ аукціон авто</title>
+
+	<meta name="description" content="⓵ Перший в Україні Аукціон авто ☼ Купити перевірені авто в Україні онлайн на автоаукціоні ✔ Швидке оформлення з ХАПАЙ аукціон авто">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="catalog-page">
+	<a href="#callback" class="callback popup-link">
+		<svg id="callback-from-button-icon-icon" class="callback-from-button-icon-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.544 25.215" enable-background="new 0 0 17.544 25.215" xml:space="preserve">
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M12.22,6.784c-0.135,0.871-1.654,4.073-2.084,4.89c-0.576,1.087-2.779,4.344-3.724,5.065l0,0l-0.775,0.532l-1.879-0.616L0,20.653l0.129,1.043l2.123,2.832l0.916,0.687c0,0,13.474-8.596,14.376-24.03c0,0-0.266-0.297-0.777-0.87L13.228,0l-1.16,0.454l-1.029,4.941l1.127,1.23"></path>
+		</svg>
+	</a>
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="breadcrumb">
+					<div class="container">
+						<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a itemprop="item" href="/">
+									<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+								</a>
+								<meta itemprop="position" content="0" />
+							</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<span itemprop="name">Каталог авто</span>
+								<meta itemprop="position" content="1" />
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section id="auction-section" class="auction-section">
+					<div class="container">
+						<div id="filter-result" class="filter-wrap">
+							<div class="filter-result-txt">
+								Знайдено 11666 авто
+							</div>
+							<div class="filter-result">
+								<div class="btn btn-filter">Фільтр</div>
+								<div class="filter-result-v" data-reload="ajax-reload-filter-tags">
+								</div>
+								<div class="filter-sort-box">
+									<div id="filter-city-block" class="filter-city">
+										<select name="filter-city" id="filter-city">
+											<option data-href="javascript:void(0)">Місто</option>
+											<option data-href="/catalog/filter-m-kyiv">
+												Київ
+											</option>
+											<option data-href="/catalog/filter-m-lviv">
+												Львів
+											</option>
+										</select>
+									</div>
+									<div id="sort-mode" class="sort-mode">
+										<select name="sortmode" id="sortmode">
+											<option data-href="/catalog?limit=50" selected>Показувати 50</option>
+											<option data-href="/catalog?limit=80">Показувати 80</option>
+											<option data-href="/catalog?limit=100">Показувати 100</option>
+										</select>
+									</div>
+									<div id="sort-items" class="sort-items">
+										<select name="sortitems" id="sortitems">
+											<option data-href="/catalog?sort=default">За замовчуванням</option>
+											<option data-href="/catalog?sort=price" selected>Від дешевих до дорогих</option>
+											<option data-href="/catalog?sort=price-desc">Від дорогих до дешевих</option>
+										</select>
+									</div>
+									<div class="type-list-buttons">
+										<button type="button" class="btn-type type-list active">
+											<svg class="i-list">
+												<use xlink:href="img/icons/icons.svg#i-list"></use>
+											</svg>
+										</button>
+										<button type="button" class="btn-type type-tile">
+											<svg class="i-tile">
+												<use xlink:href="img/icons/icons.svg#i-tile"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="auction-wrapper">
+							<div id="a-sidebar" class="a-sidebar" data-reload="ajax-reload-filter">
+								<div id="a-filter" class="a-filter">
+									<div class="a-filter__main-titile">
+										<div class="subtitle">Фільтр</div>
+									</div>
+									<div class="filter-item f-brand">
+										<div class="filter-title active">Марка авто</div>
+										<div class="filter-list show f-tags">
+											<!-- <input id="f-brand" placeholder="Введіть марку авто"> -->
+											<form class="form-f-brand" action="">
+
+												<select data-placeholder="Марка авто" class="chosen-select-deselect" tabindex="12">
+													<option value=""></option>
+													<option value="Acura">Acura</option>
+													<option value="Alfa Romeo">Alfa Romeo</option>
+													<option value="Audi">Audi</option>
+													<option value="BMW">BMW</option>
+													<option value="Daewoo">Daewoo</option>
+													<option value="Dodge">Dodge</option>
+													<option value="Fiat">Fiat</option>
+													<option value="Ford">Ford</option>
+													<option value="Geely">Geely</option>
+													<option value="Great Wall">Great Wall</option>
+													<option value="Honda">Honda</option>
+													<option value="Hyundai">Hyundai</option>
+													<option value="Infiniti">Infiniti</option>
+													<option value="Jaguar">Jaguar</option>
+													<option value="Jeep">Jeep</option>
+													<option value="Kia">Kia</option>
+													<option value="Land Rover">Land Rover</option>
+													<option value="Lexus">Lexus</option>
+													<option value="Mazda">Mazda</option>
+													<option value="Mercedes-Benz">Mercedes-Benz</option>
+													<option value="MG">MG</option>
+													<option value="MINI">MINI</option>
+													<option value="Mitsubishi">Mitsubishi</option>
+													<option value="Nissan">Nissan</option>
+													<option value="Opel">Opel</option>
+													<option value="Peugeot">Peugeot</option>
+													<option value="Porsche">Porsche</option>
+													<option value="Ravon">Ravon</option>
+													<option value="Renault">Renault</option>
+													<option value="SEAT">SEAT</option>
+													<option value="Skoda">Skoda</option>
+													<option value="Smart">Smart</option>
+													<option value="Subaru">Subaru</option>
+													<option value="Suzuki">Suzuki</option>
+													<option value="Tesla">Tesla</option>
+													<option value="Toyota">Toyota</option>
+													<option value="Triumph">Triumph</option>
+													<option value="Volkswagen">Volkswagen</option>
+													<option value="Volvo">Volvo</option>
+												</select>
+											</form>
+										</div>
+										<div class="filter-title active">Модель авто</div>
+										<div class="filter-list show">
+											<div class="f-tags">
+												<input id="f-model" placeholder="Введіть модель авто">
+											</div>
+											<div class="f-checkbox">
+												<label for="chx-2-200">
+													<span class="name">BMW</span>
+													<!--span class="i-count">(5авто)</span-->
+													<input type="checkbox" name="chx-2-200" value="/catalog/filter-bmw" id="chx-2-200">
+												</label>
+												<label for="chx-2-241">
+													<span class="name">Citroen</span>
+													<!--span class="i-count">(5авто)</span-->
+													<input type="checkbox" name="chx-2-241" value="/catalog/filter-citroen" id="chx-2-241">
+												</label>
+												<label for="chx-2-180">
+													<span class="name">Ford</span>
+													<!--span class="i-count">(5авто)</span-->
+													<input type="checkbox" name="chx-2-180" value="/catalog/filter-ford" id="chx-2-180">
+												</label>
+												<label for="chx-2-290">
+													<span class="name">Honda</span>
+													<!--span class="i-count">(5авто)</span-->
+													<input type="checkbox" name="chx-2-290" value="/catalog/filter-honda" id="chx-2-290">
+												</label>
+												<div class="fmoreButton">Показати ще (<span class="fmore-count">...</span>)</div>
+												<div class="fshowmore" style="display: none;">
+													<label for="chx-2-171">
+														<span class="name">Hyundai</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-171" value="/catalog/filter-hyundai" id="chx-2-171">
+													</label>
+													<label for="chx-2-229">
+														<span class="name">Jeep</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-229" value="/catalog/filter-jeep" id="chx-2-229">
+													</label>
+													<label for="chx-2-204">
+														<span class="name">Kia</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-204" value="/catalog/filter-kia" id="chx-2-204">
+													</label>
+													<label for="chx-2-232">
+														<span class="name">Lexus</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-232" value="/catalog/filter-lexus" id="chx-2-232">
+													</label>
+													<label for="chx-2-234">
+														<span class="name">Mazda</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-234" value="/catalog/filter-mazda" id="chx-2-234">
+													</label>
+													<label for="chx-2-182">
+														<span class="name">Mercedes-Benz</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-182" value="/catalog/filter-mercedes-benz" id="chx-2-182">
+													</label>
+													<label for="chx-2-278">
+														<span class="name">MINI</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-278" value="/catalog/filter-mini" id="chx-2-278">
+													</label>
+													<label for="chx-2-274">
+														<span class="name">Mitsubishi</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-274" value="/catalog/filter-mitsubishi" id="chx-2-274">
+													</label>
+													<label for="chx-2-169">
+														<span class="name">Nissan</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-169" value="/catalog/filter-nissan" id="chx-2-169">
+													</label>
+													<label for="chx-2-247">
+														<span class="name">Opel</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-247" value="/catalog/filter-opel" id="chx-2-247">
+													</label>
+													<label for="chx-2-176">
+														<span class="name">Peugeot</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-176" value="/catalog/filter-peugeot" id="chx-2-176">
+													</label>
+													<label for="chx-2-297">
+														<span class="name">Porsche</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-297" value="/catalog/filter-porsche" id="chx-2-297">
+													</label>
+													<label for="chx-2-314">
+														<span class="name">Ravon</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-314" value="/catalog/filter-ravon" id="chx-2-314">
+													</label>
+													<label for="chx-2-159">
+														<span class="name">Renault</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-159" value="/catalog/filter-renault" id="chx-2-159">
+													</label>
+													<label for="chx-2-174">
+														<span class="name">Skoda</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-174" value="/catalog/filter-skoda" id="chx-2-174">
+													</label>
+													<label for="chx-2-306">
+														<span class="name">Smart</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-306" value="/catalog/filter-smart" id="chx-2-306">
+													</label>
+													<label for="chx-2-265">
+														<span class="name">Suzuki</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-265" value="/catalog/filter-suzuki" id="chx-2-265">
+													</label>
+													<label for="chx-2-312">
+														<span class="name">Tesla</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-312" value="/catalog/filter-tesla" id="chx-2-312">
+													</label>
+													<label for="chx-2-202">
+														<span class="name">Toyota</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-202" value="/catalog/filter-toyota" id="chx-2-202">
+													</label>
+													<label for="chx-2-164">
+														<span class="name">Volkswagen</span>
+														<!--span class="i-count">(5авто)</span-->
+														<input type="checkbox" name="chx-2-164" value="/catalog/filter-volkswagen" id="chx-2-164">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title active">Ціна авто (USD)</div>
+										<div class="filter-list show f-range group-f" data-optionname="price">
+											<input type="number" data-min="5300" data-max="98000" value="5300" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="5300" data-max="98000" value="98000" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="5300" data-slider-max="98000" data-slider-step="100" data-slider-value="[5300,98000]"></div>
+											<div class="slider-range-line"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title active">Рік авто</div>
+										<div class="filter-list show f-range group-f" data-optionname="year">
+											<input type="number" data-min="2008" data-max="2022" value="2008" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="2008" data-max="2022" value="2022" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="2008" data-slider-max="2022" data-slider-step="1" data-slider-value="[2008,2022]"></div>
+											<div class="slider-range-line"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title active">Пробіг авто (км)</div>
+										<div class="filter-list show f-range group-f" data-optionname="mileage">
+											<input type="number" data-min="5000" data-max="272000" value="5000" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="5000" data-max="272000" value="272000" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="5000" data-slider-max="272000" data-slider-step="100" data-slider-value="[5000,272000]"></div>
+											<div class="slider-range-line"></div>
+										</div>
+									</div>
+
+									<div class="filter-item f-price">
+										<div class="filter-title active">Об'єм двигуна (мл)</div>
+										<div class="filter-list show f-range group-f" data-optionname="volume">
+											<input type="number" data-min="998" data-max="3600" value="998" class="slide-group-input input-min" style="margin-right:7px">
+											<input type="number" data-min="998" data-max="3600" value="3600" class="slide-group-input input-max">
+											<div class="slider-range" data-slider-min="998" data-slider-max="3600" data-slider-step="100" data-slider-value="[998,3600]"></div>
+											<div class="slider-range-line"></div>
+										</div>
+									</div>
+
+									<div class="filter-item">
+										<div class="filter-title active">Трансмісія</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-3-168">
+												<span class="name">Автомат</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-3-168" value="/catalog/filter-avtomat" id="chx-3-168">
+											</label>
+											<label for="chx-3-163">
+												<span class="name">Ручна / Механіка</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-3-163" value="/catalog/filter-ruchna-mehanika" id="chx-3-163">
+											</label>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title active">Колір</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-4-161">
+												<span class="name">Білий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-4-161" value="/catalog/filter-bilij" id="chx-4-161">
+											</label>
+											<label for="chx-4-198">
+												<span class="name">Бежевий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-4-198" value="/catalog/filter-bezhevij" id="chx-4-198">
+											</label>
+											<label for="chx-4-193">
+												<span class="name">Коричневий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-4-193" value="/catalog/filter-korichnevij" id="chx-4-193">
+											</label>
+											<label for="chx-4-173">
+												<span class="name">Сірий</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-4-173" value="/catalog/filter-sirij" id="chx-4-173">
+											</label>
+											<div class="fmoreButton">Показати ще (<span class="fmore-count">...</span>)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-4-166">
+													<span class="name">Синій</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-4-166" value="/catalog/filter-sinij" id="chx-4-166">
+												</label>
+												<label for="chx-4-219">
+													<span class="name">Червоний</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-4-219" value="/catalog/filter-chervonij" id="chx-4-219">
+												</label>
+												<label for="chx-4-178">
+													<span class="name">Чорний</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-4-178" value="/catalog/filter-chornij" id="chx-4-178">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title active">Тип двигуна</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-7-167">
+												<span class="name">Бензин</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-7-167" value="/catalog/filter-benzin" id="chx-7-167">
+											</label>
+											<label for="chx-7-185">
+												<span class="name">Газ / Бензин</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-7-185" value="/catalog/filter-gaz-benzin" id="chx-7-185">
+											</label>
+											<label for="chx-7-239">
+												<span class="name">Гибрид</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-7-239" value="/catalog/filter-gibrid" id="chx-7-239">
+											</label>
+											<label for="chx-7-162">
+												<span class="name">Дизель</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-7-162" value="/catalog/filter-dizel" id="chx-7-162">
+											</label>
+											<div class="fmoreButton">Показати ще (<span class="fmore-count">...</span>)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-7-269">
+													<span class="name">Электро</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-7-269" value="/catalog/filter-elektro" id="chx-7-269">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title active">Клас</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-18-189">
+												<span class="name">Екологічний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-18-189" value="/catalog/filter-eco-friendly" id="chx-18-189">
+											</label>
+											<label for="chx-18-190">
+												<span class="name">Економний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-18-190" value="/catalog/filter-ekonomichnij" id="chx-18-190">
+											</label>
+											<label for="chx-18-187">
+												<span class="name">Міський</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-18-187" value="/catalog/filter-miskij" id="chx-18-187">
+											</label>
+											<label for="chx-18-191">
+												<span class="name">Нестримний</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-18-191" value="/catalog/filter-pozashlyahovik" id="chx-18-191">
+											</label>
+											<div class="fmoreButton">Показати ще (<span class="fmore-count">...</span>)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-18-188">
+													<span class="name">Сімейний</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-18-188" value="/catalog/filter-simejnij" id="chx-18-188">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-title active">Кузов</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-15-212">
+												<span class="name">Кабріолет</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-15-212" value="/catalog/filter-kabriolet" id="chx-15-212">
+											</label>
+											<label for="chx-15-231">
+												<span class="name">Кросовер</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-15-231" value="/catalog/filter-krosover" id="chx-15-231">
+											</label>
+											<label for="chx-15-211">
+												<span class="name">Купе</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-15-211" value="/catalog/filter-kupe" id="chx-15-211">
+											</label>
+											<label for="chx-15-209">
+												<span class="name">Мінівен</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-15-209" value="/catalog/filter-miniven" id="chx-15-209">
+											</label>
+											<div class="fmoreButton">Показати ще (<span class="fmore-count">...</span>)</div>
+											<div class="fshowmore" style="display: none;">
+												<label for="chx-15-210">
+													<span class="name">Позашляховик</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-15-210" value="/catalog/filter-vnedorozhnik" id="chx-15-210">
+												</label>
+												<label for="chx-15-214">
+													<span class="name">Седан</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-15-214" value="/catalog/filter-sedan" id="chx-15-214">
+												</label>
+												<label for="chx-15-207">
+													<span class="name">Універсал</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-15-207" value="/catalog/filter-universal" id="chx-15-207">
+												</label>
+												<label for="chx-15-208">
+													<span class="name">Хетчбек</span>
+													<!--span class="i-count">(1223 авто)</span-->
+													<input type="checkbox" name="chx-15-208" value="/catalog/filter-hetchbek" id="chx-15-208">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-item filter-place">
+										<div class="filter-title active">Звідки авто</div>
+										<div class="filter-list show f-checkbox">
+											<label for="chx-19-271">
+												<span class="name">Київ</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-19-271" value="/catalog/filter-m-kyiv" id="chx-19-271">
+											</label>
+											<label for="chx-19-272">
+												<span class="name">Львів</span>
+												<!--span class="i-count">(1223 авто)</span-->
+												<input type="checkbox" name="chx-19-272" value="/catalog/filter-m-lviv" id="chx-19-272">
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="filter-result-info">
+									<div class="filter-result-txt">
+										Знайдено 50 автомобілів
+									</div>
+									<button class="filter-close">Закрити</button>
+								</div>
+							</div>
+							<div class="a-main active" data-reload="ajax-reload-product">
+								<div class="loop-wrap" data-more="ajax-more-product">
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/honda-accord-386326">
+																	<img src="files/cache/files/images/98/bc/bc677ebf876c6e3cbaad3c96655e0f56/500_500/289.jpg" alt="Honda Accord">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/5a2712247670402c8275d6fb8e89bcdb.jpg" alt="Honda Accord-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/12d2a170011c4c1db5fc5cc914ae0d6b.jpg" alt="Honda Accord-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/dbe527fdbd0e4b61b1e25282e26c6847.jpg" alt="Honda Accord-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/4b4e2bf339124f8cba6383116692d08f.jpg" alt="Honda Accord-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a324ee0c5a5b492db8c85195499bbe95.jpg" alt="Honda Accord-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/112a28d6e20443b093d8d0cdd3a4ed70.jpg" alt="Honda Accord-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/408412d715ea499598a92c7761141ea8.jpg" alt="Honda Accord-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d8f75282896d4096be9a4ec62fd607cc.jpg" alt="Honda Accord-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6aad78a6f0c04550ac6406e93789906a.jpg" alt="Honda Accord-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e3b934abc2674572bd04c355c61b0a49.jpg" alt="Honda Accord-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/2736a66eb9fd48cd8f96ffce5956dc68.jpg" alt="Honda Accord-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a99791428f944eaa886687e31ed46625.jpg" alt="Honda Accord-12">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25250ecb7c5e4156be01fc300bdaf130.jpg" alt="Honda Accord-13">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/682cd37321ee4a12b03fb12f8652d83d.jpg" alt="Honda Accord-14">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="289">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/honda-accord-386326">
+															<div class="heading">Honda Accord 2014 Honda Accord 2014 Honda Accord 2014</div>
+														</a>
+														<a href="javascript:void();" data-id="289" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/honda-accord-386326">
+																<div class="heading">Honda Accord 2014 Honda Accord 2014</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>217000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.4</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/mitsubishi-lancer-350823">
+																	<img src="files/cache/files/images/53/55/55ba391557468457b69c45371636901d/500_500/260.jpg" alt="Mitsubishi Lancer">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/28a3403d56f84d528488813b43092d9c.jpg" alt="Mitsubishi Lancer-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25236f5bcd9e403db5647767a38ae05e.jpg" alt="Mitsubishi Lancer-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/7a6f3ba9cabd46c58b96722a3d122bc8.jpg" alt="Mitsubishi Lancer-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b9dc9483ee6749a3a8d088f224a0b6ad.jpg" alt="Mitsubishi Lancer-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aa2537d6453c44efa71233023eb54b3f.jpg" alt="Mitsubishi Lancer-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aee19bdff3624a008648df85685b595b.jpg" alt="Mitsubishi Lancer-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/8b38445158514780a7e86bfc80de1ed9.jpg" alt="Mitsubishi Lancer-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/51fcb4eb057e4b20976fb9fec6429405.jpg" alt="Mitsubishi Lancer-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/284accb69fe14f55959a7ff8be6ae149.jpg" alt="Mitsubishi Lancer-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9a43851e571643a7802a50287943d50f.jpg" alt="Mitsubishi Lancer-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b7c11475d43a4c7cbb91a248eb2adbe5.jpg" alt="Mitsubishi Lancer-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/68cdebf2a2f74eb8ad90dd0bed331c23.jpg" alt="Mitsubishi Lancer-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard our-car">Наші авто</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="260">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/mitsubishi-lancer-350823">
+															<div class="heading">Mitsubishi Lancer 2008</div>
+														</a>
+														<a href="javascript:void();" data-id="260" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/mitsubishi-lancer-350823">
+																<div class="heading">Mitsubishi Lancer 2008</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>178000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Газ / Бензин, 1.6</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/renault-logan-371317">
+																	<img src="files/cache/files/images/48/07/07f22408d5a96334eb08d07815bfd3e5/500_500/278.jpg" alt="Renault Logan">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e95aea84adbc4b0aa484cd0f93c84988.jpg" alt="Renault Logan-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/124b4e9128654977b8217c341f1d9a22.jpg" alt="Renault Logan-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d233e196496440a7a41180d7b985bacb.jpg" alt="Renault Logan-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6d3343e50d804277a17210b8c29d99e3.jpg" alt="Renault Logan-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/3639143ac3dc4f99a5515c6306644181.jpg" alt="Renault Logan-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/ebd2940c55df4f13bb82654402f4980b.jpg" alt="Renault Logan-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bb33e31ed48f42708b186a64aeef2037.jpg" alt="Renault Logan-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9bc4bcfceb8d44bba056339181724380.jpg" alt="Renault Logan-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bd8f6da9ee7b46489bddebc1b352c058.jpg" alt="Renault Logan-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e82125d38cd045a5bc62e45f96d36041.jpg" alt="Renault Logan-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d00058080bfe4f199563ca8b7c410502.jpg" alt="Renault Logan-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/1e87e0467cc8467aaeab2a882c16033c.jpg" alt="Renault Logan-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="278">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/renault-logan-371317">
+															<div class="heading">Renault Logan 2019</div>
+														</a>
+														<a href="javascript:void();" data-id="278" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/renault-logan-371317">
+																<div class="heading">Renault Logan 2019</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>105000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Львів
+																</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+																<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/honda-accord-386326">
+																	<img src="files/cache/files/images/98/bc/bc677ebf876c6e3cbaad3c96655e0f56/500_500/289.jpg" alt="Honda Accord">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/5a2712247670402c8275d6fb8e89bcdb.jpg" alt="Honda Accord-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/12d2a170011c4c1db5fc5cc914ae0d6b.jpg" alt="Honda Accord-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/dbe527fdbd0e4b61b1e25282e26c6847.jpg" alt="Honda Accord-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/4b4e2bf339124f8cba6383116692d08f.jpg" alt="Honda Accord-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a324ee0c5a5b492db8c85195499bbe95.jpg" alt="Honda Accord-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/112a28d6e20443b093d8d0cdd3a4ed70.jpg" alt="Honda Accord-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/408412d715ea499598a92c7761141ea8.jpg" alt="Honda Accord-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d8f75282896d4096be9a4ec62fd607cc.jpg" alt="Honda Accord-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6aad78a6f0c04550ac6406e93789906a.jpg" alt="Honda Accord-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e3b934abc2674572bd04c355c61b0a49.jpg" alt="Honda Accord-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/2736a66eb9fd48cd8f96ffce5956dc68.jpg" alt="Honda Accord-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a99791428f944eaa886687e31ed46625.jpg" alt="Honda Accord-12">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25250ecb7c5e4156be01fc300bdaf130.jpg" alt="Honda Accord-13">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/682cd37321ee4a12b03fb12f8652d83d.jpg" alt="Honda Accord-14">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="289">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/honda-accord-386326">
+															<div class="heading">Honda Accord 2014 Honda Accord 2014 Honda Accord 2014</div>
+														</a>
+														<a href="javascript:void();" data-id="289" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/honda-accord-386326">
+																<div class="heading">Honda Accord 2014 Honda Accord 2014</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>217000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.4</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/mitsubishi-lancer-350823">
+																	<img src="files/cache/files/images/53/55/55ba391557468457b69c45371636901d/500_500/260.jpg" alt="Mitsubishi Lancer">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/28a3403d56f84d528488813b43092d9c.jpg" alt="Mitsubishi Lancer-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25236f5bcd9e403db5647767a38ae05e.jpg" alt="Mitsubishi Lancer-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/7a6f3ba9cabd46c58b96722a3d122bc8.jpg" alt="Mitsubishi Lancer-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b9dc9483ee6749a3a8d088f224a0b6ad.jpg" alt="Mitsubishi Lancer-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aa2537d6453c44efa71233023eb54b3f.jpg" alt="Mitsubishi Lancer-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aee19bdff3624a008648df85685b595b.jpg" alt="Mitsubishi Lancer-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/8b38445158514780a7e86bfc80de1ed9.jpg" alt="Mitsubishi Lancer-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/51fcb4eb057e4b20976fb9fec6429405.jpg" alt="Mitsubishi Lancer-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/284accb69fe14f55959a7ff8be6ae149.jpg" alt="Mitsubishi Lancer-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9a43851e571643a7802a50287943d50f.jpg" alt="Mitsubishi Lancer-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b7c11475d43a4c7cbb91a248eb2adbe5.jpg" alt="Mitsubishi Lancer-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/68cdebf2a2f74eb8ad90dd0bed331c23.jpg" alt="Mitsubishi Lancer-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard our-car">Наші авто</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="260">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/mitsubishi-lancer-350823">
+															<div class="heading">Mitsubishi Lancer 2008</div>
+														</a>
+														<a href="javascript:void();" data-id="260" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/mitsubishi-lancer-350823">
+																<div class="heading">Mitsubishi Lancer 2008</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>178000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Газ / Бензин, 1.6</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+                                                <a href="#" class="xa-banner-item item-1">
+                                                    <img class="banner-img" src="./img/banner-1-img.png" alt="">
+                                                    <img class="banner-img-mob" src="./img/banner-1-img-mob.png" alt="">
+                                                    <img class="banner-txt" src="./img/banner-1-txt.png" alt="">
+                                                    <img class="banner-txt-mob" src="./img/banner-1-txt-mob.png" alt="">
+                                                </a>
+											</div>
+										</div>
+									</div> -->
+									<!-- <div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+                                                <a href="#" class="xa-banner-item item-black-friday">
+                                                    <img class="banner-img" src="./img/banner-bf.jpg" alt="">
+													<div class="banner-mob">
+														<img src="./img/banner-bf-mob-img1.png" alt="">
+														<img src="./img/banner-bf-mob-img2.png" alt="">
+														<img src="./img/banner-bf-mob-img3.png" alt="">
+														<img src="./img/banner-bf-mob-img4.png" alt="">
+													</div>
+                                                </a>
+											</div>
+										</div>
+									</div> -->
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-ny item-ny-4">
+													<img class="banner-img" src="./img/banner-new-1.jpg" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-ny item-ny-5">
+													<img class="banner-img" src="./img/banner-new-2.jpg" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-ny item-ny-1">
+													<img class="banner-img" src="./img/banner-ny-1.jpg" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-ny item-ny-2">
+													<img class="banner-img" src="./img/banner-ny-2.jpg" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-ny item-ny-3">
+													<img class="banner-img" src="./img/banner-ny-3.jpg" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-num item-24-1-1">
+													<img class="banner-img" src="./img/banner-24-1-1-desk.png" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-num item-24-1-2">
+													<img class="banner-img" src="./img/banner-24-1-2-desk.png" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-num item-24-1-3">
+													<img class="banner-img" src="./img/banner-24-1-3-desk.png" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-num item-24-1-4">
+													<img class="banner-img" src="./img/banner-24-1-4-desk.png" alt="">
+													<div class="banner-mob"></div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/renault-logan-371317">
+																	<img src="files/cache/files/images/48/07/07f22408d5a96334eb08d07815bfd3e5/500_500/278.jpg" alt="Renault Logan">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e95aea84adbc4b0aa484cd0f93c84988.jpg" alt="Renault Logan-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/124b4e9128654977b8217c341f1d9a22.jpg" alt="Renault Logan-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d233e196496440a7a41180d7b985bacb.jpg" alt="Renault Logan-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6d3343e50d804277a17210b8c29d99e3.jpg" alt="Renault Logan-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/3639143ac3dc4f99a5515c6306644181.jpg" alt="Renault Logan-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/ebd2940c55df4f13bb82654402f4980b.jpg" alt="Renault Logan-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bb33e31ed48f42708b186a64aeef2037.jpg" alt="Renault Logan-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9bc4bcfceb8d44bba056339181724380.jpg" alt="Renault Logan-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bd8f6da9ee7b46489bddebc1b352c058.jpg" alt="Renault Logan-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e82125d38cd045a5bc62e45f96d36041.jpg" alt="Renault Logan-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d00058080bfe4f199563ca8b7c410502.jpg" alt="Renault Logan-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/1e87e0467cc8467aaeab2a882c16033c.jpg" alt="Renault Logan-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="278">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/renault-logan-371317">
+															<div class="heading">Renault Logan 2019</div>
+														</a>
+														<a href="javascript:void();" data-id="278" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/renault-logan-371317">
+																<div class="heading">Renault Logan 2019</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>105000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Львів
+																</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+																<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/honda-accord-386326">
+																	<img src="files/cache/files/images/98/bc/bc677ebf876c6e3cbaad3c96655e0f56/500_500/289.jpg" alt="Honda Accord">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/5a2712247670402c8275d6fb8e89bcdb.jpg" alt="Honda Accord-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/12d2a170011c4c1db5fc5cc914ae0d6b.jpg" alt="Honda Accord-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/dbe527fdbd0e4b61b1e25282e26c6847.jpg" alt="Honda Accord-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/4b4e2bf339124f8cba6383116692d08f.jpg" alt="Honda Accord-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a324ee0c5a5b492db8c85195499bbe95.jpg" alt="Honda Accord-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/112a28d6e20443b093d8d0cdd3a4ed70.jpg" alt="Honda Accord-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/408412d715ea499598a92c7761141ea8.jpg" alt="Honda Accord-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d8f75282896d4096be9a4ec62fd607cc.jpg" alt="Honda Accord-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6aad78a6f0c04550ac6406e93789906a.jpg" alt="Honda Accord-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e3b934abc2674572bd04c355c61b0a49.jpg" alt="Honda Accord-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/2736a66eb9fd48cd8f96ffce5956dc68.jpg" alt="Honda Accord-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a99791428f944eaa886687e31ed46625.jpg" alt="Honda Accord-12">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25250ecb7c5e4156be01fc300bdaf130.jpg" alt="Honda Accord-13">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/682cd37321ee4a12b03fb12f8652d83d.jpg" alt="Honda Accord-14">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="289">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/honda-accord-386326">
+															<div class="heading">Honda Accord 2014 Honda Accord 2014 Honda Accord 2014</div>
+														</a>
+														<a href="javascript:void();" data-id="289" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/honda-accord-386326">
+																<div class="heading">Honda Accord 2014 Honda Accord 2014</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>217000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.4</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/mitsubishi-lancer-350823">
+																	<img src="files/cache/files/images/53/55/55ba391557468457b69c45371636901d/500_500/260.jpg" alt="Mitsubishi Lancer">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/28a3403d56f84d528488813b43092d9c.jpg" alt="Mitsubishi Lancer-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25236f5bcd9e403db5647767a38ae05e.jpg" alt="Mitsubishi Lancer-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/7a6f3ba9cabd46c58b96722a3d122bc8.jpg" alt="Mitsubishi Lancer-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b9dc9483ee6749a3a8d088f224a0b6ad.jpg" alt="Mitsubishi Lancer-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aa2537d6453c44efa71233023eb54b3f.jpg" alt="Mitsubishi Lancer-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aee19bdff3624a008648df85685b595b.jpg" alt="Mitsubishi Lancer-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/8b38445158514780a7e86bfc80de1ed9.jpg" alt="Mitsubishi Lancer-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/51fcb4eb057e4b20976fb9fec6429405.jpg" alt="Mitsubishi Lancer-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/284accb69fe14f55959a7ff8be6ae149.jpg" alt="Mitsubishi Lancer-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9a43851e571643a7802a50287943d50f.jpg" alt="Mitsubishi Lancer-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b7c11475d43a4c7cbb91a248eb2adbe5.jpg" alt="Mitsubishi Lancer-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/68cdebf2a2f74eb8ad90dd0bed331c23.jpg" alt="Mitsubishi Lancer-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard our-car">Наші авто</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="260">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/mitsubishi-lancer-350823">
+															<div class="heading">Mitsubishi Lancer 2008</div>
+														</a>
+														<a href="javascript:void();" data-id="260" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/mitsubishi-lancer-350823">
+																<div class="heading">Mitsubishi Lancer 2008</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>178000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Газ / Бензин, 1.6</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/renault-logan-371317">
+																	<img src="files/cache/files/images/48/07/07f22408d5a96334eb08d07815bfd3e5/500_500/278.jpg" alt="Renault Logan">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e95aea84adbc4b0aa484cd0f93c84988.jpg" alt="Renault Logan-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/124b4e9128654977b8217c341f1d9a22.jpg" alt="Renault Logan-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d233e196496440a7a41180d7b985bacb.jpg" alt="Renault Logan-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6d3343e50d804277a17210b8c29d99e3.jpg" alt="Renault Logan-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/3639143ac3dc4f99a5515c6306644181.jpg" alt="Renault Logan-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/ebd2940c55df4f13bb82654402f4980b.jpg" alt="Renault Logan-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bb33e31ed48f42708b186a64aeef2037.jpg" alt="Renault Logan-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9bc4bcfceb8d44bba056339181724380.jpg" alt="Renault Logan-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bd8f6da9ee7b46489bddebc1b352c058.jpg" alt="Renault Logan-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e82125d38cd045a5bc62e45f96d36041.jpg" alt="Renault Logan-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d00058080bfe4f199563ca8b7c410502.jpg" alt="Renault Logan-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/1e87e0467cc8467aaeab2a882c16033c.jpg" alt="Renault Logan-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="278">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/renault-logan-371317">
+															<div class="heading">Renault Logan 2019</div>
+														</a>
+														<a href="javascript:void();" data-id="278" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/renault-logan-371317">
+																<div class="heading">Renault Logan 2019</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>105000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Львів
+																</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+																<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/honda-accord-386326">
+																	<img src="files/cache/files/images/98/bc/bc677ebf876c6e3cbaad3c96655e0f56/500_500/289.jpg" alt="Honda Accord">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/5a2712247670402c8275d6fb8e89bcdb.jpg" alt="Honda Accord-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/12d2a170011c4c1db5fc5cc914ae0d6b.jpg" alt="Honda Accord-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/dbe527fdbd0e4b61b1e25282e26c6847.jpg" alt="Honda Accord-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/4b4e2bf339124f8cba6383116692d08f.jpg" alt="Honda Accord-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a324ee0c5a5b492db8c85195499bbe95.jpg" alt="Honda Accord-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/112a28d6e20443b093d8d0cdd3a4ed70.jpg" alt="Honda Accord-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/408412d715ea499598a92c7761141ea8.jpg" alt="Honda Accord-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d8f75282896d4096be9a4ec62fd607cc.jpg" alt="Honda Accord-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6aad78a6f0c04550ac6406e93789906a.jpg" alt="Honda Accord-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e3b934abc2674572bd04c355c61b0a49.jpg" alt="Honda Accord-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/2736a66eb9fd48cd8f96ffce5956dc68.jpg" alt="Honda Accord-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/a99791428f944eaa886687e31ed46625.jpg" alt="Honda Accord-12">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25250ecb7c5e4156be01fc300bdaf130.jpg" alt="Honda Accord-13">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/682cd37321ee4a12b03fb12f8652d83d.jpg" alt="Honda Accord-14">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="289">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/honda-accord-386326">
+															<div class="heading">Honda Accord 2014 Honda Accord 2014 Honda Accord 2014</div>
+														</a>
+														<a href="javascript:void();" data-id="289" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/honda-accord-386326">
+																<div class="heading">Honda Accord 2014 Honda Accord 2014</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>217000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Бензин, 2.4</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-2">
+													<img class="banner-img" src="./img/banner-2-img.png" alt="">
+													<img class="banner-img-mob" src="./img/banner-2-img-mob.png" alt="">
+													<img class="banner-txt" src="./img/banner-2-txt.png" alt="">
+													<img class="banner-txt-mob" src="./img/banner-2-txt-mob.png" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/mitsubishi-lancer-350823">
+																	<img src="files/cache/files/images/53/55/55ba391557468457b69c45371636901d/500_500/260.jpg" alt="Mitsubishi Lancer">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/28a3403d56f84d528488813b43092d9c.jpg" alt="Mitsubishi Lancer-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/25236f5bcd9e403db5647767a38ae05e.jpg" alt="Mitsubishi Lancer-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/7a6f3ba9cabd46c58b96722a3d122bc8.jpg" alt="Mitsubishi Lancer-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b9dc9483ee6749a3a8d088f224a0b6ad.jpg" alt="Mitsubishi Lancer-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aa2537d6453c44efa71233023eb54b3f.jpg" alt="Mitsubishi Lancer-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/aee19bdff3624a008648df85685b595b.jpg" alt="Mitsubishi Lancer-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/8b38445158514780a7e86bfc80de1ed9.jpg" alt="Mitsubishi Lancer-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/51fcb4eb057e4b20976fb9fec6429405.jpg" alt="Mitsubishi Lancer-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/284accb69fe14f55959a7ff8be6ae149.jpg" alt="Mitsubishi Lancer-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9a43851e571643a7802a50287943d50f.jpg" alt="Mitsubishi Lancer-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/b7c11475d43a4c7cbb91a248eb2adbe5.jpg" alt="Mitsubishi Lancer-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/68cdebf2a2f74eb8ad90dd0bed331c23.jpg" alt="Mitsubishi Lancer-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard our-car">Наші авто</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="260">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/mitsubishi-lancer-350823">
+															<div class="heading">Mitsubishi Lancer 2008</div>
+														</a>
+														<a href="javascript:void();" data-id="260" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/mitsubishi-lancer-350823">
+																<div class="heading">Mitsubishi Lancer 2008</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>178000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Київ</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Автомат</p>
+																<p><span class="icon-oil icon-u_pump"></span>Газ / Бензин, 1.6</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<div class="item-loop__img">
+													<div class="swiper-item-gallery">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<a href="/product/renault-logan-371317">
+																	<img src="files/cache/files/images/48/07/07f22408d5a96334eb08d07815bfd3e5/500_500/278.jpg" alt="Renault Logan">
+																</a>
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e95aea84adbc4b0aa484cd0f93c84988.jpg" alt="Renault Logan-1">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/124b4e9128654977b8217c341f1d9a22.jpg" alt="Renault Logan-2">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d233e196496440a7a41180d7b985bacb.jpg" alt="Renault Logan-3">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/6d3343e50d804277a17210b8c29d99e3.jpg" alt="Renault Logan-4">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/3639143ac3dc4f99a5515c6306644181.jpg" alt="Renault Logan-5">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/ebd2940c55df4f13bb82654402f4980b.jpg" alt="Renault Logan-6">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bb33e31ed48f42708b186a64aeef2037.jpg" alt="Renault Logan-7">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/9bc4bcfceb8d44bba056339181724380.jpg" alt="Renault Logan-8">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/bd8f6da9ee7b46489bddebc1b352c058.jpg" alt="Renault Logan-9">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/e82125d38cd045a5bc62e45f96d36041.jpg" alt="Renault Logan-10">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/d00058080bfe4f199563ca8b7c410502.jpg" alt="Renault Logan-11">
+															</div>
+															<div class="swiper-slide">
+																<img src="https://api.ulf24.com:2222/query/files/preview/1e87e0467cc8467aaeab2a882c16033c.jpg" alt="Renault Logan-12">
+															</div>
+														</div>
+														<div class="item-gallery-button">
+															<div class="btn-item-swiper icon-left icon-u_angle-down btn__swiper-prev"></div>
+															<div class="btn-item-swiper icon-right icon-u_angle-down btn__swiper-next"></div>
+														</div>
+													</div>
+													<div class="category-standard__wrap">
+														<div class="category-standard verify">Перевірено</div>
+														<div class="category-standard city">м. Львів</div>
+													</div>
+													<a href="javascript:void();" class="btn-favor" data-id="278">
+														<i class="icon-star icon-u_favorite"></i>
+													</a>
+												</div>
+												<div class="item-loop__txtblock">
+													<div class="item-loop__txtblock-head">
+														<a class="heading-link" href="/product/renault-logan-371317">
+															<div class="heading">Renault Logan 2019</div>
+														</a>
+														<a href="javascript:void();" data-id="278" class="btn-favor">
+															<div class="icon-svg">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#star"></use>
+																</svg>
+															</div>
+														</a>
+													</div>
+													<div class="item-loop__txtblock-content">
+														<div class="item-loop__txtblock-info">
+															<a href="/product/renault-logan-371317">
+																<div class="heading">Renault Logan 2019</div>
+															</a>
+															<div class="il-param">
+																<p><span class="icon-speed icon-u_tachometer-fast-alt"></span>105000
+																	км</p>
+																<p><span class="icon-point icon-u_location-point"></span>м. Львів
+																</p>
+																<p><span class="icon-akp icon-Frame-45"></span>Ручна / Механіка</p>
+																<p><span class="icon-oil icon-u_pump"></span>Дизель, 1.5</p>
+															</div>
+															<div class="sell-car-slider__price">
+																<div class="pice-usd">78 400$</div>
+																<div class="il-price">
+																	<span class="il-price__full">55 250 грн/міс</span>
+																	<span class="il-price__old">25 800 грн</span>
+																</div>
+															</div>
+														</div>
+														<div class="sell-car__button">
+															<a href="#automatic-selection" class="btn btn-style-4 popup-link">Розрахувати платіж</a>
+															<a href="#popup-pre-sell" class="btn btn-style-1 popup-link">Купити за повну ціну</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-3">
+													<img class="banner-img" src="./img/banner-3-img.jpg" alt="">
+													<div class="banner-mob">
+														<img src="./img/banner-3-txt-top.png" alt="">
+														<div class="banner-mob-center-img">
+															<img class="car-1" src="./img/banner-3-car-1.png" alt="">
+															<img class="dude" src="./img/banner-3-dude.png" alt="">
+															<img class="car-2" src="./img/banner-3-car-2.png" alt="">
+														</div>
+														<img src="./img/banner-3-txt-bottom.png" alt="">
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-4">
+													<img class="banner-img" src="./img/banner-4-img.jpg" alt="">
+													<div>
+														<img class="banner-txt" src="./img/banner-4-txt-1.png" alt="">
+														<img class="banner-txt-2" src="./img/banner-4-txt-2.png" alt="">
+													</div>
+													<img class="banner-img-mob" src="./img/banner-4-img-mob.png" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="loop-cover xa">
+										<div class="item-loop">
+											<div class="item-loop__link">
+												<a href="#" class="xa-banner-item item-5">
+													<img class="banner-img" src="./img/banner-5-img.jpg" alt="">
+													<img class="banner-txt" src="./img/banner-5-txt.png" alt="">
+													<img class="banner-img-mob" src="./img/banner-5-img-mob.png" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-reload="ajax-reload-navigation">
+									<div id="load-more-container">
+										<a href="javascript:void(0);" onclick="ajaxReload('/catalog?page=2&sort=default', 'more', true);" class="btn btn-style-2">Показати ще</a>
+									</div>
+									<div id="pagination-container" role="navigation" class="light-theme simple-pagination">
+										<ul>
+											<li class="active">
+												<span class="current">1</span>
+											</li>
+											<li>
+												<a href="/catalog?page=2&sort=default" class="page-link">2</a>
+											</li>
+											<li>
+												<a class="page-link" href="/catalog?page=2&sort=default" rel="next">
+													<span aria-hidden="true"></span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="need-help">
+					<div class="container">
+						<div class="need-help__wrap">
+							<div class="h1">Потрібна допомога? Ми на звʼязку!</div>
+							<ul>
+								<li>Понеділок - Четвер <span>9:00 - 18:00</span></li>
+								<li>Пʼятниця <span>9:00 - 16:45</span></li>
+								<li>Субота, Неділя <span>- вихідні</span></li>
+							</ul>
+							<div class="number">
+								<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+							</div>
+							<div class="social__wrap">
+								<a href="##">
+									<div class="icon-svg icon-telegram">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#telegram-white"></use>
+										</svg>
+									</div>
+								</a>
+								<a href="##">
+									<div class="icon-svg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="also-finance">
+					<div class="container">
+						<div class="also-finance__wrap">
+							<div class="h1">Також фінансуємо</div>
+							<div class="also-finance__buttons">
+								<a class="btn btn-style-4" href="##">Авто з США</a>
+								<a class="btn btn-style-4" href="##">Авто з ЄС</a>
+								<a class="btn btn-style-4" href="##">Авто з Кореї</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+	@@include('html/popup/popup-callback.html',{})
+	@@include('html/popup/popup-cookies.html',{})
+	@@include('html/popup/popup-automatic-selection.html',{})
+	@@include('html/popup/popup-pre-sell.html',{})
+	@@include('html/popup/popup-installment.html',{})
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

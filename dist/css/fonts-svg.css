@@ -1,0 +1,226 @@
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "hapai" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-view:before {
+  content: "\e934";
+}
+
+.icon-u_google:before {
+  content: "\e933";
+}
+
+.icon-fi_truck:before {
+  content: "\e92c";
+}
+
+.icon-u_baby-carriage:before {
+  content: "\e92d";
+}
+
+.icon-u_bolt-alt:before {
+  content: "\e92e";
+}
+
+.icon-u_building:before {
+  content: "\e92f";
+}
+
+.icon-u_car-sideview:before {
+  content: "\e930";
+}
+
+.icon-u_chart-pie-alt:before {
+  content: "\e931";
+}
+
+.icon-u_mountains:before {
+  content: "\e932";
+}
+
+.icon-u_check:before {
+  content: "\e92b";
+}
+
+.icon-u_minus:before {
+  content: "\e929";
+}
+
+.icon-fi_plus:before {
+  content: "\e92a";
+}
+
+.icon-u_search:before {
+  content: "\e928";
+}
+
+.icon-u_user-circle:before {
+  content: "\e927";
+}
+
+.icon-check_box_outline_blank:before {
+  content: "\e900";
+}
+
+.icon-fi_arrow-left:before {
+  content: "\e901";
+}
+
+.icon-fi_book-open:before {
+  content: "\e902";
+}
+
+.icon-fi_check-circle:before {
+  content: "\e903";
+}
+
+.icon-fi_dollar-sign:before {
+  content: "\e904";
+}
+
+.icon-fi_edit-2:before {
+  content: "\e905";
+}
+
+.icon-fi_filter:before {
+  content: "\e906";
+}
+
+.icon-fi_menu:before {
+  content: "\e907";
+}
+
+.icon-fi_phone-call:before {
+  content: "\e908";
+}
+
+.icon-fi_trash:before {
+  content: "\e909";
+}
+
+.icon-fi_user-check:before {
+  content: "\e90a";
+}
+
+.icon-fi_x-circle:before {
+  content: "\e90b";
+}
+
+.icon-fi_x-octagon:before {
+  content: "\e90c";
+}
+
+.icon-fi_x-square:before {
+  content: "\e90d";
+}
+
+.icon-fi_x:before {
+  content: "\e90e";
+}
+
+.icon-Frame-45:before {
+  content: "\e90f";
+}
+
+.icon-u_angle-down:before {
+  content: "\e910";
+}
+
+.icon-u_apple-alt:before {
+  content: "\e911";
+}
+
+.icon-u_arrow-left:before {
+  content: "\e912";
+}
+
+.icon-u_arrow-right:before {
+  content: "\e913";
+}
+
+.icon-u_calendar-alt:before {
+  content: "\e914";
+}
+
+.icon-u_car:before {
+  content: "\e915";
+}
+
+.icon-u_check-square:before {
+  content: "\e916";
+}
+
+.icon-u_clock:before {
+  content: "\e917";
+}
+
+.icon-u_credit-card:before {
+  content: "\e918";
+}
+
+.icon-u_envelopes:before {
+  content: "\e919";
+}
+
+.icon-u_favorite-seletct:before {
+  content: "\e91a";
+}
+
+.icon-u_favorite:before {
+  content: "\e91b";
+}
+
+.icon-u_file-check-alt:before {
+  content: "\e91c";
+}
+
+.icon-u_home-alt:before {
+  content: "\e91d";
+}
+
+.icon-u_info-circle:before {
+  content: "\e91e";
+}
+
+.icon-u_location-point:before {
+  content: "\e91f";
+}
+
+.icon-u_money-stack:before {
+  content: "\e920";
+}
+
+.icon-u_notebooks:before {
+  content: "\e921";
+}
+
+.icon-u_pump:before {
+  content: "\e922";
+}
+
+.icon-u_tachometer-fast-alt:before {
+  content: "\e923";
+}
+
+.icon-u_thumbs-down:before {
+  content: "\e924";
+}
+
+.icon-u_thumbs-up:before {
+  content: "\e925";
+}
+
+.icon-u_usd-circle:before {
+  content: "\e926";
+}

@@ -1,0 +1,85 @@
+<div id="popup-automatic-selection" class="popup popup-automatic-selection">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+			<form id="form-automatic-selection">
+				<div class="user-info">
+					<div class="h1">Заявка на автопідбір</div>
+					<div class="user-txt">
+						<label class="control-label" for="client_name">Ім’я</label>
+						<input type="text" name="client_name" placeholder="Ваше ім’я">
+						<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+					</div>
+					<div class="user-txt">
+						<label class="control-label" for="client_phone">Телефон</label>
+						<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+						<p class="help-block help-block-error">Невірний телефон</p>
+					</div>
+					<div class="user-select">
+						<label class="control-label" for="automatic-car-brand">Марка авто</label>
+						<select name="automatic-car-brand" id="automatic-car-brand">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+					<div class="user-select">
+						<label class="control-label" for="automatic-car-model">Марка авто</label>
+						<select name="automatic-car-model" id="automatic-car-model">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+					<div class="user-range f-price">
+						<div class="user-txt">
+							<label class="control-label" for="amount">Ціна авто (USD)</label>
+							<input type="text" id="amount" readonly>
+						</div>
+						<div id="slider-range"></div>
+						<div class="slider-range-line"></div>
+					</div>
+					<div class="user-range f-price">
+						<div class="user-txt">
+							<label class="control-label" for="amount2">Пробіг авто</label>
+							<input type="text" id="amount2" readonly>
+						</div>
+						<div id="slider-range2"></div>
+						<div class="slider-range-line"></div>
+					</div>
+					<button type="button" class="btn btn-style-4">Почати автопідбір</button>
+				</div>
+				<div class="form-popup-callback__result">
+					<div class="h1">Дякуємо за звернення!</div>
+					<p>Дякуємо. Ми отримали Вашу заявку.<br> Чекайте на зворотній зв'язок</p>
+					<div class="form-popup-callback__social">
+						<p>Не забудьте підписатися на нас у соцмережах</p>
+						<div class="social">
+							<div class="social__wrap">
+								<a href="##">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#facebook"></use>
+									</svg>
+								</a>
+								<a href="##">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#instagram"></use>
+									</svg>
+								</a>
+								<a href="##">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/auth/signup" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="Kz35mwVXILf92EbJWUUbOWhNTki5tsipdmw5uvREEtV4bsHoTgF_4bqddo8JBHJoDCMZA4r6ntxCI3L8tjdVrQ==">
+	<title>Реєстрація</title>
+
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body>
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="authorization">
+					<div class="container">
+						<div class="authorization__wrap">
+							<div class="register">
+								<h1 class="title">Реєстрація</h1>
+								<form id="form-register" action="/auth/signup" method="post">
+									<input type="hidden" name="_csrf" value="Kz35mwVXILf92EbJWUUbOWhNTki5tsipdmw5uvREEtV4bsHoTgF_4bqddo8JBHJoDCMZA4r6ntxCI3L8tjdVrQ==">
+									<div class="user-info">
+										<div class="user-txt form-group field-signupform-firstname required">
+											<label class="control-label" for="signupform-firstname">Ім&#039;я</label>
+											<input type="text" id="signupform-firstname" class="form-control" name="SignupForm[firstname]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-lastname required">
+											<label class="control-label" for="signupform-lastname">Прізвище</label>
+											<input type="text" id="signupform-lastname" class="form-control" name="SignupForm[lastname]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-phone required">
+											<label class="control-label" for="signupform-phone">Телефон</label>
+											<input type="text" id="signupform-phone" class="phone-mask" name="SignupForm[phone]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-email required">
+											<label class="control-label" for="signupform-email">E-mail</label>
+											<input type="text" id="signupform-email" class="form-control" name="SignupForm[email]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-password required">
+											<label class="control-label" for="signupform-password">Пароль</label>
+											<input type="password" id="signupform-password" class="form-control" name="SignupForm[password]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-password_repeat required">
+											<label class="control-label" for="signupform-password_repeat">Підтвердження
+												паролю</label>
+											<input type="password" id="signupform-password_repeat" class="form-control" name="SignupForm[password_repeat]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="checkbox">
+											<label for="checkbox-agree">
+												<input type="checkbox" name="SignupForm[agree]" id="checkbox-agree">
+												<span class="checkbox__txt">Даю згоду на збирання, обробку, зберігання та використання своїх персональних даних.</span>
+											</label>
+										</div>
+										<button type="submit" class="btn btn-style-1">Зареєструватись</button>
+										<a href="/auth/login" class="txt-link">Увійти в акаунт</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

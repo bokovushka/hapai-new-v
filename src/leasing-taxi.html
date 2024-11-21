@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="">
+	<title>Лізинг авто для таксі</title>
+
+	<meta name="description" content="Лізинг авто для таксі">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="leasing-taxi-p">
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<div class="choice-car-wrapper">
+					<div class="container">
+						<div class="choice-car__main">
+							<section class="breadcrumb">
+								<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/">
+											<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+										</a>
+										<meta itemprop="position" content="0" />
+									</li>
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/catalog">
+											<span itemprop="name">Лізинг авто для таксі</span>
+										</a>
+										<meta itemprop="position" content="1" />
+									</li>
+								</ul>
+							</section>
+							<section class="choice-car">
+								<div class="choice-car__content">
+									<div class="choice-car__info">
+										<div class="h1">Авто для роботи в таксі від Хапай</div>
+										<ul class="choice-car__list">
+											<li>авто не старше 2015 р.в.</li>
+											<li>пробіг до 150 тис. км</li>
+											<li>мінімальний аванс - 40%</li>
+											<li>максимальний термін - 3 роки</li>
+										</ul>
+									</div>
+									<form id="form-leasing-taxi" class="form-choice-car">
+										<div class="h1">Хочу авто для таксі</div>
+										<div class="user-info">
+											<div class="user-txt">
+												<input type="text" name="client_name" placeholder="Ваше ім'я">
+												<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+											</div>
+											<div class="user-txt">
+												<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+												<p class="help-block help-block-error">Невірний телефон</p>
+											</div>
+											<div class="checkbox">
+												<label for="pre-sell-checkbox-agree"></label>
+												<input type="checkbox" checked name="agreement" id="pre-sell-checkbox-agree">
+												<span class="checkbox__txt">Даю згоду на збір, обробку, зберігання та використання своїх <a href="##">персональних даних</a>.</span>
+											</div>
+											<button type="submit" class="btn btn-style-3">Відправити заявку</button>
+										</div>
+									</form>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<section class="why why-we advantage-selection-car">
+					<div class="container">
+						<div class="title">Переваги підбору авто з хапай</div>
+						<div class="why__wrap">
+							<div class="why__item">
+								<span class="icon-u_money-stack"></span>
+								<div class="heading">Особиста свобода та дохід</div>
+								<p>Ти можеш обрати будь-яке авто, самостійно організовувати свій графік роботи, працювати в будь-яких компаніях</p>
+							</div>
+							<div class="why__item">
+								<span class="icon-u_money-stack"></span>
+								<div class="heading">Вигідніше, ніж оренда</div>
+								<p>Лізингові платежі менші, ніж платежі за оренду авто. Після сплати усіх платежів, автомобіль - твій.</p>
+							</div>
+							<div class="why__item">
+								<span class="icon-u_money-stack"></span>
+								<div class="heading">Гнучка програма розстрочки</div>
+								<p>Щоб мінімінізувати навантаження на бюджет, для кожного клієнта розробляється індивідуальний графік платежів</p>
+							</div>
+							<div class="why__item">
+								<span class="icon-u_money-stack"></span>
+								<div class="heading">Свобода пересування</div>
+								<p>Автомобіль можна використовувати в особистих цілях</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="loan-leasing partners">
+					<div class="container">
+						<div class="h1">Чим кредит відрізняється від лізингу?</div>
+						<div class="partners__title">
+							<div class="title">Оренда</div>
+							<div class="swiper__buttons leasing-swiper__buttons">
+								<div class="btn__swiper icon-u_arrow-left btn__swiper-prev"></div>
+								<div class="btn__swiper icon-u_arrow-right btn__swiper-next"></div>
+							</div>
+						</div>
+						<div class="swiper-container leasing__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="@img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Заробіток</div>
+										<p>Частина твого заробітку йде на оплату послуги оренди.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="@img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Графік роботи</div>
+										<p>Фіксований</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-car-usd">
+											<use xlink:href="@img/icons/icons.svg#car-usd"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Обмеження пересування</div>
+										<p class="expandable">Часто оренда авто під таксі не передбачає виїзд орендованим автомобілем за</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="@img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="@img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="partners__title">
+							<div class="title">Лізинг</div>
+						</div>
+						<div class="swiper-container loan__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="@img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Заробіток</div>
+										<p class="expandable">Частина твого заробітку йде на оплату послуги оренди. Кожен платіж наближує до викупу авто</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="@img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Графік роботи</div>
+										<p>Сам собі господар. Вирішуєш коли і скільки працювати тільки ти.</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-car-usd">
+											<use xlink:href="@img/icons/icons.svg#car-usd"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Обмеження пересування</div>
+										<p class="expandable">Користування без обмежень пересування. Ти вільно користуєшся авто на території України</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-user-check">
+											<use xlink:href="@img/icons/icons.svg#user-check"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Що означає для клієнта</div>
+										<p class="expandable">Фінансова оренда, можливість орендувати автомобіль та одночасно виплачувати</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="icon-svg">
+										<svg class="i-book-open">
+											<use xlink:href="@img/icons/icons.svg#book-open"></use>
+										</svg>
+									</div>
+									<div class="loan-leasing__descrp">
+										<div class="heading">Оформлення</div>
+										<p class="expandable">Єдиний договір лізингу між клієнтом та компанією. Інших договорів та документів</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="accordion-section">
+					<div class="container">
+						<div class="title">Поширені питання</div>
+						<div id="accordion">
+							<div class="accordion__title">Як працює послуга “автопідбір”?</div>
+							<div class="accordion__info">
+								<p>Обирай авто на нашому сайті. А далі… Маємо для тебе декілька варіантів:</p>
+								<ol>
+									<li>Бери участь у аукціоні, роби ставки та купуй авто за ціною, яку ти сам визначив: за повну вартість або в лізинг.</li>
+									<li>Не чекай початку аукціону, натискай “<strong>купити зараз</strong>” та купуй авто за повну вартість або в лізинг за ціною, вказаною на сайті.</li>
+								</ol>
+							</div>
+							<div class="accordion__title">Як купити авто в лізинг?</div>
+							<div class="accordion__info">
+								<ol>
+									<li>Обирай авто</li>
+									<li>Бери участь у аукціоні</li>
+									<li>Роби ставки</li>
+									<li>Перемагай</li>
+									<li>Оформлюй авто в лізинг (за ціною, яку ти сам визначив)</li>
+								</ol>
+								<p>або</p>
+								<ol>
+									<li>Обирай авто</li>
+									<li>Натискай кнопку «купити зараз»</li>
+									<li>Оформлюй авто в лізинг (за ціною, вказаною на сайті)</li>
+								</ol>
+								<p>На головній сторінці сайту, у розділах «лізинг» та «аукціон» доступний калькулятор. Скористайся ним, аби дізнатися розмір щомісячних платежів.</p>
+								<p>Умови:</p>
+								<ul>
+									<li>аванс - від 15% вартості автомобіля</li>
+									<li>термін - від 1 до 5 років</li>
+									<li>одноразова комісія - 2,5%</li>
+									<li>середня місячна ставка - 2,6%</li>
+								</ul>
+							</div>
+							<div class="accordion__title">Чи доступний тест-драйв?</div>
+							<div class="accordion__info">
+								<p>Однозначно! Тест-драйв доступний в робочі дні, з 9:00 до 18:00. Аби ми приділили тобі максимум уваги, радимо попередньо зателефонувати та погодити час.</p>
+							</div>
+							<div class="accordion__title">Де знаходяться авто?</div>
+							<div class="accordion__info">
+								<p>Усі авто знаходяться в Україні. На наших майданчиках. Точну адресу можна побачити в картці вподобаного тобою авто.</p>
+							</div>
+							<div class="accordion__title">Що відбудеться, якщо натиснути «купити зараз»?</div>
+							<div class="accordion__info">
+								<p>У такому випадку лот автомобіля знімається з торгів та не допускається до аукціону. Користувач, який натиснув «купити зараз» має першочергове право на купівлю цього авто (за повну вартість або в лізинг).</p>
+							</div>
+							<div class="accordion__title">Коли я отримаю автомобіль?</div>
+							<div class="accordion__info">
+								<p>Або, якщо ти просто приїхав до салону ХАПАЙавто, протестував автомобіль і не захотів чекати початку аукціону, можеш купити автівку прямо у салоні (за вартістю, вказаною на сайті або оформити лізинг).</p>
+							</div>
+							<div class="accordion__title">Де знайти повну інформацію про автомобіль?</div>
+							<div class="accordion__info">
+								<p>Обери на сторінці «аукціон» автомобіль, який тебе зацікавив, клікни на нього - відкриється «картка авто» з розширеною інформацією.</p>
+							</div>
+							<div class="accordion__title">Чи доступне розтермінування виплат?</div>
+							<div class="accordion__info">
+								<p>Ти можеш купити авто в лізинг.</p>
+								<p>Обери автомобіль - цього ж дня ми оформимо договір фінансування.</p>
+								<p>Заплати аванс (мінімальний - 15% від вартості авто) та одноразову комісію - 2,5% - отримай авто.</p>
+								<p>Більше деталей про послугу на сторінці «Лізинг»</p>
+							</div>
+						</div>
+						<a href="##" class="btn btn-style-1 btn-more">Всі часті питання</a>
+					</div>
+				</section>
+				<section class="need-help">
+					<div class="container">
+						<div class="need-help__wrap">
+							<div class="h1">Потрібна допомога? Ми на звʼязку!</div>
+							<ul>
+								<li>Понеділок - Четвер <span>9:00 - 18:00</span></li>
+								<li>Пʼятниця <span>9:00 - 16:45</span></li>
+								<li>Субота, Неділя <span>- вихідні</span></li>
+							</ul>
+							<div class="number">
+								<a href="tel:0 800 33 07 27">0 800 33 07 27</a>
+							</div>
+							<div class="social__wrap">
+								<a href="##">
+									<div class="icon-svg icon-telegram">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#telegram-white"></use>
+										</svg>
+									</div>
+								</a>
+								<a href="##">
+									<div class="icon-svg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="seo-text-section" class="seo-text-section">
+					<div class="container">
+						<h2>ХАПАЙ аукціон авто: що таке аукціон і як купити легкове авто в Україні недорого</h2>
+						<p>Швидко дістатися з одного міста до іншого. Перевезти речі чи відвезти посилку родичам через всю Україну. Взяти та зробити. Сісти та поїхати. Коли є машина відстані скорочуються, а дорогоцінний час заощаджується. Сьогодні охочих купити авто стало вдвічі більше, ніж було 2 роки тому. Навіть у маленькому місті машина - це необхідність.</p>
+						<p>І якщо взяти авто із салону може далеко не кожен, то купити авто бв під силу більшості українців. Понад 60% водіїв в Україні купують машини з пробігом. Це нормальна практика для нашої країни: так економічніше, і можна дозволити собі міняти авто частіше або взяти два автомобілі в сім&#39;ю.</p>
+						<p>Але гострим завжди залишалося питання безпеки покупки бв авто. Будь-який продавець стверджуватиме, що його авто повністю на ходу, в аварії не потрапляло, і взагалі ось тільки пройшло капремонт. А будь-який покупець хоче взяти надійну машину з пробігом недорого, але часто не може витрачати час на додаткові перевірки.</p>
+						<p>З цієї ситуації є простий вихід - купити авто через ХАПАЙ аукціон авто. Ми пропонуємо своїм клієнтам максимально прозору можливість взяти авто із пробігом в Україні. Фахівці ХАПАЙ аукціон авто перевіряють автомобіль на всіх рівнях (від технічного до юридичного), перш ніж допустити його до угоди з покупцем. А наші менеджери розкажуть вам все про те, як взяти участь в <a href="/calendar">аукціоні</a> та купити авто з пробігом безпечно та швидко.</p>
+						<h2>Авто з пробігом або нова машина: ХАПАЙ аукціон авто розвіє останні сумніви</h2>
+						<p>Досвідчені автомобілісти-порадники в інтернеті або найближчі друзі можуть скільки завгодно твердити вам, що легкове авто потрібно брати тільки в салоні офіційного дилера. Але якщо стоїть гостра необхідність заощадити кошти або взяти дві машини в сім&#39;ю, то хоч-не-хоч задумуєшся про покупку авто з пробігом.</p>
+						<p>І якщо взяти відносно нове легкове авто, якому 4-6 років, то все може бути не так і страшно. Машини за кілька років не встигають серйозно зноситися. Особливо якщо трапляється продавець, який мало експлуатував свій транспортний засіб. Але причини для недовіри все одно є, а щоб перевірити ще всю історію бв авто, потрібен час.</p>
+						<p><strong>Якщо ви не можете вирішити, взяти нову машину або купити б/в авто, то кілька аргументів нижче допоможуть схилити шальки терезів на користь участі в торгах за бв авто від ХАПАЙ аукціон авто:</strong></p>
+						<ol>
+							<li>Вартість машини відчутно вигідніша. Наприклад, авто, якому 2 роки, за технічними характеристиками не надто поступається новим, а ціна його може бути на 30-40% нижчою.</li>
+							<li>Для бв авто, як правило, немає необхідності купувати аксесуари. Попередній власник часто залишає сигналізацію, аудіосистему, а іноді навіть додатковий комплект дисків та гуми.</li>
+							<li>Обслуговування бв авто обходиться недорого. Багато власників авто з пробігом помічають, що деталі на нього коштують дешевше через вік машини. Крім того, на неї вже не шкода поставити більш доступні аналоги оригінальних запчастин.</li>
+						</ol>
+						<p>І ще один важливий аспект: вибір бв авто в Україні дуже широкий. Ви можете купити авто, яке повністю відповідає вашому стилю життя і потребам. Причому в найкоротший термін. Возите вантажі? У нас є пікапи та мінівени. У вас велика сім&#39;я? Беріть джип або кросовер. Потрібна економна легкова машина? На аукціоні є малолітражки чи гібриди.</p>
+						<h2>Купівля легкового авто в Україні: чому з ХАПАЙ аукціон авто це безпечно</h2>
+						<p>ХАПАЙ аукціон авто вирішує буквально всі питання, які можуть виникнути в процесі покупки авто з пробігом в Україні. <strong>Ми забезпечуємо абсолютно безпечну угоду і для продавця машини, і для покупця. І ось як ми це робимо:</strong></p>
+						<ul>
+							<li>організовуємо технічну перевірку бв авто;</li>
+							<li>супроводжуємо клієнта не тільки на етапі аукціону та покупки, але й у процесі всього періоду експлуатації легкового автомобіля;</li>
+							<li>перш ніж виставити бв авто на торги, ми перевіряємо юридичну &quot;чистоту&quot; через сервіси Auto Check, CAR Fax, Epic Win.</li>
+						</ul>
+						<p>І ще один важливий етап. Якщо ви вже купували колись машину з пробігом, то, напевно, потрапляли в ситуацію, коли продавець навіть не спромігся прибрати в салоні. Брудні килимки, затерті сидіння в плямах, неприємний запах, запилена панель приладів. Такі дрібниці не змусять відмовитися від покупки автомобіля, адже їх можна легко усунути. Але вони псують враження про авто.</p>
+						<p>Співробітники ХАПАЙ аукціон авто повністю готують автомобіль з пробігом перед тим, як він потрапляє на торги. А значить ви можете купити вживане авто після повної хімчистки салону. Він навіть пахне, як новий. І жодна цятка не нагадає про те, що у автомобіля був інший власник до вас.</p>
+						<h2>Як недорого купити авто б/в&nbsp;в Україні через ХАПАЙ аукціон авто: покрокова інструкція</h2>
+						<p>ХАПАЙ аукціон авто організовує максимально прозорий в Україні сервіс з
+							<a href="/sell-car">продажу легкових машин</a> з пробігом. Ми не тільки перевіряємо повну історію авто та проводимо його передпродажну підготовку, але й розписуємо всю інформацію у технічних характеристиках лота.
+						</p>
+						<p><strong>Щоб купити вживане авто вам потрібно:</strong></p>
+						<ul>
+							<li>вибрати транспортний засіб із каталогу на сайті;</li>
+							<li>ознайомитися з його характеристиками, і якщо він вам підходить, зробити ставку;</li>
+							<li>брати участь в аукціоні доти, доки він не закінчиться;</li>
+							<li>як тільки ваша ставка перемагає, наш менеджер зв&#39;яжеться з вами, щоб обговорити угоду про викуп машини.</li>
+						</ul>
+						<p>Далі процедура покупки авто з пробігом дуже стандартна і схожа на ту, що проходить у звичайному автосалоні. Потрібно буде зібрати та підготувати документи, оформити їх через держструктури. Ми в ХАПАЙ аукціон авто можемо усі реєстраційні питання взяти на себе, щоб ви могли тільки прийти та забрати своє авто з уже готовим набором документів.</p>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

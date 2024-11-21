@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="">
+	<title>Написати відгук</title>
+
+	<meta name="description" content="Написати відгук">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body>
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="write-feedback">
+					<div class="container">
+						<form id="form-write-feedback">
+							<div class="h1">Ваш відгук про сервіс hapai</div>
+							<div class="description">Поділіться своєю думкою чи враженнями про співпрацю з нами</div>
+							<div class="user-txt required">
+								<label class="control-label" for="full-name">ПІП</label>
+								<input type="text" id="full-name" name="full-name" placeholder="Ваше ім’я та прізвище">
+								<p class="help-block help-block-error"></p>
+							</div>
+							<fieldset id="gender" class="gender">
+								<div class="title">*Стать</div>
+								<div class="gender__wrap">
+									<div class="radio">
+										<input id="radio-1" name="radio" type="radio" checked>
+										<label for="radio-1" class="radio-label">Чоловіча</label>
+										<div class="gender__pics">
+											<img src="@img/men-1.png" alt="men-1">
+											<img src="@img/men-2.png" alt="men-2">
+											<img src="@img/men-3.png" alt="men-3">
+										</div>
+									</div>
+									<div class="radio">
+										<input id="radio-2" name="radio" type="radio">
+										<label for="radio-2" class="radio-label">Жіноча</label>
+										<div class="gender__pics">
+											<img src="@img/women-1.png" alt="women-1">
+											<img src="@img/women-2.png" alt="women-2">
+											<img src="@img/women-3.png" alt="women-3">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<div class="user-txt required">
+								<label class="control-label" for="impression">Загальні враження в 2 словах</label>
+								<input type="text" id="impression" name="impression" placeholder="Напишіть враження">
+								<p class="help-block help-block-error"></p>
+							</div>
+							<div class="user-txt required txt-feedback">
+								<label class="control-label" for="txt-feedback">Текст відгуку</label>
+								<textarea maxlength="300" type="text" name="txt-feedback" id="txt-feedback" placeholder="Напишіть відгук"></textarea>
+								<p><span id="txt-feedback-count">0</span> з 300</p>
+							</div>
+							<div class="rating-content">
+								<div class="title">Ваша оцінка*</div>
+								<div class="rating">
+									<input type="radio" id="star5" name="rating" value="5" />
+									<label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+									<input type="radio" id="star4" name="rating" value="4" />
+									<label class="star" for="star4" title="Great" aria-hidden="true"></label>
+									<input type="radio" id="star3" name="rating" value="3" />
+									<label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+									<input type="radio" id="star2" name="rating" value="2" />
+									<label class="star" for="star2" title="Good" aria-hidden="true"></label>
+									<input type="radio" id="star1" name="rating" value="1" />
+									<label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+								</div>
+							</div>
+							<div class="attach-files">
+								<div class="title">Прикріпити файли (не більше 8 штук)</div>
+								<div class="descrp">у форматі jpg, png, mp4, mov</div>
+								<input type="file" name="attach-files" id="attach-files" multiple accept="image/jpeg, image/jpg, image/png, video/mp4, video/mov">
+								<label for="attach-files"></label>
+							</div>
+							<button type="button" class="btn btn-style-4">Опублікувати</button>
+						</form>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

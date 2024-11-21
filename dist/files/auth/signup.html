@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/auth/signup" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/auth/signup" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="Kz35mwVXILf92EbJWUUbOWhNTki5tsipdmw5uvREEtV4bsHoTgF_4bqddo8JBHJoDCMZA4r6ntxCI3L8tjdVrQ==">
+	<title>Реєстрація</title>
+
+	<link href="css/jquery-ui.css?v=1655287247" rel="stylesheet">
+	<link href="css/swiper-bundle.min.css?v=1655287247" rel="stylesheet">
+	<link href="css/fancybox.css?v=1655287247" rel="stylesheet">
+	<link href="css/jquery.formstyler.css?v=1655287247" rel="stylesheet">
+	<link href="css/jquery.formstyler.theme.css?v=1655287247" rel="stylesheet">
+	<link href="css/style.css?v=1.06" rel="stylesheet">
+	<link href="css/changes.css?v=1.06" rel="stylesheet">
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body>
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		<header id="header" class="header">
+			<div class="container">
+				<div class="header-menu">
+					<a href="#header" class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+					<a href="/" class="logo">
+						<img class="logo-desk" src="../../img/logo.svg" alt="main-logo">
+						<img class="logo-m" src="../../img/logo-m.svg" alt="main-logo">
+					</a>
+					<div class="navigation">
+						<nav class="site-nav menu">
+							<div class="nav-menu__item language language-m">
+								<div class="language__ch">Укр</div>
+								<div class="language__menu">
+									<ul class="submenu">
+										<li>
+											<a onclick="changeLanguage('ru', '/ru')" href="javascript:void();">Рос</a>
+										</li>
+										<li>
+											<a onclick="changeLanguage('ru', '/ru')" href="javascript:void();">Українська</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<ul class="nav-menu">
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Каталог авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Продати авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Лізинг</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Підбір авто</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Аукціон</a>
+								</li>
+								<li class="nav-menu__item">
+									<a href="##" class="nav-menu__link">Партнерам</a>
+								</li>
+								<li class="nav-menu__item city-choose city-choose-d">
+									<div class="city-choose__ch">Київ</div>
+									<div class="submenu">
+										<ul class="submenu__list">
+											<li>Луцьк</li>
+											<li>Львів</li>
+											<li>Київ</li>
+											<li>Івано-Франківськ</li>
+											<li>Запоріжжя</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-menu__item donate-m donate-ua">
+									<a href="##" class="nav-menu__link">
+										<span>Допомогти</span>
+										<img src="../../img/donate.png">
+									</a>
+								</li>
+							</ul>
+							<div class="authorization-btn-m">
+								<a href="/auth/login" class="btn btn-style-3">Увійти</a>
+								<a href="/auth/signup" class="btn btn-style-1">Зареєструватись</a>
+							</div>
+						</nav>
+						<div class="personal-nav">
+							<ul class="nav-menu right-menu">
+								<li class="nav-menu__item donate donate-ua">
+									<a href="##" class="nav-menu__link">
+										<span>Допомогти</span>
+										<img src="../../img/donate.png">
+									</a>
+								</li>
+								<li class="nav-menu__item phone">
+									<a href="tel:0 800 33 07 27">
+										<div class="icon-svg phone-icon">
+											<svg>
+												<use xlink:href="../../img/icons/icons.svg#phone"></use>
+											</svg>
+										</div>
+									</a>
+									<span><a href="tel:0 800 33 07 27">0 800 33 07 27</a></span>
+								</li>
+								<li class="nav-menu__item language language-d">
+									<div class="language__ch">Укр</div>
+									<div class="language__menu">
+										<ul class="submenu">
+											<li>
+												<a onclick="changeLanguage('ru', '/ru')" href="javascript:void();">Рос</a>
+											</li>
+											<li>
+												<a onclick="changeLanguage('ru', '/ru')" href="javascript:void();">Українська</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-menu__item user-favorite">
+									<a href="##" class="nav-menu__link">
+										<div class="icon-svg phone-icon">
+											<svg>
+												<use xlink:href="../../img/icons/icons.svg#star"></use>
+											</svg>
+										</div>
+									</a>
+								</li>
+								<li class="nav-menu__item user-profile">
+									<a href="#login" class="nav-menu__link popup-link">
+										<div class="icon-svg phone-icon">
+											<svg>
+												<use xlink:href="../../img/icons/icons.svg#profile"></use>
+											</svg>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="content">
+				<section class="authorization">
+					<div class="container">
+						<div class="authorization__wrap">
+							<div class="register">
+								<h1 class="title">Реєстрація</h1>
+								<form id="form-register" action="/auth/signup" method="post">
+									<input type="hidden" name="_csrf" value="Kz35mwVXILf92EbJWUUbOWhNTki5tsipdmw5uvREEtV4bsHoTgF_4bqddo8JBHJoDCMZA4r6ntxCI3L8tjdVrQ==">
+									<div class="user-info">
+										<div class="user-txt form-group field-signupform-firstname required">
+											<label class="control-label" for="signupform-firstname">Ім&#039;я</label>
+											<input type="text" id="signupform-firstname" class="form-control" name="SignupForm[firstname]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-lastname required">
+											<label class="control-label" for="signupform-lastname">Прізвище</label>
+											<input type="text" id="signupform-lastname" class="form-control" name="SignupForm[lastname]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-phone required">
+											<label class="control-label" for="signupform-phone">Телефон</label>
+											<input type="text" id="signupform-phone" class="phone-mask" name="SignupForm[phone]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-email required">
+											<label class="control-label" for="signupform-email">E-mail</label>
+											<input type="text" id="signupform-email" class="form-control" name="SignupForm[email]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-password required">
+											<label class="control-label" for="signupform-password">Пароль</label>
+											<input type="password" id="signupform-password" class="form-control" name="SignupForm[password]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-signupform-password_repeat required">
+											<label class="control-label" for="signupform-password_repeat">Підтвердження
+												паролю</label>
+											<input type="password" id="signupform-password_repeat" class="form-control" name="SignupForm[password_repeat]" aria-required="true">
+
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="checkbox">
+											<label for="checkbox-agree">
+												<input type="checkbox" name="SignupForm[agree]" id="checkbox-agree">
+												<span class="checkbox__txt">Даю згоду на збирання, обробку, зберігання та використання своїх персональних даних.</span>
+											</label>
+										</div>
+										<button type="submit" class="btn btn-style-1">Зареєструватись</button>
+										<a href="/auth/login" class="txt-link">Увійти в акаунт</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="foоter">
+			<div class="container">
+				<div class="foоter-main">
+					<div class="footer__info">
+						<div class="footer__caption">
+							<a href="#"><img src="img/main-logo-4.png" alt="main-logo"></a>
+							<p>Сервіс покупки у лізинг уживаних авто.</p>
+						</div>
+						<nav class="footer-nav">
+							<div class="footer-nav__b">
+								<ul>
+									<li>
+										<a href="/catalog">
+											Авто в наявності </a>
+									</li>
+									<li>
+										<a href="/calendar">
+											Аукціон </a>
+									</li>
+									<li>
+										<a href="/pravila-provedeniya-auktsiona">
+											Правила проведення аукціону </a>
+									</li>
+									<li>
+										<a href="/about">
+											Про нас </a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-nav__b">
+								<ul>
+									<li>
+										<a href="/sell-car">
+											Продати авто </a>
+									</li>
+									<li>
+										<a href="/leasing">
+											Лізинг </a>
+									</li>
+									<li>
+										<a href="/blog">
+											Блог </a>
+									</li>
+									<li>
+										<a href="/faq">
+											FAQ </a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-nav__b footer-helpdesk">
+								<p>Залишились питання?</p>
+								<div class="number">
+									<a href="tel:0800334170">0 800 33 41 70</a>
+								</div>
+								<div class="email">
+									<a target="_blank" href="mailto:hapai.info@ulf.ua">hapai.info@ulf.ua</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="footer-bottom">
+						<div class="copyright">© 2017-2023 Хапай. Усі права захищено</div>
+						<div class="regulation">
+							<ul>
+								<li><a href="#popup-policy" class="popup-link">Політика конфіденційності</a></li>
+								<li><a href="#popup-terms" class="popup-link">Правила використання</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	<div id="popup-policy" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="title">Політика конфіденційності</div>
+				<p>ЗГОДА-ДОЗВІЛ НА ОБРОБКУ ПЕРСОНАЛЬНИХ ДАНИХ
+
+					Підписанням цієї згоди Я, власник персональних даних (надалі – Клієнт), надаю свою згоду/дозвіл на:
+
+					обробку ТОВ «УЛФ-ФІНАНС» Персональних даних (будь-якої інформації, що стосується мене, в тому числі,
+					однак не виключно інформації щодо прізвища, власного імені, по батькові, паспортних даних,
+					ідентифікаційного коду, дати та місця народження, громадянства, адреси проживання та реєстрації,
+					сімейного, соціального, майнового становища, освіти, професії, доходів, номерів контактних
+					телефонів/факсів, адреси електронної пошти, тощо (надалі - "Персональні дані")) Власника персональних
+					даних з метою:
+
+					1) Здійснення ТОВ «УЛФ-ФІНАНС» своєї фінансово-господарської діяльності, пропонування повного кола
+					послуг ТОВ «УЛФ-ФІНАНС» та/або третіми особами (будь-які особи, з якими ТОВ «УЛФ-ФІНАНС» перебуває в
+					договірних відносинах та/або члени Групи «ТАС» (надалі – «Треті особи»), у тому числі шляхом здійснення
+					прямих контактів із Власником персональних даних за допомогою засобів зв’язку, та/або надання послуг ТОВ
+					«УЛФ-ФІНАНС» та Третіми особами, в тому числі укладення/зміни та/або виконання будь-яких договорів,
+					укладених із ТОВ «УЛФ-ФІНАНС» та/або Третіми особами та/або у зв’язку з ними;
+
+					2) Надання Третіми особами послуг ТОВ «УЛФ-ФІНАНС» для виконання ним своїх функцій та/або для виконання
+					укладених ТОВ «УЛФ-ФІНАНС» із Третіми особами договорів, у т.ч. про відступлення права вимоги;
+
+					3) Захисту ТОВ «УЛФ-ФІНАНС» своїх законних прав та інтересів, у т.ч. передача даних фінансовим установам
+					(ураховуючи, але не виключно, страховим та факторинговим компаніям);     
+
+					4) здійснення ТОВ «УЛФ-ФІНАНС» прав та виконання обов’язків за іншими договірними відносинами між ТОВ
+					«УЛФ-ФІНАНС» та Клієнтом: передачу (поширення), у т.ч. транскордонну, ТОВ «УЛФ-ФІНАНС» Персональних
+					даних Третім особам, зміну, знищення Персональних даних або обмеження доступу до них, включення
+					Персональних даних до бази Персональних даних ТОВ «УЛФ-ФІНАНС» з метою, зазначеною в п.п.1-4 цієї
+					згоди/дозволу та без необхідності надання Власнику персональних даних письмового повідомлення про
+					здійснення зазначених дій.   
+
+					Я надаю та підтверджую свою згоду ПрАТ "ВФ Україна" та ПрАТ "Київстар" на обробку інформації про надання
+					та отримання мною телекомунікаційних послуг, з метою отримання мною послуг ТОВ «УЛФ-ФІНАНС». Мені,
+					Власнику персональних даних, роз'яснено, що ТОВ «УЛФ-ФІНАНС» виступає надавачем фінансових послуг, що
+					діє на підставі Розпорядження Нацкомфінпослуг № 454 від 02.03.2017р.,    
+
+					Зазначена Згода надається на строк, який є необхідним відповідно до мети обробки Персональних даних,
+					передбаченої цією Згодою, однак у будь-якому випадку до моменту припинення ТОВ «УЛФ-ФІНАНС» та/або його
+					правонаступників. Підписанням цієї Згоди Власник персональних даних підтверджує, що він письмово
+					повідомлений про володільця персональних даних, про склад та зміст зібраних ТОВ «УЛФ-ФІНАНС»
+					персональних даних Клієнта, про включення Персональних даних до бази персональних даних ТОВ
+					«УЛФ-ФІНАНС», про права, передбачені Законом України «Про захист персональних даних» від 01.06.2010 року
+					N 2297-VI, про мету збору даних та осіб, яким передаються Персональні дані, засвідчує, що склад та зміст
+					Персональних даних є відповідним визначеній вище меті обробки Персональних даних. Застереження: Термін
+					«обробка персональних даних» визначається чинним законодавством, та означає будь-яку дію або сукупність
+					дій, здійснених повністю або частково в інформаційній (автоматизованій) системі та/або в картотеках
+					персональних даних, які пов'язані зі збиранням, реєстрацією, накопиченням, зберіганням, адаптуванням,
+					зміною, поновленням, використанням і поширенням (розповсюдженням, реалізацією, передачею),
+					знеособленням, знищенням відомостей про фізичну особу (Клієнта), володільцем яких є ТОВ «УЛФ-ФІНАНС»
+					та/чи Треті особи. У випадку укладання між ТОВ «УЛФ-ФІНАНС» і Клієнтом Договору фінансового лізингу
+					(далі - Договір), Клієнт надає ТОВ «УЛФ-ФІНАНС» згоду передавати третім особам будь-яку інформацію щодо
+					персональних та інших даних Клієнта, а також використовувати її в цілях комерційних пропозицій. При
+					порушенні Клієнтом умов Договору чи повідомлені неправдивих відомостей ТОВ «УЛФ-ФІНАНС» має право на
+					свій розсуд розпоряджатися вищезазначеною інформацією. Цей дозвіл знімає будь-які претензії Клієнта щодо
+					порушення ТОВ «УЛФ-ФІНАНС» положень про нерозголошення інформації щодо Клієнта, які існують у чинному
+					законодавстві України, як впродовж дії Договору, так і в будь-який момент після закінчення строку дії
+					Договору. Клієнт надає ТОВ «УЛФ-ФІНАНС» свою згоду на надання інформації про Клієнта до Бюро кредитних
+					історій, а також згоду на запит ТОВ «УЛФ-ФІНАНС» інформації про Клієнта (кредитного звіту) в будь-якому
+					Бюро кредитних історій (в т.ч. до укладення Договору). Зазначена згода діє протягом всього строку дії
+					Договору. Обробка персональних даних фізичних осіб, отриманих від третіх осіб здійснюється на підставі
+					згоди клієнта/потенційного клієнта та його засвідчення про надання згоди близьких осіб, представників,
+					спадкоємців, поручителів, майнових поручителів або третіх осіб на обробку їхніх персональних даних та до
+					передачі таких персональних даних ТОВ «УЛФ-ФІНАНС». Обробка персональних даних фізичних осіб без згоди
+					таких осіб здійснюється виключно відповідно до законодавства України або за умови надання цими третіми
+					особами гарантії, що така передача здійснюється ними з дотриманням вимог законодавства України і не
+					порушує права фізичних осіб, персональні дані яких передаються ТОВ «УЛФ-ФІНАНС».
+
+					Підписанням цього документу Клієнт заявляє, гарантує та підтверджує, що:
+
+					а) Клієнт діє за згодою другого з подружжя або особи, з якою проживає однією сім’єю (фактичні сімейні
+					відносини), на укладання та виконання Договору (в тому числі, укладення договору фінансового лізингу). У
+					випадку визнання Договору чи будь-якої його частини у судовому порядку недійсним (неукладеним) з причин
+					відсутності згоди другого з подружжя або особи, з якою проживає Клієнт однією сім’єю (фактичні сімейні
+					відносини), останній зобов‘язаний компенсувати ТОВ «УЛФ-ФІНАНС» всі витрати та збитки, що виникли у
+					зв‘язку з виконанням такого судового рішення;
+
+					б) Клієнт не заперечує, щоб ТОВ «УЛФ-ФІНАНС» здійснив перевірку Бюро кредитних історій інформації, що
+					надана Клієнтом ТОВ «УЛФ-ФІНАНС», на отримання останнім інформації з Бюро кредитних історій: Приватне
+					акціонерне товариство «Перше всеукраїнське бюро кредитних історій», яке знаходиться за адресою: вул.
+					Марини Раскової, буд.11, м. Київ, 02660; Товариство з обмеженою відповідальністю «УКРАЇНСЬКЕ БЮРО
+					КРЕДИТНИХ ІСТОРІЙ», яке знаходиться за адресою: вул. Грушевського, 1-д, м. Київ, 01001, про Клієнта, а
+					також на отримання інформації про Клієнта, з усіх дозволених законом джерел;
+
+					в) Клієнт не заперечує, щоб ТОВ «УЛФ-ФІНАНС» перевірив надану Клієнтом інформацію та надає згоду на:  
+
+					- збір, зберігання, використання, поширення та передачу у повному обсязі інформації, що надана Клієнтом
+					ТОВ «УЛФ-ФІНАНС», в тому числі зазначена в Договорі, до Бюро кредитних історій, назва і адреса
+					якого/яких зазначена в Тарифах ТОВ «УЛФ-ФІНАНС» і доведена Клієнту ТОВ «УЛФ-ФІНАНС» (надалі – «Бюро»), з
+					метою формування та ведення кредитної історії Клієнта як суб’єкта кредитної історії;
+
+					- перевірку Бюро інформації, що надана Клієнтом ТОВ «УЛФ-ФІНАНС», на отримання ТОВ «УЛФ-ФІНАНС» з Бюро
+					кредитної історії Клієнта, а також на отримання від Бюро додаткової інформації про Клієнта, з усіх
+					дозволених законом джерел. Я, власник персональних даних, підтверджую, що перед укладенням Договору ТОВ
+					«УЛФ-ФІНАНС» повідомив мене у письмовій формі про особу та місцезнаходження ТОВ «УЛФ-ФІНАНС»; умови
+					(мету отримання послуги фінансового лізингу; форми забезпечення; наявні в ТОВ «УЛФ-ФІНАНС» умови надання
+					послуг з коротким описом відмінностей між ними, в тому числі між зобов'язаннями Клієнта; тип відсоткової
+					ставки; вартість послуги (перелік витрат, пов'язаних з одержанням послуги, його обслуговуванням та
+					поверненням, зокрема таких, як комісії, витрати на страхування, юридичне оформлення, консультаційні
+					витрати, тощо); строк, на який послуга фінансового лізингу може бути одержана; включаючи кількість
+					платежів, їх частоту та обсяги; можливість дострокового розірвання договору та умови; відомості про те,
+					від кого Клієнт може одержати докладнішу інформацію.</p>
+			</div>
+		</div>
+	</div>
+	<div id="popup-terms" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="title">Правила використання</div>
+				<p>
+				<p>ПРАВИЛА ВИКОРИСТАННЯ САЙТУ ТОВ «УЛФ-ФІНАНС» </p>
+
+				1. МЕТА
+
+				<p>ТОВ «УЛФ-ФІНАНС» (далі - Товариство) - власник доменного імені ulf.uа, а також авторського права на
+					наповнення цього вебсайта відповідно до законодавства України з авторського права, якщо інше не було
+					чітко визначено в окремих випадках на вебсайті. Авторське право Товариства поширюється на всі матеріали,
+					опубліковані на вебсайті https://ulf.ua/ (далі - Сайт), а також будь-які матеріали, які можуть бути
+					видалені чи змінені Товариством.</p>
+				<p>Дані Правила використання Сайту (далі - Правила) розроблені для відвідувачів/ користувачів Сайту та
+					описують дії, які спрямовані на забезпечення конфіденційності інформації про відвідувачів/користувачів
+					Сайту Товариства https://ulf.ua/.</p>
+
+				2. ВИЗНАЧЕННЯ ТА СФЕРА ЗАСТОСУВАННЯ
+
+				<p>Цей Сайт має виключно інформаційне значення якщо інше не визначено законодавством України. Товариство не
+					несе відповідальності за можливі наслідки використання інформації на сайті. Для
+					відвідування/користування Сайтом Товариства реєстрація не потрібна.</p>
+				<p>Користуючись Сайтом Ви погоджуєтесь з цими Правилами користування Сайту. Ці Правила є угодою між Вами та
+					ТОВ «УЛФ-ФІНАНС», предмет якої описаний в цих Правилах. Товариство може вносити зміни до Правил час від
+					часу без попереднього повідомлення відвідувачів/користувачів Сайту.</p>
+				<p>Даний Сайт містить перелік фінансових та інших послуг, що надаються Товариством, а також надає
+					відвідувачам/користувачам додаткові можливості при використанні послуг Товариства. Жодна частина змісту
+					даного Сайту не може бути витлумачена як пропозиція відвідувачу/користувачу Сайту зі сторони Товариства
+					купити/отримати, продати/надати або здійснити будь-які послуги, що пропонуються Товариством.</p>
+
+				3. НАДАННЯ ТА ВИКОРИСТАННЯ ІНФОРМАЦІЇ
+
+				<p>Інформація про послуги Товариства на цьому Сайті надаються на умовах "як є" і "як доступно". Ви
+					погоджуєтеся, що будь-яка інформація, розміщена на цьому Сайті, підлягає Вашій власній оцінці перед
+					прийняттям базованого на ній рішення. Ви погоджуєтеся також нести повну відповідальність за використання
+					цієї інформації. Товариство володіє інформацією, розміщеною на цьому Сайті, або має право на її
+					використання. Будь-який відвідувач/користувач має право демонструвати, зберігати, переформатовати,
+					роздруковувати та виконувати інші дії з інформацією, що міститься на цьому Сайті. Однак, публікація,
+					передача, розміщення або поширення в будь-який інший формі інформації, внесення змін та правок до
+					інформації, що міститься на цьому Сайті, без попередньої письмової згоди Товариства, забороняється.</p>
+				<p>У випадках, коли відвідувачі/користувачі для отримання детальної інформації або зворотного зв'язку
+					заповнюють онлайн-заявки/анкети та/або надсилають е-mail повідомлення, вони залишають персональну
+					інформацію для подальшого опрацювання її відповідними підрозділами Товариства. За таких умов Товариство
+					може зв'язуватися з особами, які заповнили та надіслали такі заявки/анкети, для надання відповідей та
+					більш детальної інформації, опрацювання наданих даних, призначення зустрічей, надсилання публікацій або
+					маркетингових матеріалів тощо.</p>
+				<p>Для захисту такої інформації використовується технологія кодування, оскільки дані йдуть через Інтернет.
+					Надання персональних даних, зокрема, може знадобитися у перерахованих нижче випадках.</p>
+
+
+				<p>3.1. ЗАПОВНЕННЯ ЗАЯВОК НА ПОСЛУГИ ТОВАРИСТВА</p>
+				<p>Даний Сайт надає відвідувачам можливість дізнатися про переваги послуг Товариства та, в разі
+					зацікавленості в отриманні додаткової інформації, заповнити анкети за відповідними послугами, а також
+					залишити свої контактні дані для подальшої комунікації з представниками Товариства. Дані заявки
+					розташовані на сторінках з описом послуг Товариства.</p>
+
+				4. КОНФІДЕНЦІЙНІСТЬ ПАРОЛЯ
+
+				<p>У разі присвоєння Вам імені користувача і пароля (як клієнтові або зареєстрованому користувачу), Ви
+					несете відповідальність за збереження його конфіденційності та погоджуєтеся нести повну відповідальність
+					за дії, вчинені під присвоєним Вам ім'ям користувача. Ви погоджуєтеся кожен раз після закінчення роботи
+					виходити з системи клієнтського доступу і негайно повідомити Товариство у разі виникнення підозри, що
+					Ваша конфіденційність порушена.</p>
+
+				5. ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ
+
+				<p>В обмін на право користуватися інформацією або послугами даного сайту Ви погоджуєтеся надати точну
+					інформацію під час реєстрації та невідкладно оновлювати її в разі потреби, для забезпечення точності
+					такої інформації. Товариство не збирає особисті дані відвідувачів/користувачів, що мають ознаки
+					конфіденційного характеру за допомогою Сайту, за винятком випадків, передбачених законодавством
+					(наприклад, при підборі персоналу).</p>
+
+				6. РОЗКРИТТЯ ІНФОРМАЦІЇ
+
+				<p>Товариство дотримується вимог чинного законодавства України, зокрема Закону України «Про захист
+					персональних даних», Закону України «Фінансові послуги та державне регулювання ринків фінансових
+					послуг», та не розкриває особисту інформацію, окрім випадків, що потребують таких дій згідно з
+					законодавством України.</p>
+
+				7. ЗБЕРІГАННЯ ДАНИХ
+
+				<p>Товариство зберігає інформацію, отриману від відвідувачів/користувачів Сайту, виключно з метою надання їм
+					відповідних послуг. Контактна інформація, яка вказується в реєстраційній формі, використовується нами
+					(Товариством) з метою взаємодії з нашими зареєстрованими користувачами, як в індивідуальному порядку,
+					так і через розсилку колективних повідомлень. Ви маєте право відмовитися від отримання повідомлень, що
+					розсилаються одночасно різним адресатам, але в той же час даєте згоду відповісти невідкладно на будь-які
+					повідомлення, спрямовані конкретно Вам і стосуються використання Вами цього Сайту.</p>
+
+				8. ВКАЗІВКИ ПЕРЕХОДУ НА ІНШІ САЙТИ
+
+				<p>Для зручності цей Сайт може містити вказівники переходу на інші сайти. І хоча Товариство докладає
+					зусилля, щоб упевнитися в надійності інших сайтів, ми не несемо ніякої відповідальності за використання
+					вами інших сайтів або за збиток будь-якого роду, заподіяний в результаті їх використання. Ми
+					рекомендуємо відвідувачам/користувачам перед розміщенням своєї особистої інформації (персональних даних)
+					на інших сайтах уважно ознайомитися з їхньою політикою конфіденційності та/або правилами користування
+					сайтом.</p>
+
+				9. COOKIES, GOOGLE ANALYTICS
+
+				<p>Інтернет Сайт https://ulf.ua/ або будь-які з його розділів/підрозділів можуть використовувати файли
+					cookies, статистичну програму Google Analytics.</p>
+
+				<p>9.1. COOKIES</p>
+				<p>Технологія cookies дозволять нашому Сайту зберігати у Вашому браузері пристрої ідентифікації інформації
+					(«ідентифікатори»), які будуть використовуватися тільки нашим Сайтом при його відвідуванні Вами. Cookies
+					не використовуються для встановлення особи, що є відвідувачем https://ulf.ua/. Якщо Ви не бажаєте
+					отримувати cookies від https:// ulf.ua/, Ви можете налаштувати Ваш браузер таким чином, щоб він
+					повідомляв Вас про отримання cookie-файлу, а Ви могли вибирати, приймати його чи ні. При цьому,
+					відключивши cookies в настройках Вашого браузера, Ви не зможете скористатися всіма функціями Сайту.</p>
+				<p>9.2. GOOGLE ANALYTICS</p>
+				<p>Google Analytics надають інструменти цифрової аналітики для своїх користувачів, яка допомагає
+					відслідковувати ефективність маркетингових кампаній, рівень доступності та інформативності контенту, що
+					є предметом найчастішого пошуку на сайті та інше. Товариство використовує цю технологію винятково з
+					метою складання узагальнених статистичних даних про відвідувачів нашого Сайту, а також для оцінки
+					ефективності наших рекламних компаній/розсилок. Отримані відомості допомагають Товариству удосконалювати
+					вебсайт з урахуванням потреб відвідувачів/користувачів Сайту. Статистична програма Google Analytics не
+					збирає та не зберігає персональні дані відвідувачів/користувачів Сайту, а також не використовує та не
+					ділиться даними нашої аналітики.</p>
+
+				10. ПРИКІНЦЕВІ ПОЛОЖЕННЯ
+
+				<p>Товариство не несе відповідальності за повноту та достовірність інформації, що надають про себе
+					відвідувачі/користувачі Сайту в рамках даних Правил. У випадку виникнення у користувачів Сайту
+					конкретних питань, пов'язаних із діяльністю Товариства, просимо звертатись до Товариства будь-яким
+					зручним для них способом. Усі реквізити, за якими користувачі Сайту зможуть зв'язатись з Товариством,
+					зазначені в розділі Сайту https://ulf.ua/contacts.</p>
+				<p>У разі отримання Вами доступу до будь-якої частини Сайту Товариства та/або використання інформації з
+					Сайту Товариства, вважається що Ви ознайомилися та погодилися з даними Правилами використання Сайту ТОВ
+					«УЛФ-ФІНАНС».</p>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="popup-help" class="popup petty-popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="title">Потрібна допомога? Залиш заявку</div>
+				<form id="form-help">
+					<input type="hidden" name="subject" value="Форма помощи">
+					<div class="user-info">
+						<div class="user-txt">
+							<input type="text" name="client_name" placeholder="Ім'я">
+							<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+						</div>
+						<div class="user-txt">
+							<input type="text" name="client_phone" placeholder="Номер телефону">
+							<p class="help-block help-block-error">Невірний телефон</p>
+						</div>
+						<div class="checkbox">
+							<label for="help-checkbox-agree"></label>
+							<input type="checkbox" checked name="agreement" id="help-checkbox-agree">
+							<span class="checkbox__txt">Даю згоду на збір, обробку, зберігання та використання своїх персональних даних.</span>
+						</div>
+						<button type="submit" class="btn btn-style-1">Відправити</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="popup-success" class="popup petty-popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="card-check card-accepted show">
+					<span class="icon icon-u_check"></span>
+					<div class="popup-auction__title">Дякуємо за вашу заявку</div>
+					<p>Наш менеджер зв'яжеться з вами</p>
+					<div class="bank-card__button">
+						<button type="button" class="btn btn-style-2 close-popup">Закрити</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="login" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="title">Вхід</div>
+				<form id="form-popup-login" action="auth/login" method="post">
+					<input type="hidden" name="_csrf" value="Kz35mwVXILf92EbJWUUbOWhNTki5tsipdmw5uvREEtV4bsHoTgF_4bqddo8JBHJoDCMZA4r6ntxCI3L8tjdVrQ==">
+					<div class="user-info">
+						<div class="user-txt form-group field-loginform-phone required">
+							<label class="control-label" for="loginform-phone">Телефон</label>
+							<input type="text" id="loginform-phone" class="phone-mask" name="LoginForm[phone]" aria-required="true">
+
+							<p class="help-block help-block-error"></p>
+						</div>
+						<div class="user-txt form-group field-loginform-password required">
+							<label class="control-label" for="loginform-password">Пароль</label>
+							<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+
+							<p class="help-block help-block-error"></p>
+						</div>
+						<div class="user-info__b">
+							<div class="checkbox">
+								<label for="checkbox-remember-popup">
+									<input type="checkbox" name="LoginForm[remember]" id="checkbox-remember-popup" checked>
+									<span class="checkbox__txt">Запам'ятати мене</span>
+								</label>
+							</div>
+							<a href="/auth/request-password-reset" class="forgot-password">Забули пароль?</a>
+						</div>
+						<button type="submit" class="btn btn-style-1">Войти</button>
+						<a href="/auth/signup" class="txt-link">У мене ще немає акаунту</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="popup-auction-auth" class="popup popup-auction">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+				<div class="authorization__wrap">
+					<div class="payment-methods">
+						<div class="popup-auction__title">Щоб приймати участь в аукціоні ввійдіть в систему</div>
+						<div class="popup-auction__note">Щоб приймати участь в аукціоні пройдіть реєстрацію.</div>
+						<div class="bank-card__button">
+							<a href="/auth/login" class="btn btn-style-2">Увійти</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/45446e13/jquery.js?v=1614705114"></script>
+	<script src="assets/b1b6c6cc/yii.js?v=1651734449"></script>
+	<script src="assets/b1b6c6cc/yii.validation.js?v=1651734449"></script>
+	<script src="assets/b1b6c6cc/yii.activeForm.js?v=1651734449"></script>
+	<script src="js/jquery-ui.js?v=1655287247"></script>
+	<script src="js/jquery.ui.touch-punch.min.js?v=1658866374"></script>
+	<script src="js/jquery.formstyler.min.js?v=1655287247"></script>
+	<script src="js/jquery.mask.min.js?v=1655287247"></script>
+	<script src="js/swiper-bundle.min.js?v=1655287247"></script>
+	<script src="js/slider.js?v=1.02"></script>
+	<script src="js/popups.js?v=1655287247"></script>
+	<script src="js/fancybox.umd.js?v=1655287247"></script>
+	<script src="js/main.js?v=1.04"></script>
+	<script src="js/calc.js?v=1.01"></script>
+	<script src="js/script.js?v=1.22"></script>
+	<script>jQuery(function ($) {
+			jQuery('#form-register').yiiActiveForm([{
+				"id": "signupform-firstname",
+				"name": "firstname",
+				"container": ".field-signupform-firstname",
+				"input": "#signupform-firstname",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "signupform-lastname",
+				"name": "lastname",
+				"container": ".field-signupform-lastname",
+				"input": "#signupform-lastname",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "signupform-phone",
+				"name": "phone",
+				"container": ".field-signupform-phone",
+				"input": "#signupform-phone",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "signupform-email",
+				"name": "email",
+				"container": ".field-signupform-email",
+				"input": "#signupform-email",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					yii.validation.email(value, messages, {
+						"pattern": /^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,
+						"fullPattern": /^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/,
+						"allowName": false,
+						"message": "Невалідна пошта",
+						"enableIDN": false,
+						"skipOnEmpty": 1
+					});
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "signupform-password",
+				"name": "password",
+				"container": ".field-signupform-password",
+				"input": "#signupform-password",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					yii.validation.string(value, messages, {
+						"message": "Значення \"Пароль\" має бути текстовим рядком.",
+						"min": 6,
+						"tooShort": "Значення \"Пароль\" повинно містити мінімум 6 символів.",
+						"skipOnEmpty": 1
+					});
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "signupform-password_repeat",
+				"name": "password_repeat",
+				"container": ".field-signupform-password_repeat",
+				"input": "#signupform-password_repeat",
+				"error": ".help-block.help-block-error",
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+					yii.validation.compare(value, messages, {
+						"operator": "==",
+						"type": "string",
+						"compareAttribute": "signupform-password",
+						"compareAttributeName": "SignupForm[password]",
+						"skipOnEmpty": 1,
+						"message": "Паролі не співпадають"
+					}, $form);
+				}
+			}], []);
+			jQuery('#form-popup-login').yiiActiveForm([{
+				"id": "loginform-phone",
+				"name": "phone",
+				"container": ".field-loginform-phone",
+				"input": "#loginform-phone",
+				"error": ".help-block.help-block-error",
+				"enableAjaxValidation": true,
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}, {
+				"id": "loginform-password",
+				"name": "password",
+				"container": ".field-loginform-password",
+				"input": "#loginform-password",
+				"error": ".help-block.help-block-error",
+				"enableAjaxValidation": true,
+				"validate": function (attribute, value, messages, deferred, $form) {
+					yii.validation.required(value, messages, { "message": "Поле не може бути незаповненим" });
+					value = yii.validation.trim($form, attribute, {
+						"skipOnArray": true,
+						"skipOnEmpty": false,
+						"chars": false
+					}, value);
+				}
+			}], { "validationUrl": "auth\/login-validate" });
+		});</script>
+</body>
+
+</html>

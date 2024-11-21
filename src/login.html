@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/auth/login" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/auth/login" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/auth/login" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru/auth/login" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="1oQlw2tbapWE2SIazjwwYpmtnmwppSVtwp2fqxqg4L2F1x2wIA01w8OcElyefVkz_cPJJxrpcxj20tTtWNOnxQ==">
+	<title>Вхід</title>
+
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<meta name="google-site-verification" content="8P-GSlgqUr82Wu2O2QjJgcLUrXfA9wKplrDz9w3BmSA" />
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body>
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHLKHPX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="authorization">
+					<div class="container">
+						<div class="authorization__wrap">
+							<div class="login">
+								<h1 class="title">Вхід</h1>
+								<form id="form-login" action="auth/login" method="post">
+									<input type="hidden" name="_csrf" value="1oQlw2tbapWE2SIazjwwYpmtnmwppSVtwp2fqxqg4L2F1x2wIA01w8OcElyefVkz_cPJJxrpcxj20tTtWNOnxQ==">
+									<div class="user-info">
+										<div class="user-txt form-group field-loginform-phone required">
+											<label class="control-label" for="loginform-phone">Телефон</label>
+											<input type="text" id="loginform-phone" class="phone-mask" name="LoginForm[phone]" aria-required="true">
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-txt form-group field-loginform-password required">
+											<label class="control-label" for="loginform-password">Пароль</label>
+											<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+											<p class="help-block help-block-error"></p>
+										</div>
+										<div class="user-info__b">
+											<div class="checkbox">
+												<label for="checkbox-remember">
+													<input type="checkbox" name="LoginForm[remember]" id="checkbox-remember" checked>
+													<span class="checkbox__txt">Запам'ятати мене</span>
+												</label>
+											</div>
+											<a href="/auth/request-password-reset" class="forgot-password">Забули пароль?</a>
+										</div>
+										<button type="submit" class="btn btn-style-1">Войти</button>
+										<a href="/auth/signup" class="txt-link">У мене ще немає акаунту</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<link rel="canonical" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="x-default" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="uk-UA" href="https://auction.hapai.kiev.ua/" />
+	<link rel="alternate" hreflang="ru-UA" href="https://auction.hapai.kiev.ua/ru" />
+
+	<meta name="csrf-param" content="_csrf">
+	<meta name="csrf-token" content="">
+	<title>Відгуки</title>
+
+	<meta name="description" content="Відгуки">
+	@@include('html/part-head-stylesheet.html',{})
+	<script>
+		const usdRate = 40.8000;
+		const productCalc = {
+			"OsagoPaymentAmount": 2500,
+			"KaskoPercentage": 0.0127,
+			"Tax": 0,
+			"RegistrationPrice": 4500,
+			"DeregistrationPrice": 500,
+			"ManagerBonusPercentage": 0.025,
+			"TrackerPrice": 3000,
+			"OtherExpences": 700,
+			"DealerBonusPercentage": 0.02,
+			"OtherAnnualAmount": 120,
+			"OfficialJobAnnualAdditionalAmount": 500,
+			"Irr": 0.365
+		};
+	</script>
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Хапай Аукціон",
+            "url": "https://auction.hapai.kiev.ua/",
+            "logo": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "image": "https://auction.hapai.kiev.ua/img/main-logo-4.png",
+            "email": "hapai.info@ulf.ua",
+            "telephone": "0800334170"
+        }
+    </script>
+</head>
+
+<body class="reviews-p">
+	<div class="popup-bg-body"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<div class="choice-car-wrapper banner-top">
+					<div class="container">
+						<div class="choice-car__main">
+							<section class="breadcrumb">
+								<ul class="breadcrumb-wrap" itemscope itemtype="https://schema.org/BreadcrumbList">
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/">
+											<span itemprop="name"><span class="icon-u_home-alt"></span></span>
+										</a>
+										<meta itemprop="position" content="0" />
+									</li>
+									<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+										<a itemprop="item" href="/catalog">
+											<span itemprop="name">Відгуки</span>
+										</a>
+										<meta itemprop="position" content="1" />
+									</li>
+								</ul>
+							</section>
+							<section class="banner-top-descrp">
+								<div class="banner-top-descrp__wraper">
+									<div class="banner-top-descrp__content">
+										<div class="title">Дізнайся, що про нас говорять</div>
+										<div class="txt-big">Відгуки наших клієнтів про фінансування, автопідбір, обслуговування та інші послуги</div>
+										<div class="btn-wrapper">
+											<a href="##" class="btn btn-style-3">Переглянути відгуки</a>
+											<a href="##" class="btn btn-style-6">Написати відгук</a>
+										</div>
+									</div>
+									<div class="img-wrap">
+										<img src="@img/c4542cd615f44173abe2243c7c451b59.png" alt="leasing-1">
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<section class="why">
+					<div class="container">
+						<div class="description">ХАПАЙавто — сервіс покупки б/у авто в лізинг. Ви можете придбати авто у нашому салоні або обрати автомобіль на будь-якому сайті чи майданчику. Також ми пропонуємо послугу автопідбору та забезпечуємо усіх клієнтів цілодобовою підтримкою в дорозі - Assistance.</div>
+						<div class="why__wrap">
+							<div class="why__item">
+								<span class="icon-fi_user-check"></span>
+								<div class="why__descrp">
+									<div class="heading">Фінансуємо</div>
+									<p>Фінансуємо тільки перевірені авто</p>
+								</div>
+							</div>
+							<div class="why__item">
+								<span class="icon-fi_book-open"></span>
+								<div class="why__descrp">
+									<div class="heading">10 років на ринку України</div>
+									<p>ХАПАЙавто - компанія лідера з фінансування нових авто - ULF</p>
+								</div>
+							</div>
+							<div class="why__item">
+								<span class="icon-u_car"></span>
+								<div class="why__descrp">
+									<div class="heading">Представництво по всій Україні</div>
+									<p>Працюємо по всій Україні, представництва - в 15 містах</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="reviews-list">
+					<div class="container">
+						<div class="title">Відгуки клієнтів</div>
+						<div class="reviews-tabs" id="reviews-tabs">
+							<div class="reviews-tabs__menu">
+								<ul>
+									<li class="active"><a href="##">Всі відгуки</a></li>
+									<li><a href="#">Останні відгуки</a></li>
+									<li><a href="#">Найкращі відгуки</a></li>
+								</ul>
+								<a href="##" class="btn btn-style-3">Написати відгук</a>
+							</div>
+							<div>
+								<div class="reviews-tabs__wrapper">
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+									<div class="reviews-tabs__item">
+										<img src="@img/reviews-img.jpeg" alt="reviews-img"></a>
+										<div class="reviews-tabs__info">
+											<div class="reviews-tabs__title">Эмоции переполняют! Благодарен компании ХАПАЙавто.</div>
+											<div class="reviews-tabs__star">
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star star-paint"></span>
+												<span class="star"></span>
+												<span class="star"></span>
+											</div>
+											<p class="reviews-tabs__txt">Помогли купить машину. В наше время собрать деньги тяжело: дети, памперсы и так...</p>
+											<a href="##">Показати весь відгук</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<a id="button_top" href="javascript:void();"><img src="@img/svg/arrow_up.svg" alt="top"></a>
+	</div>
+	@@include('html/popup/popup-policy.html',{})
+	@@include('html/popup/popup-terms.html',{})
+	@@include('html/popup/popup-help.html',{})
+	@@include('html/popup/popup-success.html',{})
+	@@include('html/popup/popup-login.html',{})
+	@@include('html/popup/popup-auth.html',{})
+
+	@@include('html/part-footer-js.html',{})
+</body>
+
+</html>

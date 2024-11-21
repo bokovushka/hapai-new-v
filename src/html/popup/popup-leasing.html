@@ -1,0 +1,32 @@
+<div id="popup-leasing" class="popup petty-popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+			<div class="title">Заявка на лізинг</div>
+			<form id="form-leasing">
+				<input type="hidden" name="subject" value="Лизинг">
+				<input type="hidden" name="price" value="">
+				<div class="user-info">
+					<div class="user-txt">
+						<input type="text" name="client_name" placeholder="Ваше ім'я">
+						<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+					</div>
+					<div class="user-txt">
+						<input type="text" name="client_phone" placeholder="Ваш номер телефону">
+						<p class="help-block help-block-error">Невірний телефон</p>
+					</div>
+					<div class="user-txt">
+						<input type="text" name="client_inn" placeholder="Ваш ІНП">
+						<p class="help-block help-block-error">Невірний ІНП</p>
+					</div>
+					<div class="checkbox">
+						<label for="leasing-checkbox-agree"></label>
+						<input type="checkbox" name="agreement" id="leasing-checkbox-agree">
+						<span class="checkbox__txt">Даю згоду на збір, обробку, зберігання та використання своїх <a href="##">персональних даних</a>.</span>
+					</div>
+					<button type="submit" class="btn btn-style-4">Відправити</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
