@@ -1049,3 +1049,68 @@
     padding: 0 20px;
   }
 }
+.top-banner__wrap.black-friday {
+  background: #000 url(../img/hapai-page-friday/top-bg-down.jpeg) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 40px;
+  display: flex;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.black-friday {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.black-friday {
+    padding-top: 0;
+  }
+}
+.top-banner__wrap.black-friday .form-leasing-main {
+  width: 100%;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.black-friday .form-leasing-main {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.black-friday .wrapping {
+    margin: 0 -40px;
+  }
+}
+.top-banner__wrap.black-friday .img-wrap {
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  margin-left: 30px;
+  transform: unset;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.black-friday .img-wrap {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 840px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .top-banner__wrap.black-friday .img-wrap {
+    display: block;
+  }
+}
+.top-banner__wrap.black-friday .img-wrap img {
+  object-fit: cover;
+}
+.top-banner__wrap.black-friday .img-wrap img.mob {
+  display: none;
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.black-friday .img-wrap img.desk {
+    display: none;
+  }
+  .top-banner__wrap.black-friday .img-wrap img.mob {
+    display: block;
+  }
+}
