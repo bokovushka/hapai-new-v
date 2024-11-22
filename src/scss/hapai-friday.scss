@@ -115,6 +115,7 @@
 			border-radius: 30px;
 			position: relative;
 			overflow: hidden;
+			box-shadow: 0px 0px 100px -30px rgb(78, 79, 141);
 			@media only screen and (max-width: 1279px) {
 				padding: 305px 45px 45px 45px;
 				background-size: 120%;
@@ -143,34 +144,6 @@
 						max-width: 290px;
 					}
 				}
-				.collection-funds {
-					display: flex;
-					align-items: center;
-					gap: 4px;
-					span {
-						display: block;
-						width: 61px;
-						min-width: 61px;
-						height: 100px;
-						position: relative;
-						padding: 4px;
-						background: #f5f6f8;
-						border-radius: 8px;
-						font-size: 48px;
-						font-weight: 500;
-						line-height: 46px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						@media only screen and (max-width: 639px) {
-							font-size: 36px;
-							line-height: 46px;
-							width: 37px;
-							min-width: 37px;
-							height: 61px;
-						}
-					}
-				}
 				.img-wrap {
 					display: none;
 					@media only screen and (max-width: 991px) {
@@ -181,6 +154,36 @@
 			}
 		}
 	}
+
+	.collection-funds {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		span {
+			display: block;
+			width: 61px;
+			min-width: 61px;
+			height: 100px;
+			position: relative;
+			padding: 4px;
+			background: #f5f6f8;
+			border-radius: 8px;
+			font-size: 48px;
+			font-weight: 500;
+			line-height: 46px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@media only screen and (max-width: 639px) {
+				font-size: 36px;
+				line-height: 46px;
+				width: 37px;
+				min-width: 37px;
+				height: 61px;
+			}
+		}
+	}
+
 	.information-content {
 		padding: 40px 0 65px 0;
 		.container {
@@ -575,6 +578,17 @@
 		}
 	}
 	.project-num {
+		.title {
+			font-size: 36px;
+			font-weight: 500;
+			line-height: 46px;
+			margin-bottom: 25px;
+			@media only screen and (max-width: 639px) {
+				font-size: 29px;
+				font-weight: 500;
+				line-height: 42px;
+			}
+		}
 		.wrap-img {
 			max-height: 590px;
 			border-radius: 20px;
@@ -677,6 +691,7 @@
 
 .before-after__swiper {
 	height: 100%;
+	position: relative;
 	.swiper-slide {
 		.before-after--wrap {
 			height: 100%;
@@ -695,6 +710,36 @@
 				text-align: center;
 				margin-bottom: 12px;
 			}
+		}
+	}
+	.swiper__buttons {
+		display: block;
+		position: static;
+		.btn__swiper-prev,
+		.btn__swiper-next {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			transform: translateY(-50%) translateY(-20px);
+			border-radius: 50%;
+			border-color: #fff;
+			background: #fff;
+			transition: all 0.5s;
+			&::before {
+				color: #6667ab;
+				transition: all 0.5s;
+			}
+			&:hover {
+				&::before {
+					color: #d45279;
+				}
+			}
+		}
+		.btn__swiper-prev {
+			left: 15px;
+		}
+		.btn__swiper-next {
+			right: 15px;
 		}
 	}
 }
@@ -875,15 +920,73 @@
 	margin-top: -85px;
 }
 
-@media only screen and (max-width: 1439px) {
+//////
+///
+
+.before-after-slider {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	border: 3px solid white;
 }
-@media only screen and (max-width: 1279px) {
+
+.after-image {
+	display: block;
 }
-@media only screen and (max-width: 991px) {
+
+.before-image {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 2;
 }
-@media only screen and (max-width: 767px) {
+
+.resizer {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	z-index: 5;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 3px;
+	background: white;
+	/*Stop vertical scrolling on touch*/
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	cursor: grab;
 }
-@media only screen and (max-width: 639px) {
+
+.resizer {
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		width: 11px;
+		height: 26px;
+		background: url(../img/icons/icons.svg#triangle-before-after) 50% 50% no-repeat;
+		background-size: 100%;
+	}
+	&::after {
+		right: 7px;
+	}
+	&::before {
+		transform: translateY(-50%) rotate(180deg);
+		left: 7px;
+	}
+	.swiper__buttons {
+	}
 }
-@media only screen and (max-width: 479px) {
+
+@media (max-width: 767px) {
+	.container {
+		width: 100%;
+		padding: 0 20px;
+	}
 }

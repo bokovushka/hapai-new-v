@@ -512,12 +512,16 @@ var beforeAfterSwiper = new Swiper('.before-after__swiper', {
 		el: ".information-content .wrap-slider .swiper-pagination",
 		clickable: true,
 	},
-	// simulateTouch: false,
-	loop: true,
-	autoplay: {
-		delay: 10000,
-		disableOnInteraction: false
+	navigation: {
+		prevEl: ".information-content .wrap-slider .swiper__buttons .icon-u_arrow-left",
+		nextEl: ".information-content .wrap-slider .swiper__buttons .icon-u_arrow-right"
 	},
+	simulateTouch: false,
+	loop: true,
+	// autoplay: {
+	// 	delay: 10000,
+	// 	disableOnInteraction: false
+	// },
 });
 
 //hapai-page-friday.html

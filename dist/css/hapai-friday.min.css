@@ -132,6 +132,7 @@
   border-radius: 30px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 0px 100px -30px rgb(78, 79, 141);
 }
 @media only screen and (max-width: 1279px) {
   .hapai-friday .ten-implants .ten-implants--main {
@@ -170,12 +171,21 @@
     max-width: 290px;
   }
 }
-.hapai-friday .ten-implants .ten-implants--main .inner .collection-funds {
+.hapai-friday .ten-implants .ten-implants--main .inner .img-wrap {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .hapai-friday .ten-implants .ten-implants--main .inner .img-wrap {
+    display: block;
+    margin: 0 -10px;
+  }
+}
+.hapai-friday .collection-funds {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.hapai-friday .ten-implants .ten-implants--main .inner .collection-funds span {
+.hapai-friday .collection-funds span {
   display: block;
   width: 61px;
   min-width: 61px;
@@ -192,21 +202,12 @@
   justify-content: center;
 }
 @media only screen and (max-width: 639px) {
-  .hapai-friday .ten-implants .ten-implants--main .inner .collection-funds span {
+  .hapai-friday .collection-funds span {
     font-size: 36px;
     line-height: 46px;
     width: 37px;
     min-width: 37px;
     height: 61px;
-  }
-}
-.hapai-friday .ten-implants .ten-implants--main .inner .img-wrap {
-  display: none;
-}
-@media only screen and (max-width: 991px) {
-  .hapai-friday .ten-implants .ten-implants--main .inner .img-wrap {
-    display: block;
-    margin: 0 -10px;
   }
 }
 .hapai-friday .information-content {
@@ -648,6 +649,19 @@
 .hapai-friday .our-proofs .our-proofs__swiper .slide-pdf .wrap.pdf-download .inner {
   height: 100%;
 }
+.hapai-friday .project-num .title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 639px) {
+  .hapai-friday .project-num .title {
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 42px;
+  }
+}
 .hapai-friday .project-num .wrap-img {
   max-height: 590px;
   border-radius: 20px;
@@ -749,6 +763,7 @@
 
 .before-after__swiper {
   height: 100%;
+  position: relative;
 }
 .before-after__swiper .swiper-slide .before-after--wrap {
   height: 100%;
@@ -767,6 +782,36 @@
   line-height: 24px;
   text-align: center;
   margin-bottom: 12px;
+}
+.before-after__swiper .swiper__buttons {
+  display: block;
+  position: static;
+}
+.before-after__swiper .swiper__buttons .btn__swiper-prev,
+.before-after__swiper .swiper__buttons .btn__swiper-next {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%) translateY(-20px);
+  border-radius: 50%;
+  border-color: #fff;
+  background: #fff;
+  transition: all 0.5s;
+}
+.before-after__swiper .swiper__buttons .btn__swiper-prev::before,
+.before-after__swiper .swiper__buttons .btn__swiper-next::before {
+  color: #6667ab;
+  transition: all 0.5s;
+}
+.before-after__swiper .swiper__buttons .btn__swiper-prev:hover::before,
+.before-after__swiper .swiper__buttons .btn__swiper-next:hover::before {
+  color: #d45279;
+}
+.before-after__swiper .swiper__buttons .btn__swiper-prev {
+  left: 15px;
+}
+.before-after__swiper .swiper__buttons .btn__swiper-next {
+  right: 15px;
 }
 
 .grid-gallery {
@@ -941,4 +986,66 @@
   height: 235px;
   margin-left: auto;
   margin-top: -85px;
+}
+
+.before-after-slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid white;
+}
+
+.after-image {
+  display: block;
+}
+
+.before-image {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.resizer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 3px;
+  background: white;
+  /*Stop vertical scrolling on touch*/
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.resizer::after, .resizer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 11px;
+  height: 26px;
+  background: url(../img/icons/icons.svg#triangle-before-after) 50% 50% no-repeat;
+  background-size: 100%;
+}
+.resizer::after {
+  right: 7px;
+}
+.resizer::before {
+  transform: translateY(-50%) rotate(180deg);
+  left: 7px;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

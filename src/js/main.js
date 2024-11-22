@@ -577,11 +577,33 @@ $(".choice-help__seacrh-number-car .btn-style-3").click(function () {
 });
 
 //video auto-ria.html
-const players = Plyr.setup('.js-player',
-	{
-		iconUrl: 'img/svg/plyr.svg',
-	}
-);
+
+// Знаходимо всі відеоплеєри з класом .js-player
+const videoPlayers = document.querySelectorAll('.js-player');
+
+if (videoPlayers.length > 0) {
+	// Ініціалізуємо відеоплеєри з Plyr
+	const players = Plyr.setup('.js-player',
+		{
+			iconUrl: 'img/svg/plyr.svg',
+		}
+	);
+
+	// Додаємо обробник подій для кожного відеоплеєра
+	players.forEach((player, index) => {
+		player.on('play', () => {
+			// Ставимо на паузу всі плеєри, крім поточного
+			players.forEach((otherPlayer, otherIndex) => {
+				if (otherIndex !== index) {
+					otherPlayer.pause();
+				}
+			});
+		});
+	});
+}
+
+
+
 
 
 // radio button form field
