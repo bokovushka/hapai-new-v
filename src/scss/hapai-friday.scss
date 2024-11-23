@@ -589,35 +589,66 @@
 				line-height: 42px;
 			}
 		}
-		.wrap-img {
-			max-height: 590px;
-			border-radius: 20px;
+		.project-num--main {
+			background: #000 url(../img/hapai-page-friday/bg-work-help.jpeg) no-repeat center;
+			background-size: cover;
+			padding: 70px 75px;
+			border-radius: 30px;
+			position: relative;
 			overflow: hidden;
-			@media only screen and (max-width: 767px) {
-				max-width: 400px;
-				margin: 0 auto;
-			}
 			@media only screen and (max-width: 639px) {
-				max-height: 530px;
+				padding: 45px 25px;
 			}
-			img {
-				object-fit: cover;
-				&.mob {
-					display: none;
-				}
-				@media only screen and (max-width: 767px) {
-					&.desk {
-						display: none;
+			.inner {
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 40px;
+				row-gap: 25px;
+				.project-num-item {
+					color: #fff;
+					width: calc((100% - 40px * 3) / 4);
+					@media only screen and (max-width: 1279px) {
+						width: calc((100% - 40px) / 2);
 					}
-					&.mob {
-						display: block;
+					@media only screen and (max-width: 992px) {
+						width: 100%;
+					}
+					&:nth-child(1),
+					&:nth-child(2) {
+						@media only screen and (min-width: 993px) {
+							width: calc((100% - 40px) / 2);
+						}
+					}
+					.heading {
+						font-size: 70px;
+						font-weight: 700;
+						line-height: 75px;
+						margin-bottom: 18px;
+						@media only screen and (max-width: 1279px) {
+							font-size: 60px;
+							line-height: 65px;
+						}
+						@media only screen and (max-width: 639px) {
+							font-size: 50px;
+							line-height: 55px;
+						}
+						@media only screen and (max-width: 639px) {
+							font-size: 40px;
+							line-height: 45px;
+						}
+					}
+					.descrp {
+						font-size: 20px;
+						font-weight: 400;
+						line-height: 24px;
+						max-width: 385px;
 					}
 				}
 			}
 		}
 	}
 }
-#popup-content-information {
+.popup-content-information {
 	.title {
 		font-size: 24px;
 		font-weight: 700;
