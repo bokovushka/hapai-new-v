@@ -251,7 +251,6 @@
 }
 .hapai-friday .information-content .inner .wrap-slider {
   width: 310px;
-  overflow: hidden;
   border-radius: 12px;
 }
 @media only screen and (max-width: 991px) {
@@ -822,17 +821,20 @@
   margin-bottom: 12px;
 }
 .before-after__swiper .swiper__buttons {
-  display: block;
-  position: static;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 .before-after__swiper .swiper__buttons .btn__swiper-prev,
 .before-after__swiper .swiper__buttons .btn__swiper-next {
-  position: absolute;
+  position: relative;
+  min-width: 40px;
   z-index: 2;
-  top: 50%;
-  transform: translateY(-50%) translateY(-20px);
+  top: unset;
+  transform: unset;
   border-radius: 50%;
-  border-color: #fff;
+  border-color: #6667ab;
   background: #fff;
   transition: all 0.5s;
 }
@@ -841,15 +843,16 @@
   color: #6667ab;
   transition: all 0.5s;
 }
+.before-after__swiper .swiper__buttons .btn__swiper-prev:hover,
+.before-after__swiper .swiper__buttons .btn__swiper-next:hover {
+  border-color: #d45279;
+}
 .before-after__swiper .swiper__buttons .btn__swiper-prev:hover::before,
 .before-after__swiper .swiper__buttons .btn__swiper-next:hover::before {
   color: #d45279;
 }
-.before-after__swiper .swiper__buttons .btn__swiper-prev {
-  left: 15px;
-}
-.before-after__swiper .swiper__buttons .btn__swiper-next {
-  right: 15px;
+.before-after__swiper .swiper__navigation {
+  position: relative;
 }
 
 .grid-gallery {

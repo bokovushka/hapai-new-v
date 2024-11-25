@@ -217,7 +217,7 @@
 			}
 			.wrap-slider {
 				width: 310px;
-				overflow: hidden;
+				// overflow: hidden;
 				border-radius: 12px;
 				@media only screen and (max-width: 991px) {
 					width: 335px;
@@ -744,16 +744,19 @@
 		}
 	}
 	.swiper__buttons {
-		display: block;
-		position: static;
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 100%;
 		.btn__swiper-prev,
 		.btn__swiper-next {
-			position: absolute;
+			position: relative;
+			min-width: 40px;
 			z-index: 2;
-			top: 50%;
-			transform: translateY(-50%) translateY(-20px);
+			top: unset;
+			transform: unset;
 			border-radius: 50%;
-			border-color: #fff;
+			border-color: #6667ab;
 			background: #fff;
 			transition: all 0.5s;
 			&::before {
@@ -761,17 +764,15 @@
 				transition: all 0.5s;
 			}
 			&:hover {
+				border-color: #d45279;
 				&::before {
 					color: #d45279;
 				}
 			}
 		}
-		.btn__swiper-prev {
-			left: 15px;
-		}
-		.btn__swiper-next {
-			right: 15px;
-		}
+	}
+	.swiper__navigation {
+		position: relative;
 	}
 }
 .grid-gallery {

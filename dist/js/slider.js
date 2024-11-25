@@ -518,10 +518,7 @@ var beforeAfterSwiper = new Swiper('.before-after__swiper', {
 	},
 	simulateTouch: false,
 	loop: true,
-	// autoplay: {
-	// 	delay: 10000,
-	// 	disableOnInteraction: false
-	// },
+	allowTouchMove: false,
 });
 
 //hapai-page-friday.html
