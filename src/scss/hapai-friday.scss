@@ -1030,8 +1030,10 @@
 		background-size: cover;
 		padding: 140px 40px;
 		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
 		@media only screen and (max-width: 1279px) {
-			flex-direction: column-reverse;
+			flex-direction: column;
 			justify-content: center;
 		}
 		@media only screen and (max-width: 479px) {
@@ -1042,22 +1044,42 @@
 			@media only screen and (max-width: 1279px) {
 				margin: 0 auto;
 				max-width: 600px;
+				order: 3;
 			}
 		}
 		.wrapping {
-			@media only screen and (max-width: 479px) {
-				margin: 0 -40px;
+			width: calc(100% - 438px - 20px);
+			@media only screen and (max-width: 1279px) {
+				width: 100%;
+				order: 1;
+			}
+			.wrapping--inner {
+				@media only screen and (max-width: 479px) {
+					margin: 0 -40px;
+				}
+			}
+		}
+		.description {
+			width: calc(100% - 438px - 20px);
+			text-align: justify;
+			margin-left: auto;
+			font-size: 12px;
+			line-height: 16px;
+			@media only screen and (max-width: 1279px) {
+				width: 100%;
+				order: 2;
+				max-width: 840px;
+				margin: 0 auto;
+				margin-bottom: 40px;
 			}
 		}
 		.img-wrap {
 			position: static;
 			max-width: 100%;
 			width: 100%;
-			margin-left: 30px;
 			transform: unset;
 			@media only screen and (max-width: 1279px) {
 				margin: 0 auto;
-				margin-bottom: 40px;
 				max-width: 840px;
 			}
 			@media only screen and (max-width: 991px) {
