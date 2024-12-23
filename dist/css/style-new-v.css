@@ -344,10 +344,13 @@ input[type=text]::placeholder {
 }
 .header .phone span a {
   color: #d45279;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 16px;
   line-height: 18px;
   padding: 0 8px;
+}
+.header .phone-m span {
+  display: none;
 }
 .header .icon-svg {
   display: flex;
@@ -5077,8 +5080,15 @@ textarea::placeholder {
   .donate-m {
     display: block;
   }
+  .header .phone-m {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .header .phone-m span {
+    display: block !important;
+  }
   .menu {
-    top: 64px;
+    top: 57px;
   }
   .donate-ua {
     padding: 12px 0;

@@ -5,7 +5,7 @@
 	"main": "gulpfile.js",
 	"type": "module",
 	"scripts": {
-		"dev": "gulp",
+		"dev": "node --experimental-print-required-tla node_modules/gulp/bin/gulp.js",
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",
@@ -27,7 +27,7 @@
 		"gulp-fonter-fix": "latest",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-if": "latest",
-		"gulp-imagemin": "latest",
+		"gulp-imagemin": "^6.0.0",
 		"gulp-newer": "latest",
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",

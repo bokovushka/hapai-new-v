@@ -57,14 +57,19 @@ input[type="text"]::placeholder {
 		span {
 			margin-left: 12px;
 			a {
-				color: #d45279;
-				font-weight: 500;
-				font-size: 12px;
-				line-height: 18px;
-				padding: 0 8px;
+              color: #d45279;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 18px;
+              padding: 0 8px;
 			}
 		}
 	}
+    .phone-m  {
+        span {
+          display: none;
+        }
+    }
 	.icon-svg {
 		display: flex;
 		background: #f5f5f5;
@@ -4941,8 +4946,15 @@ textarea {
 	.donate-m {
 		display: block;
 	}
+    .header .phone-m {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .header .phone-m span {
+      display: block !important;
+    }
 	.menu {
-		top: 64px;
+		top: 57px;
 	}
 	.donate-ua {
 		padding: 12px 0;

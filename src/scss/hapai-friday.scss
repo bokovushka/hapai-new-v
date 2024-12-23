@@ -1,52 +1,213 @@
 .hapai-friday {
+	&.gather {
+		.ten-implants {
+			.ten-implants--main {
+				background: url(../img/gather/18nj195.jpeg) no-repeat center;
+				background-size: 100%;
+
+				@media only screen and (max-width: 991px) {
+					background: linear-gradient(180deg, rgb(165 168 212), rgb(165 168 212) 100%);
+					padding: 0 10px 20px 10px;
+				}
+
+				.inner {
+					.title {
+						@media only screen and (min-width: 640px) {
+							max-width: 500px;
+							line-height: 46px;
+						}
+					}
+				}
+			}
+		}
+
+		.how-works-with-arrow__three .how-works-with-arrow__wrap {
+			@media only screen and (min-width: 993px) {
+				gap: 20px;
+			}
+
+			.how-works-with-arrow__item {
+				@media only screen and (min-width: 993px) {
+					width: calc((100% - 40px) / 3);
+				}
+			}
+		}
+
+		.collection-results,
+		.grid-gallery {
+			.title {
+				background: #000 url(../img/lease-bg.jpeg) no-repeat center;
+				background-size: cover;
+				padding: 35px;
+				border-radius: 30px;
+				position: relative;
+				overflow: hidden;
+				color: rgb(255, 255, 255);
+				font-size: 44px;
+				font-weight: 500;
+				line-height: 48px;
+				text-align: center;
+
+				@media only screen and (max-width: 992px) {
+					font-size: 32px;
+					line-height: 44px;
+					text-align: left;
+				}
+			}
+
+			.subtitle {
+				font-size: 36px;
+				font-weight: 500;
+				line-height: 46px;
+				margin-bottom: 30px;
+
+				@media only screen and (max-width: 992px) {
+					font-size: 28px;
+					line-height: 32px;
+				}
+			}
+		}
+
+		.help-win {
+			padding-bottom: 60px;
+
+			.inner {
+				background: url(../img/gather/bg-482.png) no-repeat center;
+				background-size: cover;
+				padding: 35px 60px 10px 60px;
+				border-radius: 12px;
+				position: relative;
+				overflow: hidden;
+				color: rgb(255, 255, 255);
+				font-size: 44px;
+				font-weight: 500;
+				line-height: 48px;
+				text-align: center;
+				display: flex;
+				align-items: center;
+
+				@media only screen and (max-width: 1279px) {
+					padding: 40px 12px;
+				}
+
+				@media only screen and (max-width: 1279px) {
+					flex-direction: column;
+					gap: 40px;
+				}
+
+				.title {
+					font-size: 48px;
+					font-weight: 500;
+					line-height: 58px;
+					color: #000;
+					text-align: left;
+					margin-bottom: 30px;
+
+					@media only screen and (max-width: 1279px) {
+						font-size: 32px;
+						line-height: 36px;
+					}
+
+					@media only screen and (max-width: 1279px) {
+						text-align: center;
+					}
+
+					span {
+						font-weight: 800;
+					}
+				}
+
+				.wrap-img {
+					max-width: 600px;
+				}
+
+				.qr {
+					.wrap-img {
+						border-radius: 12px;
+						background: rgb(255, 255, 255);
+						padding: 15px;
+						width: 309px;
+						margin-bottom: 15px;
+
+						img {
+							border: dashed 2px #e8e8f2;
+						}
+					}
+
+					.btn {
+						width: 309px;
+					}
+				}
+
+				.col-item {
+					&:nth-child(2) {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+
 	.conditions-promotion {
 		.inner {
 			border: 1px solid rgb(229, 229, 229);
 			border-radius: 12px;
 			padding: 10px 50px 30px 50px;
+
 			@media only screen and (max-width: 767px) {
 				padding: 0 25px 20px 25px;
 			}
 		}
 	}
+
 	.choice-car__main {
 		background: #000 url(../img/hapai-page-friday/top-bg-down.jpeg) no-repeat center;
 		background-size: cover;
 		padding: 20px 32px 15px 32px;
 		min-height: 565px;
+
 		@media only screen and (max-width: 1279px) {
 			min-height: 470px;
 		}
+
 		@media only screen and (max-width: 767px) {
 			min-height: 340px;
 			padding: 100px 10px 60px 10px;
 		}
+
 		@media only screen and (max-width: 479px) {
 			background: unset;
 			padding: 0;
 		}
 	}
+
 	.choice-car .choice-car__content {
 		justify-content: center;
+
 		.choice-car__info {
 			margin-right: 0;
 			margin: 0 auto;
 			max-width: 890px;
+
 			@media only screen and (max-width: 1279px) {
 				max-width: 640px;
 			}
+
 			@media only screen and (max-width: 767px) {
 				max-width: 480px;
 			}
+
 			.img-wrap {
 				img {
 					&.mob {
 						display: none;
 					}
+
 					@media only screen and (max-width: 479px) {
 						&.desk {
 							display: none;
 						}
+
 						&.mob {
 							display: block;
 						}
@@ -55,16 +216,21 @@
 			}
 		}
 	}
+
 	.main-goal {
 		padding: 132px 0 144px 0;
+
 		@media only screen and (max-width: 1279px) {
 			padding: 90px 0 110px 0;
 		}
+
 		@media only screen and (max-width: 767px) {
 			padding: 60px 0 60px 0;
 		}
+
 		.container {
 			position: relative;
+
 			&::before {
 				content: "";
 				background: url(../img/hapai-page-friday/spiral-1.png) no-repeat center;
@@ -76,30 +242,37 @@
 				width: 900px;
 				height: 900px;
 				z-index: -1;
+
 				@media only screen and (max-width: 1279px) {
 					right: -65%;
 				}
+
 				@media only screen and (max-width: 991px) {
 					content: unset;
 				}
 			}
 		}
+
 		.title {
 			font-size: 64px;
 			line-height: 77px;
 			display: flex;
 			flex-direction: column;
 			text-align: center;
+
 			@media only screen and (max-width: 767px) {
 				font-size: 42px;
 				line-height: 46px;
 			}
+
 			@media only screen and (max-width: 639px) {
 				font-size: 36px;
 				line-height: 44px;
 			}
+
 			span {
 				font-weight: 700;
+
 				&.uppercase {
 					text-transform: uppercase;
 					font-weight: 500;
@@ -107,27 +280,32 @@
 			}
 		}
 	}
+
 	.ten-implants {
 		.ten-implants--main {
-			background: #000 url(../img/hapai-page-friday/image-364.jpeg) no-repeat center;
+			background: #000 url(../img/hapai-page-friday/image-364.png) no-repeat center;
 			background-size: cover;
 			padding: 335px 65px 65px 65px;
 			border-radius: 30px;
 			position: relative;
 			overflow: hidden;
 			box-shadow: 0px 0px 100px -30px rgb(78, 79, 141);
+
 			@media only screen and (max-width: 1279px) {
 				padding: 305px 45px 45px 45px;
 				background-size: 120%;
 				background-position: left;
 			}
+
 			@media only screen and (max-width: 991px) {
 				background: linear-gradient(180deg, rgb(187, 182, 179), rgb(185, 180, 177) 100%);
 				padding: 0 10px 20px 10px;
 			}
+
 			@media only screen and (max-width: 639px) {
 				padding: 0 5px 20px 5px;
 			}
+
 			.inner {
 				.title {
 					font-size: 40px;
@@ -135,17 +313,21 @@
 					line-height: 51px;
 					margin-bottom: 20px;
 					max-width: 470px;
+
 					@media only screen and (max-width: 991px) {
 						margin-top: 10px;
 					}
+
 					@media only screen and (max-width: 639px) {
 						font-size: 20px;
 						line-height: 26px;
 						max-width: 290px;
 					}
 				}
+
 				.img-wrap {
 					display: none;
+
 					@media only screen and (max-width: 991px) {
 						display: block;
 						margin: 0 -10px;
@@ -159,6 +341,7 @@
 		display: flex;
 		align-items: center;
 		gap: 4px;
+
 		span {
 			display: block;
 			width: 61px;
@@ -174,6 +357,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+
 			@media only screen and (max-width: 639px) {
 				font-size: 36px;
 				line-height: 46px;
@@ -186,8 +370,10 @@
 
 	.information-content {
 		padding: 40px 0 65px 0;
+
 		.container {
 			position: relative;
+
 			&::before {
 				content: "";
 				background: url(../img/hapai-page-friday/spiral-2.png) no-repeat center;
@@ -199,39 +385,49 @@
 				width: 900px;
 				height: 900px;
 				z-index: -1;
+
 				@media only screen and (max-width: 1279px) {
 					left: -50%;
 				}
+
 				@media only screen and (max-width: 991px) {
 					content: unset;
 				}
 			}
 		}
+
 		.inner {
 			display: flex;
 			align-items: center;
 			min-width: 0;
+
 			@media only screen and (max-width: 991px) {
 				flex-direction: column;
 				gap: 40px;
 			}
+
 			.wrap-slider {
 				width: 310px;
 				// overflow: hidden;
 				border-radius: 12px;
+
 				@media only screen and (max-width: 991px) {
 					width: 335px;
 				}
 			}
+
 			.popups-slider {
 				display: none;
+
 				@media only screen and (max-width: 991px) {
 					display: block;
 					width: 100%;
 				}
+
 				.popups--item {
 					.img-wrap {
 						text-align: center;
+
 						img {
 							max-width: 210px;
 							width: 100%;
@@ -240,6 +436,7 @@
 							border-radius: 200px;
 							margin-bottom: 25px;
 						}
+
 						.img-wrap--title {
 							font-size: 24px;
 							font-weight: 700;
@@ -251,27 +448,34 @@
 					}
 				}
 			}
+
 			.popups {
 				position: relative;
 				width: 70%;
 				min-height: 560px;
+
 				@media only screen and (max-width: 991px) {
 					display: none;
 				}
+
 				.popups--item {
 					width: max-content;
 					position: absolute;
 					transform: translate(-50%, -50%);
+
 					&:nth-child(1) {
 						left: 30%;
 						top: 40%;
 					}
+
 					&:nth-child(2) {
 						left: 65%;
 						top: 20%;
+
 						@media only screen and (max-width: 1279px) {
 							left: 75%;
 						}
+
 						.img-wrap {
 							img {
 								max-width: 160px;
@@ -280,12 +484,15 @@
 							}
 						}
 					}
+
 					&:nth-child(3) {
 						left: 60%;
 						top: 80%;
+
 						@media only screen and (max-width: 1279px) {
 							left: 70%;
 						}
+
 						.img-wrap {
 							img {
 								max-width: 200px;
@@ -294,15 +501,18 @@
 							}
 						}
 					}
+
 					&:hover {
 						.img-wrap {
 							scale: 1.05;
 						}
 					}
+
 					.img-wrap {
 						transition: all 0.5s;
 						max-width: 270px;
 						text-align: center;
+
 						img {
 							max-width: 210px;
 							width: 100%;
@@ -311,6 +521,7 @@
 							border-radius: 200px;
 							margin-bottom: 25px;
 						}
+
 						.img-wrap--title {
 							font-size: 24px;
 							font-weight: 700;
@@ -323,46 +534,58 @@
 			}
 		}
 	}
+
 	.how-works-with-arrow {
 		padding: 0;
 		padding-bottom: 130px;
+
 		@media only screen and (max-width: 639px) {
 			padding-bottom: 65px;
 		}
+
 		.title {
 			font-size: 48px;
 			font-weight: 500;
 			line-height: 46px;
 			text-align: center;
 			margin-bottom: 85px;
+
 			@media only screen and (max-width: 1279px) {
 				margin-bottom: 55px;
 			}
+
 			@media only screen and (max-width: 991px) {
 				text-align: left;
 			}
+
 			@media only screen and (max-width: 639px) {
 				font-size: 32px;
 				line-height: 44px;
 				margin-bottom: 30px;
 			}
 		}
+
 		.how-works-with-arrow__three .how-works-with-arrow__wrap {
 			padding: 0;
+
 			.how-works-with-arrow__item {
-				padding: 35px 60px 35px 60px;
+				padding: 35px 50px 35px 50px;
 				transition: all 0.5s;
+
 				@media only screen and (max-width: 1279px) {
 					padding: 35px 30px 35px 30px;
 				}
+
 				&:nth-child(2n)::after {
 					top: -60px;
 					right: -75px;
+
 					@media only screen and (max-width: 1279px) {
 						top: -30px;
 						right: -55px;
 						width: 65px;
 					}
+
 					@media only screen and (max-width: 992px) {
 						top: unset;
 						width: 65px;
@@ -372,15 +595,18 @@
 						transform: rotate(90deg) scale(1, -1);
 					}
 				}
+
 				&:nth-child(2n + 1)::after {
 					transform: unset;
 					top: -60px;
 					right: -75px;
+
 					@media only screen and (max-width: 1279px) {
 						top: -30px;
 						right: -55px;
 						width: 65px;
 					}
+
 					@media only screen and (max-width: 992px) {
 						top: unset;
 						right: 0px;
@@ -389,6 +615,7 @@
 						transform: rotate(90deg) scale(1, 1);
 					}
 				}
+
 				&:hover {
 					background: #6667ab;
 					color: #ffffff;
@@ -396,27 +623,33 @@
 			}
 		}
 	}
+
 	.collection-results {
 		padding-bottom: 120px;
+
 		@media only screen and (max-width: 991px) {
 			padding-bottom: 70px;
 		}
+
 		.title {
 			font-size: 36px;
 			font-weight: 500;
 			line-height: 46px;
 			margin-bottom: 35px;
+
 			@media only screen and (max-width: 639px) {
 				font-size: 29px;
 				font-weight: 500;
 				line-height: 42px;
 			}
 		}
+
 		.collection-results__wrap {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
 			gap: 80px;
+
 			.collection-results__item {
 				width: calc((100% - 80px * 2) / 3);
 				max-width: 420px;
@@ -427,12 +660,15 @@
 				position: relative;
 				text-align: center;
 				padding: 42px 28px 28px 28px;
+
 				@media only screen and (max-width: 1279px) {
 					width: calc((100% - 80px) / 2);
 				}
+
 				@media only screen and (max-width: 1279px) {
 					width: 100%;
 				}
+
 				.img-wrap__title {
 					font-size: 36px;
 					font-weight: 500;
@@ -442,37 +678,44 @@
 					align-items: center;
 					justify-content: center;
 				}
+
 				.img-wrap__count {
 					font-size: 150px;
 					font-weight: 700;
 					line-height: 111px;
 				}
+
 				.img-wrap__title,
 				.img-wrap__count {
 					position: relative;
 					z-index: 2;
 				}
+
 				.img-wrap {
 					position: absolute;
 					bottom: -50px;
 					left: 50%;
 					transform: translateX(-50%);
+
 					@media only screen and (max-width: 639px) {
 						transform: translateX(-50%) scale(0.9);
 					}
 				}
+
 				&:nth-child(1) {
 					.img-wrap {
 						width: 365px;
 						height: 235px;
 					}
 				}
+
 				&:nth-child(2) {
 					.img-wrap {
 						width: 260px;
 						height: 260px;
 					}
 				}
+
 				&:nth-child(3) {
 					.img-wrap {
 						width: 210px;
@@ -481,46 +724,59 @@
 			}
 		}
 	}
+
 	.our-proofs {
 		margin: 0;
 		padding-bottom: 80px;
+
 		@media only screen and (max-width: 639px) {
 			padding-bottom: 45px;
 		}
+
 		.preview-video {
 			border-radius: 12px;
 			overflow: hidden;
 			width: 100%;
 			height: 240px;
+
 			@media only screen and (max-width: 1279px) {
 				height: 170px;
 			}
+
 			@media only screen and (max-width: 639px) {
 				height: 240px;
 			}
+
 			@media only screen and (max-width: 479px) {
 				height: 185px;
 			}
 		}
+
 		.our-proofs__swiper-wrap {
 			display: flex;
 			gap: 25px;
+
 			@media only screen and (max-width: 1279px) {
 				justify-content: center;
 				flex-wrap: wrap;
 			}
+
 			.wrap {
 				width: calc((100% - 25px * 2) / 3);
+
 				@media only screen and (max-width: 1279px) {
 					width: calc((100%) / 3);
 				}
+
 				@media only screen and (max-width: 1279px) {
 					width: 50%;
 				}
+
 				&.pdf-download {
 					@media only screen and (max-width: 639px) {
 						display: none;
 					}
+
 					.inner {
 						column-gap: 25px;
 						background: #000 url(../img/hapai-page-friday/bg-pdf.png) no-repeat center;
@@ -532,14 +788,17 @@
 						align-items: center;
 						justify-content: center;
 						height: 100%;
+
 						@media only screen and (max-width: 1279px) {
 							height: 170px;
 						}
+
 						img {
 							width: 65px;
 							height: 65px;
 							object-fit: cover;
 						}
+
 						.pdf-title {
 							font-size: 24px;
 							font-weight: 600;
@@ -547,6 +806,7 @@
 							display: flex;
 							flex-direction: column;
 							color: #ffffff;
+
 							span {
 								font-size: 32px;
 								line-height: 36px;
@@ -556,19 +816,24 @@
 				}
 			}
 		}
+
 		.our-proofs__swiper {
 			@media only screen and (max-width: 1279px) {
 				max-width: 720px;
 			}
+
 			.slide-pdf {
 				display: none;
+
 				@media only screen and (max-width: 639px) {
 					display: flex;
 				}
+
 				.wrap {
 					&.pdf-download {
 						display: block;
 						width: 100%;
+
 						.inner {
 							height: 100%;
 						}
@@ -577,18 +842,21 @@
 			}
 		}
 	}
+
 	.project-num {
 		.title {
 			font-size: 36px;
 			font-weight: 500;
 			line-height: 46px;
 			margin-bottom: 25px;
+
 			@media only screen and (max-width: 639px) {
 				font-size: 29px;
 				font-weight: 500;
 				line-height: 42px;
 			}
 		}
+
 		.project-num--main {
 			background: #000 url(../img/hapai-page-friday/bg-work-help.jpeg) no-repeat center;
 			background-size: cover;
@@ -596,47 +864,58 @@
 			border-radius: 30px;
 			position: relative;
 			overflow: hidden;
+
 			@media only screen and (max-width: 639px) {
 				padding: 45px 25px;
 			}
+
 			.inner {
 				display: flex;
 				flex-wrap: wrap;
 				column-gap: 40px;
 				row-gap: 25px;
+
 				.project-num-item {
 					color: #fff;
 					width: calc((100% - 40px * 3) / 4);
+
 					@media only screen and (max-width: 1279px) {
 						width: calc((100% - 40px) / 2);
 					}
+
 					@media only screen and (max-width: 992px) {
 						width: 100%;
 					}
+
 					&:nth-child(1),
 					&:nth-child(2) {
 						@media only screen and (min-width: 993px) {
 							width: calc((100% - 40px) / 2);
 						}
 					}
+
 					.heading {
 						font-size: 70px;
 						font-weight: 700;
 						line-height: 75px;
 						margin-bottom: 18px;
+
 						@media only screen and (max-width: 1279px) {
 							font-size: 60px;
 							line-height: 65px;
 						}
+
 						@media only screen and (max-width: 639px) {
 							font-size: 50px;
 							line-height: 55px;
 						}
+
 						@media only screen and (max-width: 639px) {
 							font-size: 40px;
 							line-height: 45px;
 						}
 					}
+
 					.descrp {
 						font-size: 20px;
 						font-weight: 400;
@@ -648,28 +927,34 @@
 		}
 	}
 }
+
 .popup-content-information {
 	.title {
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 28px;
 	}
+
 	.popup__content {
 		max-width: 570px;
 	}
+
 	p {
 		font-size: 16px;
 		line-height: 24px;
 	}
+
 	ul {
 		li {
 			position: relative;
 			padding-left: 20px;
 			font-size: 16px;
 			line-height: 24px;
+
 			&:not(:last-child) {
 				margin-bottom: 4px;
 			}
+
 			&::before {
 				content: "";
 				position: absolute;
@@ -693,6 +978,7 @@
 	top: unset !important;
 	bottom: unset !important;
 	left: unset !important;
+
 	.swiper-pagination-bullet {
 		background: #d9d9d9;
 		opacity: 1;
@@ -700,11 +986,13 @@
 		width: 12px;
 		height: 12px;
 		margin: 0 !important;
+
 		&.swiper-pagination-bullet-active {
 			width: 12px;
 			height: 12px;
 			border: unset;
 			position: relative;
+
 			&::before {
 				content: "";
 				background: #787878;
@@ -723,10 +1011,12 @@
 .before-after__swiper {
 	height: 100%;
 	position: relative;
+
 	.swiper-slide {
 		.before-after--wrap {
 			height: 100%;
 			position: relative;
+
 			img {
 				height: 490px;
 				overflow: hidden;
@@ -734,6 +1024,7 @@
 				object-fit: cover;
 				margin-bottom: 15px;
 			}
+
 			.descrp {
 				font-size: 20px;
 				font-weight: 700;
@@ -743,11 +1034,13 @@
 			}
 		}
 	}
+
 	.swiper__buttons {
 		display: flex;
 		align-items: center;
 		position: relative;
 		width: 100%;
+
 		.btn__swiper-prev,
 		.btn__swiper-next {
 			position: relative;
@@ -759,40 +1052,49 @@
 			border-color: #6667ab;
 			background: #fff;
 			transition: all 0.5s;
+
 			&::before {
 				color: #6667ab;
 				transition: all 0.5s;
 			}
+
 			&:hover {
 				border-color: #d45279;
+
 				&::before {
 					color: #d45279;
 				}
 			}
 		}
 	}
+
 	.swiper__navigation {
 		position: relative;
 	}
 }
+
 .grid-gallery {
 	padding-bottom: 100px;
+
 	.title {
 		font-size: 36px;
 		font-weight: 500;
 		line-height: 46px;
 		margin-bottom: 40px;
+
 		@media only screen and (max-width: 639px) {
 			font-size: 29px;
 			line-height: 42px;
 			margin-bottom: 50px;
 		}
 	}
+
 	.gallery-grid--swiper {
 		position: relative;
 		overflow: hidden;
 		margin: 0 -20px;
 		width: 1440px;
+
 		.swiper-wrapper {
 			transition-timing-function: linear;
 		}
@@ -801,11 +1103,16 @@
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr); /* 12 колонок */
-	grid-template-rows: auto; /* Висота кожного ряду автоматична */
-	gap: 10px; /* Проміжки між елементами */
-	width: 1400px; /* Ширина сітки */
-	margin: 0 auto; /* Центрування сітки */
+	grid-template-columns: repeat(12, 1fr);
+	/* 12 колонок */
+	grid-template-rows: auto;
+	/* Висота кожного ряду автоматична */
+	gap: 10px;
+	/* Проміжки між елементами */
+	width: 1400px;
+	/* Ширина сітки */
+	margin: 0 auto;
+	/* Центрування сітки */
 }
 
 /* Стиль для кожного блоку */
@@ -824,6 +1131,7 @@
 	overflow: hidden;
 	border-radius: 12px;
 	position: relative;
+
 	&:hover {
 		.wrap-img {
 			img {
@@ -831,6 +1139,7 @@
 			}
 		}
 	}
+
 	.wrap-img {
 		img {
 			position: absolute;
@@ -844,6 +1153,7 @@
 			transition: all 0.5s;
 		}
 	}
+
 	.item-label {
 		border-radius: 4px 0px 0px 4px;
 		background: rgb(255, 255, 255);
@@ -860,16 +1170,20 @@
 
 /* Верхній ряд — 5 блоків */
 .item1 {
-	grid-column: 1 / span 3; /* Займає 3 колонки */
-	grid-row: span 10; /* Займає 10 рядків */
+	grid-column: 1 / span 3;
+	/* Займає 3 колонки */
+	grid-row: span 10;
+	/* Займає 10 рядків */
 	min-width: 150px;
 	max-width: 225px;
 	height: 240px;
 }
 
 .item2 {
-	grid-column: 4 / span 2; /* Займає 2 колонки */
-	grid-row: span 10; /* Займає 15 рядків */
+	grid-column: 4 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 10;
+	/* Займає 15 рядків */
 	min-width: 100px;
 	max-width: 220px;
 	height: 150px;
@@ -877,8 +1191,10 @@
 }
 
 .item3 {
-	grid-column: 6 / span 3; /* Займає 3 колонки */
-	grid-row: span 10; /* Займає 20 рядків */
+	grid-column: 6 / span 3;
+	/* Займає 3 колонки */
+	grid-row: span 10;
+	/* Займає 20 рядків */
 	width: 185px;
 	height: 120px;
 	margin-left: 50px;
@@ -886,16 +1202,20 @@
 }
 
 .item4 {
-	grid-column: 9 / span 2; /* Займає 2 колонки */
-	grid-row: span 5; /* Займає 5 рядків */
+	grid-column: 9 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 5;
+	/* Займає 5 рядків */
 	width: 175px;
 	height: 210px;
 	margin-left: auto;
 }
 
 .item5 {
-	grid-column: 11 / span 2; /* Займає 2 колонки */
-	grid-row: span 2; /* Займає 2 рядки */
+	grid-column: 11 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 2;
+	/* Займає 2 рядки */
 	width: 175px;
 	height: 130px;
 	margin-left: auto;
@@ -904,24 +1224,31 @@
 
 /* Нижній ряд — 6 блоків */
 .item6 {
-	grid-column: 1 / span 2; /* Займає 2 колонки */
-	grid-row: span 3; /* Займає 3 рядки */
+	grid-column: 1 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 3;
+	/* Займає 3 рядки */
 	width: 135px;
 	height: 110px;
 	margin-left: auto;
 }
 
 .item7 {
-	grid-column: 3 / span 2; /* Займає 2 колонки */
-	grid-row: span 8; /* Займає 8 рядків */
+	grid-column: 3 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 8;
+	/* Займає 8 рядків */
 	width: 175px;
 	height: 235px;
 	margin-top: -70px;
 	margin-left: 30px;
 }
+
 .item8 {
-	grid-column: 5 / span 2; /* Займає 2 колонки */
-	grid-row: span 6; /* Займає 6 рядків */
+	grid-column: 5 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 6;
+	/* Займає 6 рядків */
 	width: 175px;
 	height: 130px;
 	margin-top: -55px;
@@ -929,16 +1256,20 @@
 }
 
 .item9 {
-	grid-column: 7 / span 2; /* Займає 2 колонки */
-	grid-row: span 8; /* Займає 8 рядків */
+	grid-column: 7 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 8;
+	/* Займає 8 рядків */
 	width: 190px;
 	height: 260px;
 	margin-top: -95px;
 }
 
 .item10 {
-	grid-column: 9 / span 2; /* Займає 2 колонки */
-	grid-row: span 5; /* Займає 5 рядків */
+	grid-column: 9 / span 2;
+	/* Займає 2 колонки */
+	grid-row: span 5;
+	/* Займає 5 рядків */
 	width: 195px;
 	height: 110px;
 }
@@ -993,6 +1324,7 @@
 }
 
 .resizer {
+
 	&::after,
 	&::before {
 		content: "";
@@ -1005,15 +1337,17 @@
 		background: url(../img/icons/icons.svg#triangle-before-after) 50% 50% no-repeat;
 		background-size: 100%;
 	}
+
 	&::after {
 		right: 7px;
 	}
+
 	&::before {
 		transform: translateY(-50%) rotate(180deg);
 		left: 7px;
 	}
-	.swiper__buttons {
-	}
+
+	.swiper__buttons {}
 }
 
 @media (max-width: 767px) {
@@ -1028,43 +1362,52 @@
 		background: #000 url(../img/hapai-page-friday/top-bg-down.jpeg) no-repeat center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding: 140px 40px;
+		padding: 80px 40px;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
+
 		@media only screen and (max-width: 1279px) {
 			flex-direction: column;
 			justify-content: center;
 		}
+
 		@media only screen and (max-width: 479px) {
 			padding-top: 0;
 		}
+
 		.form-leasing-main {
 			width: 100%;
+
 			@media only screen and (max-width: 1279px) {
 				margin: 0 auto;
 				max-width: 600px;
 				order: 3;
 			}
 		}
+
 		.wrapping {
 			width: calc(100% - 438px - 20px);
+
 			@media only screen and (max-width: 1279px) {
 				width: 100%;
 				order: 1;
 			}
+
 			.wrapping--inner {
 				@media only screen and (max-width: 479px) {
 					margin: 0 -40px;
 				}
 			}
 		}
+
 		.description {
 			width: calc(100% - 438px - 20px);
 			text-align: justify;
 			margin-left: auto;
 			font-size: 12px;
 			line-height: 16px;
+
 			@media only screen and (max-width: 1279px) {
 				width: 100%;
 				order: 2;
@@ -1073,34 +1416,43 @@
 				margin-bottom: 40px;
 			}
 		}
+
 		.img-wrap {
 			position: static;
 			max-width: 100%;
 			width: 100%;
 			transform: unset;
+
 			@media only screen and (max-width: 1279px) {
 				margin: 0 auto;
 				max-width: 840px;
 			}
+
 			@media only screen and (max-width: 991px) {
 				display: block;
 			}
+
 			@media only screen and (max-width: 767px) {
 				// max-width: 400px;
 				// margin: 0 auto;
 			}
+
 			@media only screen and (max-width: 639px) {
 				// max-height: 530px;
 			}
+
 			img {
 				object-fit: cover;
+
 				&.mob {
 					display: none;
 				}
+
 				@media only screen and (max-width: 479px) {
 					&.desk {
 						display: none;
 					}
+
 					&.mob {
 						display: block;
 					}
