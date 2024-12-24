@@ -1338,3 +1338,83 @@
     display: block;
   }
 }
+.top-banner__wrap.win-toyota {
+  background: #000 url(../img/14jnvk1-bg.png) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.win-toyota {
+    padding-top: 0;
+  }
+}
+.top-banner__wrap.win-toyota .form-leasing-main {
+  width: 100%;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota .form-leasing-main {
+    margin: 0 auto;
+    max-width: 600px;
+    order: 3;
+  }
+}
+.top-banner__wrap.win-toyota .wrapping {
+  width: calc(100% - 438px - 20px);
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota .wrapping {
+    width: 100%;
+    order: 1;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.win-toyota .wrapping .wrapping--inner {
+    margin: 0 -40px;
+  }
+}
+.top-banner__wrap.win-toyota .description {
+  width: calc(100% - 438px - 20px);
+  text-align: justify;
+  margin-left: auto;
+  font-size: 12px;
+  line-height: 16px;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota .description {
+    width: 100%;
+    order: 2;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.top-banner__wrap.win-toyota .img-wrap {
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  transform: unset;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota .img-wrap {
+    margin: 0 auto;
+    max-width: 840px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .top-banner__wrap.win-toyota .img-wrap {
+    display: block;
+  }
+}
+.top-banner__wrap.win-toyota .img-wrap img {
+  object-fit: cover;
+}
