@@ -861,6 +861,10 @@
   line-height: 24px;
   max-width: 385px;
 }
+.hapai-friday.win-toyota-2 .choice-car__main {
+  background: #000 url(../img/agjn155.png) no-repeat center;
+  background-size: cover;
+}
 
 .popup-content-information .title {
   font-size: 24px;
@@ -1417,4 +1421,95 @@
 }
 .top-banner__wrap.win-toyota .img-wrap img {
   object-fit: cover;
+}
+.top-banner__wrap.win-toyota-2 {
+  background: #000 url(../img/agjn155.png) no-repeat center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota-2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.win-toyota-2 {
+    padding-top: 0;
+  }
+}
+.top-banner__wrap.win-toyota-2 .form-leasing-main {
+  width: 100%;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota-2 .form-leasing-main {
+    margin: 0 auto;
+    max-width: 600px;
+    order: 3;
+  }
+}
+.top-banner__wrap.win-toyota-2 .wrapping {
+  width: calc(100% - 438px - 20px);
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota-2 .wrapping {
+    width: 100%;
+    order: 1;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.win-toyota-2 .wrapping .wrapping--inner {
+    margin: 0 -40px;
+  }
+}
+.top-banner__wrap.win-toyota-2 .description {
+  width: calc(100% - 438px - 20px);
+  text-align: justify;
+  margin-left: auto;
+  font-size: 12px;
+  line-height: 16px;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota-2 .description {
+    width: 100%;
+    order: 2;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.top-banner__wrap.win-toyota-2 .img-wrap {
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  transform: unset;
+}
+@media only screen and (max-width: 1279px) {
+  .top-banner__wrap.win-toyota-2 .img-wrap {
+    margin: 0 auto;
+    max-width: 840px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .top-banner__wrap.win-toyota-2 .img-wrap {
+    display: block;
+  }
+}
+.top-banner__wrap.win-toyota-2 .img-wrap img {
+  object-fit: cover;
+}
+.top-banner__wrap.win-toyota-2 .img-wrap img.mob {
+  display: none;
+}
+@media only screen and (max-width: 479px) {
+  .top-banner__wrap.win-toyota-2 .img-wrap img.desk {
+    display: none;
+  }
+  .top-banner__wrap.win-toyota-2 .img-wrap img.mob {
+    display: block;
+  }
 }
