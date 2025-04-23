@@ -10478,6 +10478,7 @@ textarea {
 
 				.btn {
 					margin: 0 auto;
+					max-width: max-content;
 
 					@media only screen and (max-width: 767px) {
 						max-width: 100%;
