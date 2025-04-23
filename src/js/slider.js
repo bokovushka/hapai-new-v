@@ -16,7 +16,7 @@ new Swiper(".partners__swiper", {
 		640: {
 			slidesPerView: 1.7,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.1,
 		}
 	},
@@ -91,7 +91,7 @@ var articleSwiper = new Swiper('.partners .article__swiper', {
 			slidesPerView: 1.6,
 			spaceBetween: 8,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.1,
 			spaceBetween: 8,
 		}
@@ -125,7 +125,7 @@ var articleSwiperPartners = new Swiper('.happy-customers .article__swiper', {
 			slidesPerView: 1.6,
 			spaceBetween: 8,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.1,
 			spaceBetween: 8,
 		}
@@ -159,7 +159,7 @@ var teamSwiper = new Swiper('.team__swiper', {
 		480: {
 			slidesPerView: 1.6,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.2,
 		}
 	},
@@ -191,7 +191,7 @@ var articleSwiperCar = new Swiper('.car-style__swiper', {
 		480: {
 			slidesPerView: 1.8,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.3,
 		}
 	},
@@ -216,7 +216,7 @@ new Swiper(".company-partners__swiper", {
 		480: {
 			slidesPerView: 2,
 		},
-		360: {
+		0: {
 			slidesPerView: 1,
 			grid: {
 				rows: 2,
@@ -244,7 +244,7 @@ var SwiperWallpaperCollectionThumbs = new Swiper(".loan-leasing .leasing__swiper
 		640: {
 			slidesPerView: 2,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.15,
 		}
 	},
@@ -261,7 +261,7 @@ var SwiperWallpaperCollection = new Swiper(".loan-leasing .loan__swiper", {
 		640: {
 			slidesPerView: 2,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.15,
 		}
 	},
@@ -314,7 +314,7 @@ new Swiper(".why-sell-car__swiper", {
 			slidesPerView: 1.2,
 			spaceBetween: 8,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.1,
 			spaceBetween: 8,
 		}
@@ -333,6 +333,20 @@ new Swiper(".about__swiper", {
 
 	},
 })
+
+//about__swiper
+new Swiper(".about__swiper__new", {
+	direction: 'horizontal',
+	grabCursor: true,
+	navigation: {
+		prevEl: ".about__swiper__new .swiper__buttons .btn__swiper-prev",
+		nextEl: ".about__swiper__new .swiper__buttons .btn__swiper-next"
+	},
+	breakpoints: {
+
+	},
+})
+
 //why-we-about__swiper
 new Swiper(".why-we-about__swiper", {
 	grabCursor: true,
@@ -355,7 +369,7 @@ new Swiper(".why-we-about__swiper", {
 		640: {
 			slidesPerView: 1.6,
 		},
-		360: {
+		0: {
 			slidesPerView: 1.15,
 		},
 	},
@@ -571,3 +585,112 @@ var beforeAfterSwiper = new Swiper('.popups__swiper', {
 	},
 	// simulateTouch: false,
 });
+
+
+//loan-leasing
+var SwiperLoanCommissionSale = new Swiper(".loan-commission-sale .commission-sale__swiper", {
+	spaceBetween: 20,
+	grabCursor: true,
+	// loop: true,
+	breakpoints: {
+		1440: {
+			grid: {
+				rows: 2,
+				fill: "row",
+			},
+			slidesPerView: 3,
+		},
+		640: {
+			slidesPerView: 2,
+		},
+		0: {
+			slidesPerView: 1,
+		}
+	},
+	navigation: {
+		prevEl: ".loan-commission-sale .leasing-swiper__buttons .icon-u_arrow-left",
+		nextEl: ".loan-commission-sale .leasing-swiper__buttons .icon-u_arrow-right"
+	},
+})
+
+
+//loan-leasing
+var SwiperaHowLoanCommissionSale = new Swiper(".how-loan-commission-sale .commission-sale__swiper", {
+	spaceBetween: 20,
+	grabCursor: true,
+	// loop: true,
+	breakpoints: {
+		1440: {
+			grid: {
+				rows: 2,
+				fill: "row",
+			},
+			slidesPerView: 3,
+		},
+		992: {
+			slidesPerView: 2,
+		},
+		640: {
+			slidesPerView: 2,
+		},
+		0: {
+			slidesPerView: 1,
+		}
+	},
+	navigation: {
+		prevEl: ".how-loan-commission-sale .leasing-swiper__buttons .icon-u_arrow-left",
+		nextEl: ".how-loan-commission-sale .leasing-swiper__buttons .icon-u_arrow-right"
+	},
+})
+
+
+
+const titleEl = document.querySelector('.car-highest-demand__title .title');
+const yearEl = document.querySelector('.car-highest-demand__title .year');
+const daysEl = document.querySelector('.label-day-clock .text');
+
+let CarHighestDemandGallerySwiper;
+
+const СarHighestDemandGalleryThumbsSwiper = new Swiper(".car-highest-demand__gallery-thumbs--swiper", {
+	grabCursor: true,
+	direction: 'vertical',
+	spaceBetween: 16,
+	slidesPerView: 5,
+	watchSlidesProgress: true,
+});
+
+CarHighestDemandGallerySwiper = new Swiper(".car-highest-demand__gallery--swiper", {
+	grabCursor: true,
+	slidesPerView: 1,
+	breakpoints: {
+		1200: { spaceBetween: 25 },
+		576: { spaceBetween: 20 },
+		0: {}
+	},
+	navigation: {
+		prevEl: ".car-highest-demand .swiper__buttons .btn__swiper-prev",
+		nextEl: ".car-highest-demand .swiper__buttons .btn__swiper-next"
+	},
+	thumbs: {
+		swiper: СarHighestDemandGalleryThumbsSwiper
+	},
+	on: {
+		init: updateCarInfo,
+		slideChange: updateCarInfo
+	}
+});
+
+function updateCarInfo() {
+	if (!CarHighestDemandGallerySwiper) return;
+
+	const activeSlide = CarHighestDemandGallerySwiper.slides[CarHighestDemandGallerySwiper.activeIndex];
+	if (!activeSlide) return;
+
+	const title = activeSlide.getAttribute('data-title');
+	const year = activeSlide.getAttribute('data-year');
+	const days = activeSlide.getAttribute('data-days');
+
+	if (titleEl && title) titleEl.textContent = title;
+	if (yearEl && year) yearEl.textContent = year;
+	if (daysEl && days) daysEl.textContent = days;
+}

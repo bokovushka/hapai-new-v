@@ -654,3 +654,111 @@ if (document.querySelector('.sales-methods--item') && document.querySelector('.b
 		});
 	});
 }
+
+
+Fancybox.bind('[data-fancybox="car-highest-demand__gallery--fancybox"]', {
+	animated: false,
+	showClass: false,
+	hideClass: false,
+
+	click: false,
+
+	dragToClose: false,
+
+	Image: {
+		zoom: false,
+	},
+
+	Toolbar: {
+		display: [{
+			id: "counter",
+			position: "center"
+		}, "close"],
+	},
+});
+
+
+
+
+$(function () {
+	function isMobile() {
+		return window.innerWidth <= 991;
+	}
+
+	function createCustomSelect() {
+		if (!isMobile() || $('#office-select').length) return;
+
+		const $select = $('<select id="office-select"></select>');
+
+		$('.tab').each(function () {
+			const $tab = $(this);
+			const name = $tab.find('.offices__name').text().trim();
+			const address = $tab.find('.offices__address').text().trim();
+			const tabId = $tab.data('tab-content');
+
+			const html = `<div class="offices__name">${name}</div><div class="offices__address">${address}</div>`;
+
+			const $option = $('<option></option>')
+				.attr('value', tabId)
+				.attr('data-html', html)
+				.text(`${name} ${address}`);
+
+			if ($tab.hasClass('active')) {
+				$option.attr('selected', true);
+			}
+
+			$select.append($option);
+		});
+
+		$('#tabs-select-container').append($select);
+
+		// Ініціалізуємо selectmenu
+		$select.selectmenu({
+			create: function (event, ui) {
+				// 💡 одразу вставляємо HTML в кнопку після створення
+				const $selected = $(this).find('option:selected');
+				const html = $selected.data('html');
+				$(this).selectmenu("widget").find('.ui-selectmenu-text').html(html);
+			},
+			change: function (event, ui) {
+				const selectedId = ui.item.value;
+
+				$('.tab').removeClass('active')
+					.filter(`[data-tab-content="${selectedId}"]`)
+					.addClass('active');
+
+				$('.tab-content-item').removeClass('active')
+					.filter(`#${selectedId}`)
+					.addClass('active');
+			}
+		}).selectmenu("instance");
+
+		// Кастомне відображення пунктів випадаючого списку
+		const instance = $select.selectmenu("instance");
+
+		instance._renderItem = function (ul, item) {
+			const $wrapper = $('<div></div>').html(item.element.data('html'));
+			return $('<li>').append($wrapper).appendTo(ul);
+		};
+
+		// Відображення кастомного HTML у кнопці після вибору
+		instance._setText = function (element, value) {
+			const selected = $select.find("option:selected");
+			element.html(selected.data("html"));
+		};
+	}
+
+	createCustomSelect();
+
+	$(window).on("resize", function () {
+		if (isMobile() && !$('#office-select').length) {
+			createCustomSelect();
+		}
+	});
+});
+
+
+
+
+
+

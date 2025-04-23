@@ -928,7 +928,7 @@ input {
 	-ms-transform: translate(0, -50%) rotate(-90deg);
 	transform: translate(0, -50%) rotate(-90deg);
 	font-size: 16px;
-	color: #a9a9a9;
+	color: #a9a9a9 !important;
 }
 
 .breadcrumb-wrap li:last-child::after {
@@ -937,6 +937,7 @@ input {
 
 .breadcrumb-wrap li a {
 	color: #6667ab;
+	font-weight: 500;
 }
 
 .breadcrumb-wrap .icon-u_home-alt {
@@ -4023,8 +4024,8 @@ video {
 	width: calc((100% - 40px) / 3);
 }
 
-.why__item .why__descrp > span,
-.why__item > span {
+.why__item .why__descrp>span,
+.why__item>span {
 	font-size: 24px;
 	padding: 16px;
 	color: #6667ab;
@@ -6892,6 +6893,7 @@ input.field {
 }
 
 @media only screen and (min-width: 993px) {
+
 	.ic-content,
 	.ic-img-loop {
 		-ms-flex-wrap: wrap;
@@ -7019,7 +7021,7 @@ input.field {
 		padding-right: 80px;
 	}
 
-	.article__swiper > .swiper-wrapper {
+	.article__swiper>.swiper-wrapper {
 		padding-left: 40px;
 	}
 
@@ -7028,7 +7030,7 @@ input.field {
 		padding-right: 40px;
 	}
 
-	.happy-customers__swiper > .swiper-wrapper {
+	.happy-customers__swiper>.swiper-wrapper {
 		padding-left: 20px;
 	}
 
@@ -7141,6 +7143,7 @@ input.field {
 }
 
 @media only screen and (max-width: 1023px) {
+
 	.nav-menu__item .language__ch,
 	.nav-menu__item .nav-menu__link,
 	.nav-menu__item ul li {
@@ -7564,7 +7567,7 @@ input.field {
 		padding-right: 24px;
 	}
 
-	.partners__swiper > .swiper-wrapper {
+	.partners__swiper>.swiper-wrapper {
 		padding-left: 12px;
 	}
 
@@ -7691,7 +7694,7 @@ input.field {
 		margin-bottom: 56px;
 	}
 
-	.top-banner-sell-car .choice-help__b > p {
+	.top-banner-sell-car .choice-help__b>p {
 		margin-bottom: 52px !important;
 	}
 
@@ -8235,6 +8238,7 @@ input.field {
 }
 
 @media only screen and (max-width: 360px) {
+
 	#login .popup__body,
 	#password-recovery .popup__body,
 	#popup-test-drive .popup__body,

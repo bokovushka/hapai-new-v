@@ -994,6 +994,11 @@
 .grid-gallery {
   padding-bottom: 100px;
 }
+@media only screen and (max-width: 992px) {
+  .commission-sale .grid-gallery {
+    padding-bottom: 40px;
+  }
+}
 .grid-gallery .title {
   font-size: 36px;
   font-weight: 500;
@@ -1007,14 +1012,34 @@
     margin-bottom: 50px;
   }
 }
+@media only screen and (max-width: 992px) {
+  .commission-sale .grid-gallery .title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
 .grid-gallery .gallery-grid--swiper {
   position: relative;
   overflow: hidden;
   margin: 0 -20px;
   width: 1440px;
 }
+.commission-sale .grid-gallery .gallery-grid--swiper {
+  width: 1730px;
+}
+@media only screen and (max-width: 1439px) {
+  .commission-sale .grid-gallery .gallery-grid--swiper {
+    width: 1440px;
+  }
+}
 .grid-gallery .gallery-grid--swiper .swiper-wrapper {
   transition-timing-function: linear;
+}
+@media only screen and (max-width: 639px) {
+  .grid-gallery .btn-style-1 {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .grid-container {
@@ -1029,6 +1054,14 @@
   /* Ширина сітки */
   margin: 0 auto;
   /* Центрування сітки */
+}
+.commission-sale .grid-container {
+  width: 1730px;
+}
+@media only screen and (max-width: 1439px) {
+  .commission-sale .grid-container {
+    width: 1440px;
+  }
 }
 
 /* Стиль для кожного блоку */

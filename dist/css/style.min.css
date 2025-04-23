@@ -926,7 +926,7 @@ input {
   -ms-transform: translate(0, -50%) rotate(-90deg);
   transform: translate(0, -50%) rotate(-90deg);
   font-size: 16px;
-  color: #a9a9a9;
+  color: #a9a9a9 !important;
 }
 
 .breadcrumb-wrap li:last-child::after {
@@ -935,6 +935,7 @@ input {
 
 .breadcrumb-wrap li a {
   color: #6667ab;
+  font-weight: 500;
 }
 
 .breadcrumb-wrap .icon-u_home-alt {

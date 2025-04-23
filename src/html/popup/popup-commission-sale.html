@@ -1,0 +1,31 @@
+<div id="popup-commission-sale" class="popup">
+	<div class="popup__body">
+		<div class="popup__content">
+			<a class="popup__close close-popup"><span class="icon-fi_x"></span></a>
+			<div class="title">Заявка на продаж авто</div>
+			<form id="form-popup-login" action="files/auth/login" method="post">
+				<input type="hidden" name="_csrf"
+					value="B_GJKiydcIa9uzqXnDmpo5Vnt8JRfvG4Ac73cBuj_INUorFZZ8sv0Pr-CtHMeMDy8QngiWIyp801gbw2WdC7-w==">
+				<div class="user-info">
+					<div class="user-txt">
+						<label class="control-label" for="client_name">*Імʼя</label>
+						<input type="text" name="client_name" placeholder="Ваше ім'я">
+						<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+					</div>
+					<div class="user-txt">
+						<label class="control-label" for="client_name">Телефон</label>
+						<input type="text" name="client_name" placeholder="Ваше ім'я">
+						<p class="help-block help-block-error">Обов'язкове поле. Тільки кирилиця</p>
+					</div>
+					<div class="user-txt required txt-feedback">
+						<label class="control-label" for="txt-feedback">Коментар (Не обовʼязково)</label>
+						<textarea maxlength="300" type="text" name="txt-feedback" id="txt-feedback"
+							placeholder="Марка, модель, рік випуску вашого авто"></textarea>
+						<!-- <p><span id="txt-feedback-count">0</span> з 300</p> -->
+					</div>
+					<a href="#popup-thank-you-2" class="btn btn-style-4 popup-link">Подати заявку</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

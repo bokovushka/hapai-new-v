@@ -1084,6 +1084,12 @@
 .grid-gallery {
 	padding-bottom: 100px;
 
+	.commission-sale & {
+		@media only screen and (max-width: 992px) {
+			padding-bottom: 40px;
+		}
+	}
+
 	.title {
 		font-size: 36px;
 		font-weight: 500;
@@ -1095,6 +1101,13 @@
 			line-height: 42px;
 			margin-bottom: 50px;
 		}
+
+		.commission-sale & {
+			@media only screen and (max-width: 992px) {
+				font-size: 32px;
+				line-height: 37px;
+			}
+		}
 	}
 
 	.gallery-grid--swiper {
@@ -1103,8 +1116,23 @@
 		margin: 0 -20px;
 		width: 1440px;
 
+		.commission-sale & {
+			width: 1730px;
+
+			@media only screen and (max-width: 1439px) {
+				width: 1440px;
+			}
+		}
+
 		.swiper-wrapper {
 			transition-timing-function: linear;
+		}
+	}
+
+	.btn-style-1 {
+		@media only screen and (max-width: 639px) {
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
@@ -1120,7 +1148,15 @@
 	width: 1400px;
 	/* Ширина сітки */
 	margin: 0 auto;
+
 	/* Центрування сітки */
+	.commission-sale & {
+		width: 1730px;
+
+		@media only screen and (max-width: 1439px) {
+			width: 1440px;
+		}
+	}
 }
 
 /* Стиль для кожного блоку */
