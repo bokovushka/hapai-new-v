@@ -9351,6 +9351,7 @@ textarea {
 			line-height: 23px;
 			margin-bottom: 40px;
 			color: #828282;
+			max-width: 1065px;
 
 			@media only screen and (max-width: 992px) {
 				font-size: 14px;
@@ -9605,8 +9606,10 @@ textarea {
 
 			.wrap {
 				min-height: 460px;
-				background-size: cover;
 				padding: 40px;
+				background: url(../img/commission-sale/bg-10.png) no-repeat center;
+				background-size: cover;
+				border-radius: 12px;
 
 				@media only screen and (max-width: 991px) {
 					padding: 20px;
@@ -9698,6 +9701,8 @@ textarea {
 			padding-left: 0;
 			max-width: 925px;
 			height: 100%;
+			border-radius: 12px;
+			overflow: hidden;
 
 			@media only screen and (max-width: 991px) {
 				padding-top: 0;
@@ -10468,6 +10473,7 @@ textarea {
 
 				.title {
 					color: #fff;
+					margin-bottom: 40px;
 
 					@media only screen and (max-width: 991px) {
 						font-size: 32px;
