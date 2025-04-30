@@ -675,10 +675,28 @@ CarHighestDemandGallerySwiper = new Swiper(".car-highest-demand__gallery--swiper
 		swiper: СarHighestDemandGalleryThumbsSwiper
 	},
 	on: {
-		init: updateCarInfo,
-		slideChange: updateCarInfo
+		init: function () {
+			updateCarInfo();
+			toggleExclusiveClass(this);
+		},
+		slideChange: function () {
+			updateCarInfo();
+			toggleExclusiveClass(this);
+		}
 	}
 });
+
+function toggleExclusiveClass(swiperInstance) {
+	const swiperContainer = swiperInstance.el;
+	const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+
+	if (activeSlide.querySelector('.next-exlusive')) {
+		swiperContainer.classList.add('has-next-exclusive');
+	} else {
+		swiperContainer.classList.remove('has-next-exclusive');
+	}
+}
+
 
 function updateCarInfo() {
 	if (!CarHighestDemandGallerySwiper) return;

@@ -10249,6 +10249,54 @@ textarea {
 			height: 250px;
 		}
 
+		.car-highest-demand__gallery--swiper {
+			&.has-next-exclusive {
+				@media only screen and (max-width: 767px) {
+					.label-day-clock {
+						display: none;
+					}
+				}
+			}
+
+			.next-exlusive {
+				height: 100%;
+				background: #7B7ECF;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				.title {
+					font-size: 32px;
+					line-height: 34px;
+					font-weight: 500;
+					color: #fff;
+
+					@media only screen and (max-width: 479px) {
+						font-size: 24px;
+						line-height: 28px;
+					}
+				}
+
+				.icon-svg {
+					svg {
+						width: 170px;
+						height: 20px;
+					}
+				}
+			}
+
+			.swiper-slide {
+				&:nth-last-child(-n + 2) {
+					display: none;
+
+					@media only screen and (max-width: 767px) {
+						display: block;
+					}
+				}
+			}
+		}
+
 		//main slider
 		.car-highest-demand__gallery--swiper,
 		.car-highest-demand__gallery--wrap {

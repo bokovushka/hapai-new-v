@@ -759,6 +759,21 @@ $(function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+	const swiperContainer = document.querySelector('.car-highest-demand__gallery--swiper');
+	const slides = swiperContainer.querySelectorAll('.swiper-slide');
+
+	slides.forEach((slide, index) => {
+		// Додаємо data-fancybox, окрім останніх двох слайдів
+		if (index < slides.length - 2) {
+			const link = slide.querySelector('a');
+			if (link) {
+				link.setAttribute('data-fancybox', 'car-highest-demand__gallery--fancybox');
+			}
+		}
+	});
+});
+
 
 
 

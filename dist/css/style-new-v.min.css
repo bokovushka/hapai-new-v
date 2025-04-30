@@ -8949,6 +8949,43 @@ textarea::placeholder {
     height: 250px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper.has-next-exclusive .label-day-clock {
+    display: none;
+  }
+}
+.car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .next-exlusive {
+  height: 100%;
+  background: #7B7ECF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .next-exlusive .title {
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #fff;
+}
+@media only screen and (max-width: 479px) {
+  .car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .next-exlusive .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .next-exlusive .icon-svg svg {
+  width: 170px;
+  height: 20px;
+}
+.car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .swiper-slide:nth-last-child(-n+2) {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper .swiper-slide:nth-last-child(-n+2) {
+    display: block;
+  }
+}
 .car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--swiper,
 .car-highest-demand .car-highest-demand__gallery .car-highest-demand__gallery--wrap {
   position: relative;
