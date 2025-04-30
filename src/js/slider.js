@@ -704,11 +704,14 @@ function updateCarInfo() {
 	const activeSlide = CarHighestDemandGallerySwiper.slides[CarHighestDemandGallerySwiper.activeIndex];
 	if (!activeSlide) return;
 
+	// Отримуємо атрибути
 	const title = activeSlide.getAttribute('data-title');
 	const year = activeSlide.getAttribute('data-year');
 	const days = activeSlide.getAttribute('data-days');
 
-	if (titleEl && title) titleEl.textContent = title;
-	if (yearEl && year) yearEl.textContent = year;
-	if (daysEl && days) daysEl.textContent = days;
+	// Оновлюємо елементи тільки якщо атрибут не пустий
+	if (titleEl) titleEl.textContent = title || '';  // Якщо title нема - залишимо порожнім
+	if (yearEl) yearEl.textContent = year || '';    // Якщо year нема - залишимо порожнім
+	if (daysEl) daysEl.textContent = days || '';    // Якщо days нема - залишимо порожнім
 }
+
