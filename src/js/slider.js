@@ -553,11 +553,28 @@ new Swiper(".our-proofs__swiper", {
 	},
 })
 
-//hapai-page-friday.html
-new Swiper('.gallery-grid--swiper', {
+new Swiper(".our-proofs__swiper-one", {
+	grabCursor: true,
+	spaceBetween: 25,
+	slidesPerView: 1,
+	breakpoints: {
+		640: {
+
+		},
+		0: {
+
+			pagination: {
+				el: ".our-proofs-one .swiper-pagination",
+				clickable: true,
+			},
+		}
+	},
+})
+
+const swiper = new Swiper('.gallery-grid--swiper', {
 	slidesPerView: 1,
 	spaceBetween: 25,
-	loop: true,
+	// loop: true,
 	speed: 25000,
 	autoplay: {
 		enabled: true,
@@ -565,8 +582,11 @@ new Swiper('.gallery-grid--swiper', {
 		disableOnInteraction: false,
 	},
 	centeredSlides: true,
-	// allowTouchMove: false,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
 });
+
 
 //hapai-page-friday.html
 var beforeAfterSwiper = new Swiper('.popups__swiper', {

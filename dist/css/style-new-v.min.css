@@ -6763,7 +6763,7 @@ textarea::placeholder {
   stroke-linejoin: round;
 }
 .plyr--video .plyr__poster {
-  background-size: 105%;
+  background-size: cover;
 }
 .plyr--video video {
   object-fit: cover;

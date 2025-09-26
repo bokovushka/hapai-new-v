@@ -123,6 +123,15 @@ $(function () {
 	});
 });
 
+//#accordion-dobro
+$(function () {
+	$("#accordion-dobro").accordion({
+		collapsible: true,
+		active: false,
+		heightStyle: "content"
+	});
+});
+
 // MAIN SEARCH
 
 // $(function () {
@@ -761,6 +770,8 @@ $(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 	const swiperContainer = document.querySelector('.car-highest-demand__gallery--swiper');
+	if (!swiperContainer) return; // Якщо контейнера немає, далі не виконуємо
+
 	const slides = swiperContainer.querySelectorAll('.swiper-slide');
 
 	slides.forEach((slide, index) => {
@@ -773,6 +784,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
+
 
 
 
