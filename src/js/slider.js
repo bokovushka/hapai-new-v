@@ -530,9 +530,9 @@ var beforeAfterSwiper = new Swiper('.before-after__swiper', {
 		prevEl: ".information-content .wrap-slider .swiper__buttons .icon-u_arrow-left",
 		nextEl: ".information-content .wrap-slider .swiper__buttons .icon-u_arrow-right"
 	},
-	simulateTouch: false,
+	// simulateTouch: false,
 	loop: true,
-	allowTouchMove: false,
+	// allowTouchMove: false,
 });
 
 //hapai-page-friday.html

@@ -273,6 +273,7 @@
 
 			span {
 				font-weight: 700;
+				color: #2b2b2b;
 
 				&.uppercase {
 					text-transform: uppercase;
@@ -1736,6 +1737,7 @@
 				left: 3.5%;
 				width: 262px;
 				text-align: center;
+				text-transform: uppercase;
 
 				@media only screen and (max-width: 991px) {
 					width: 240px;
@@ -1751,6 +1753,24 @@
 					bottom: unset;
 					top: 32%;
 					transform: translateX(-50%);
+					display: none;
+				}
+			}
+		}
+
+		.mob-btn {
+			display: none;
+
+			@media only screen and (max-width: 639px) {
+				display: block;
+				padding: 0 12px;
+				margin-top: 20px;
+
+				.btn-style-1 {
+					display: block;
+					text-align: center;
+					text-transform: uppercase;
+
 				}
 			}
 		}

@@ -252,6 +252,7 @@
 }
 .hapai-friday .main-goal .title span {
   font-weight: 700;
+  color: #2b2b2b;
 }
 .hapai-friday .main-goal .title span.uppercase {
   text-transform: uppercase;
@@ -1599,6 +1600,7 @@
   left: 3.5%;
   width: 262px;
   text-align: center;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 991px) {
   .dobro .choice-car__main .choice-car .choice-car__content .choice-car__info .btn-style-1 {
@@ -1617,6 +1619,22 @@
     bottom: unset;
     top: 32%;
     transform: translateX(-50%);
+    display: none;
+  }
+}
+.dobro .choice-car__main .mob-btn {
+  display: none;
+}
+@media only screen and (max-width: 639px) {
+  .dobro .choice-car__main .mob-btn {
+    display: block;
+    padding: 0 12px;
+    margin-top: 20px;
+  }
+  .dobro .choice-car__main .mob-btn .btn-style-1 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 .dobro .ten-implants .ten-implants--main {
