@@ -6766,7 +6766,7 @@ textarea::placeholder {
   background-size: cover;
 }
 .plyr--video video {
-  object-fit: cover;
+  object-fit: contain;
   width: 101%;
 }
 
