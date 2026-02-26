@@ -132,6 +132,13 @@ $(function () {
 	});
 });
 
+$(function () {
+	$("#accordion-social-responsibility").accordion({
+		collapsible: true,
+		active: false,
+		heightStyle: "content"
+	});
+});
 // MAIN SEARCH
 
 // $(function () {
