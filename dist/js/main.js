@@ -139,6 +139,7 @@ $(function () {
 		heightStyle: "content"
 	});
 });
+
 // MAIN SEARCH
 
 // $(function () {
