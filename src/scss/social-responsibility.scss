@@ -55,9 +55,11 @@
 				font-size: 16px;
 				line-height: 24px;
 				color: #ffffff;
+				margin-left: -7px;
 
 				@media only screen and (max-width: 639px) {
 					justify-content: center;
+					margin-left: 0;
 				}
 
 				.svg-icon {
@@ -100,7 +102,7 @@
 				}
 
 				@media only screen and (max-width: 639px) {
-					margin-bottom: 760px;
+					margin-bottom: 500px;
 				}
 
 				@media only screen and (max-width: 479px) {
@@ -208,6 +210,10 @@
 				column-gap: 24px;
 				row-gap: 24px;
 
+				@media only screen and (max-width: 991px) {
+					row-gap: 10px;
+				}
+
 				.project-num-item {
 					color: #6667ab;
 					width: calc((100% - 24px * 3) / 4);
@@ -219,13 +225,13 @@
 						width: calc((100% - 24px) / 2);
 					}
 
-					@media only screen and (max-width: 992px) {
+					@media only screen and (max-width: 991px) {
 						width: 100%;
 					}
 
 					&:nth-child(1),
 					&:nth-child(2) {
-						@media only screen and (min-width: 993px) {
+						@media only screen and (min-width: 992px) {
 							width: calc((100% - 24px) / 2);
 						}
 					}
@@ -288,7 +294,7 @@
 
 		.title {
 			text-align: center;
-			padding: 100px 0;
+			padding: 144px 0 60px 0;
 			font-size: 32px;
 			font-weight: 500;
 			line-height: 32px;
@@ -298,7 +304,7 @@
 				font-weight: 500;
 				line-height: 28px;
 				padding-top: 60px;
-				padding-bottom: 20px;
+				padding-bottom: 24px;
 			}
 
 		}
@@ -328,7 +334,6 @@
 			padding-right: 68px;
 			padding-left: 60px;
 			border: none;
-			border-top: 1px solid #e5e5e5;
 			background: 0 0;
 			margin: 0;
 			position: relative;
@@ -431,6 +436,7 @@
 				margin: 0;
 				transform: scale(0.9);
 				flex: 0 0 auto; // Дозволяє керувати шириною вручну
+				border-radius: 12px;
 				transition:
 					width 0.35s ease-in-out,
 					margin 0.35s ease-in-out,
@@ -560,6 +566,14 @@
 			}
 		}
 	}
+
+	.accordion-section {
+		margin-bottom: 100px;
+
+		@media only screen and (max-width: 991px) {
+			margin-bottom: 60px;
+		}
+	}
 }
 
 .br {
@@ -591,6 +605,7 @@
 			align-items: flex-start;
 			background: url(../img/social-responsibility/bg-2-mob.jpg) no-repeat center;
 			background-size: cover;
+			padding-top: 33px;
 		}
 
 		&::after {
@@ -633,10 +648,12 @@
 			font-weight: 500;
 			line-height: 76px;
 			color: #ffffff;
+			margin-left: 48px;
 
 			@media only screen and (max-width: 1279px) {
 				font-size: 42px;
 				line-height: 46px;
+				margin-left: 18px;
 			}
 
 			@media only screen and (max-width: 991px) {
@@ -646,6 +663,7 @@
 
 			@media only screen and (max-width: 767px) {
 				text-align: center;
+				margin-left: 0;
 			}
 		}
 	}
